@@ -1,0 +1,77 @@
+/*
+ * RED design tokens. Single source of truth.
+ * Colors are stored as RGB channels so Tailwind can apply alpha:
+ *   rgb(var(--red-500) / 0.12)
+ * Hex equivalents are documented in docs/DESIGN.md and in the /system gallery.
+ */
+:root {
+  /* Ink: surfaces, darkest to lightest */
+  --ink-950: 5 6 10; /* #05060A page */
+  --ink-900: 11 13 19; /* #0B0D13 surface */
+  --ink-800: 20 24 33; /* #141821 raised */
+  --line: 35 41 54; /* #232936 borders */
+
+  /* Signal red: the only red. Action and signal, never decoration. */
+  --red-500: 255 31 31; /* #FF1F1F signal */
+  --red-600: 209 15 15; /* #D10F0F action fill */
+  --red-900: 90 7 7; /* #5A0707 tint */
+
+  /* Chrome: text and metal */
+  --chrome-100: 242 245 250; /* #F2F5FA primary text */
+  --chrome-300: 201 208 220; /* #C9D0DC secondary text */
+  --chrome-500: 138 147 166; /* #8A93A6 tertiary text, meta */
+
+  /* Evidence status */
+  --detected: 61 220 151; /* #3DDC97 */
+  --inferred: 255 176 32; /* #FFB020 */
+  --risk: 255 31 31; /* #FF1F1F (aliases red-500 by design) */
+
+  /* Families: --font-display, --font-body, --font-mono are set by next/font in
+     src/app/fonts.ts (self-hosted woff2, size-adjusted fallbacks, no layout shift). */
+
+  /* Type: 1.25 ratio at 1440px, 1.2 at 360px, fluid between */
+  --step-n2: 0.6875rem;
+  --step-n1: 0.8rem;
+  --step-0: clamp(0.9375rem, 0.9167rem + 0.0926vw, 1rem);
+  --step-1: clamp(1.125rem, 1.0833rem + 0.1852vw, 1.25rem);
+  --step-2: clamp(1.35rem, 1.2792rem + 0.3148vw, 1.5625rem);
+  --step-3: clamp(1.62rem, 1.509rem + 0.4935vw, 1.9531rem);
+  --step-4: clamp(1.944rem, 1.7782rem + 0.7369vw, 2.4414rem);
+  --step-5: clamp(2.3328rem, 2.0931rem + 1.0651vw, 3.0518rem);
+  --step-6: clamp(2.7994rem, 2.4609rem + 1.5042vw, 3.8147rem);
+  --step-7: clamp(3.3592rem, 2.889rem + 2.087vw, 4.7684rem);
+
+  /* Space: 4px grid */
+  --space-unit: 4px;
+
+  /* Radius: three values only */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* Glow: shadows are light, not blur-drops */
+  --glow-red:
+    0 0 0 1px rgb(var(--red-500) / 0.55), 0 0 0 4px rgb(var(--red-500) / 0.12),
+    0 0 24px rgb(var(--red-500) / 0.12);
+  --glow-red-soft: 0 0 0 1px rgb(var(--red-500) / 0.35), 0 0 18px rgb(var(--red-500) / 0.12);
+  --glow-chrome: 0 0 0 1px rgb(var(--chrome-500) / 0.45);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --dur-1: 120ms; /* micro: hover, press */
+  --dur-2: 240ms; /* state: toggles, tabs, tooltips */
+  --dur-3: 480ms; /* enter: reveals, toasts */
+  --dur-4: 900ms; /* sequence: dissolves, scan passes */
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms;
+    --dur-2: 0ms;
+    --dur-3: 0ms;
+    --dur-4: 0ms;
+  }
+}

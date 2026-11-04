@@ -1,0 +1,134 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: rgb(var(--ink-950));
+    color: rgb(var(--chrome-100));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.55;
+    min-height: 100dvh;
+  }
+  ::selection {
+    background: rgb(var(--red-500) / 0.28);
+    color: rgb(var(--chrome-100));
+  }
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--glow-red);
+    border-radius: var(--radius-sm);
+  }
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Custom cursor is active: hide the native one on fine pointers only. */
+  html.has-red-cursor,
+  html.has-red-cursor * {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  /* Loading skeleton. Pulses to say "pending"; static under reduced motion. */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: rgb(var(--ink-800));
+    border-radius: var(--radius-sm);
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(var(--chrome-100) / 0.05), transparent);
+    animation: red-skeleton 1.4s var(--ease-in-out-quart) infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton::after {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
+@keyframes red-skeleton {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Reduced motion: anything marked as a reveal item is shown in its final state
+   from the first paint, before JS hydrates. */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal-item] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+@keyframes red-pixel {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  33% {
+    opacity: 1;
+  }
+}
+
+/* Toast countdown. Linear on purpose: it is a timer, not an ease.
+   Not disabled under reduced motion because it is the only auto-dismiss cue;
+   it is a 1px scale change, not movement across the screen. */
+@keyframes red-toast-timer {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/* PixelMark assembly: each cell flies in from its own --fx/--fy after --d.
+   Reduced motion: no animation, cells rest in place (the end state). */
+@keyframes red-cell-in {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--fx), var(--fy), 0) scale(0.4);
+  }
+}
+.red-cell {
+  animation: red-cell-in var(--dur-3) var(--ease-out-expo) var(--d) both;
+  animation-play-state: paused;
+}
+[data-phase="assembling"] .red-cell,
+[data-phase="reading"] .red-cell,
+[data-phase="idle"] .red-cell {
+  animation-play-state: running;
+}
+@media (prefers-reduced-motion: reduce) {
+  .red-cell {
+    animation: none;
+  }
+}
+
+/* Below-fold landing sections: skip style/layout/paint until near the viewport.
+   `auto` in contain-intrinsic-size remembers the real size once rendered. */
+.cv-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 960px;
+}

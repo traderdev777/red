@@ -1,0 +1,27 @@
+{
+  "name": "red",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @red/web dev",
+    "dev:all": "pnpm -r --parallel --filter ./apps/* dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run packages",
+    "test:db": "vitest run supabase"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "pg": "^8.13.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}
