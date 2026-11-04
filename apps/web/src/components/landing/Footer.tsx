@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
-import { site } from "@/lib/site";
+import { site, withBase } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -17,7 +17,7 @@ export function Footer() {
             {site.nav.map((l) => (
               <li key={l.href}>
                 <a
-                  href={l.href}
+                  href={withBase(l.href)}
                   className="text-step-n1 text-chrome-300 hover:text-chrome-100 rounded-sm"
                 >
                   {l.label}

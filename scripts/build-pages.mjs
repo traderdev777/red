@@ -75,7 +75,12 @@ try {
   execSync("npx next build", {
     cwd: tmp,
     stdio: "inherit",
-    env: { ...process.env, NEXT_PUBLIC_RED_STATIC: "1", NEXT_TELEMETRY_DISABLED: "1" },
+    env: {
+      ...process.env,
+      NEXT_PUBLIC_RED_STATIC: "1",
+      NEXT_PUBLIC_BASE_PATH: base,
+      NEXT_TELEMETRY_DISABLED: "1",
+    },
   });
   cpSync(join(tmp, "out"), out, { recursive: true });
   writeFileSync(join(out, ".nojekyll"), "");

@@ -1,16 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { CursorLoader } from "@/motion/CursorLoader";
 import { ToastProvider } from "@/components/ui/Toast";
-import { site } from "@/lib/site";
+import { site, withBase } from "@/lib/site";
 import { body, display, mono } from "./fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  // Origin only: Next adds basePath to file-based metadata (OG image) itself.
+  metadataBase: new URL(new URL(site.url).origin),
   title: { default: site.title, template: "%s · RED" },
   description: site.description,
   applicationName: site.name,
-  alternates: { canonical: "/" },
+  alternates: { canonical: withBase("/") },
   openGraph: {
     type: "website",
     siteName: site.name,
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: { card: "summary_large_image", title: site.title, description: site.description },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: withBase("/icon.svg") },
 };
 
 export const viewport: Viewport = {

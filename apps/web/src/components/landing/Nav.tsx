@@ -7,7 +7,7 @@ import { Logo } from "@/components/ui/Logo";
 import { Icon } from "@/components/ui/Icon";
 import { buttonClasses } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { site } from "@/lib/site";
+import { site, withBase } from "@/lib/site";
 
 /**
  * Sticky nav. Height drops 64 → 52px once the page scrolls: the change says "you've left the top".
@@ -51,7 +51,7 @@ export function Nav() {
               {site.nav.map((l) => (
                 <li key={l.href}>
                   <a
-                    href={l.href}
+                    href={withBase(l.href)}
                     className="text-step-n1 text-chrome-300 duration-120 ease-out-expo hover:text-chrome-100 rounded-sm transition-colors"
                   >
                     {l.label}
@@ -88,7 +88,7 @@ export function Nav() {
             {site.nav.map((l) => (
               <li key={l.href}>
                 <a
-                  href={l.href}
+                  href={withBase(l.href)}
                   onClick={() => setOpen(false)}
                   className="text-step-0 text-chrome-300 hover:text-chrome-100 block rounded-sm py-3"
                 >
