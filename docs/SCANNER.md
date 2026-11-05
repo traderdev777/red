@@ -122,3 +122,33 @@ Non-root (`pwuser`), read-only root filesystem, `cap_drop: ALL`, 2 CPUs, 2 GB me
   loopback. All fail the scan; the internal server records zero hits.
 - `supabase/tests/scanner-queue.test.ts`: two workers never claim the same scan,
   ownership, monotonic progress, refunds, reaper.
+
+## Analysis (fingerprint → compress → analyze)
+
+Runs under status `analyzing`; its progress bar restarts at 0
+(migration `20261106000000_analysis.sql`). Milestones: 20 stack detected, 40 evidence
+compressed, 50 model called, 85 findings validated, 95 report stored.
+
+1. **Evidence catalog** (`analysis/catalog.ts`): every citable fact, built mechanically from
+   evidence.json with stable ids (`hdr.server`, `hdr-missing.content-security-policy`,
+   `lh.largest-contentful-paint`, `net.12`, `cookie._ga@.example.com`, `tp.googletagmanager.com`).
+2. **Fingerprint** (`analysis/fingerprint.ts`): deterministic stack detection. Direct signals
+   (headers, runtime globals, generator) → `detected`, 90–99; indirect only (ASN, URL patterns)
+   → `inferred`, ≤80. Known vendors from the shared list.
+3. **Rules** (`analysis/rules.ts`): security headers, cookie flags, version disclosure, public
+   source maps, certificate expiry, security.txt, LCP/CLS/TTFB against web.dev thresholds,
+   Lighthouse failures, sync scripts, third-party weight, page weight, title/description/canonical/
+   Open Graph/noindex/sitemap/lang, accessibility, console errors, broken requests. Each cites
+   catalog ids and carries stack-aware build actions (next.config.js, vercel.json, Netlify
+   `_headers`, Apache, nginx, WordPress `functions.php`, Cloudflare).
+4. **Model** (`analysis/gemini.ts`, optional, `GEMINI_API_KEY`): one structured-output call
+   with the catalog, the stack, and the rule findings. The reply is untrusted
+   (`analysis/validate.ts`): a finding is dropped if it cites no catalog id, cites ids that
+   don't exist, states a number its cited excerpts don't contain, or duplicates a rule finding.
+   Drops are counted in `model.rejected`. Without a key, or if the call fails, the scan still
+   completes with rule findings and the report says why.
+5. **Busy pages** (`analysis/view.ts`): if a desktop probe timed out, the mobile pass's reading
+   is used and labelled; if neither pass answered, no absence finding is drawn from it.
+
+Full analysis is stored at `evidence/<scan_id>/analysis.json`; `scans.result.analysis` keeps a
+small summary because Realtime pushes the whole row on every update.

@@ -33,8 +33,8 @@ export interface ScanViewData {
 }
 
 const STEPS = ["Collect", "Fingerprint", "Compress", "Analyze"] as const;
-/** Stages the scanner actually runs today. The rest plug in with the analysis build. */
-const BUILT = 1;
+/** Stages the scanner runs. */
+const BUILT = 4;
 
 /** The scanner's real milestones (apps/scanner/src/pipeline/collect.ts). */
 const MILESTONES = [
@@ -45,9 +45,18 @@ const MILESTONES = [
   [80, "Lighthouse"],
   [95, "evidence uploaded"],
 ] as const;
-function milestone(progress: number): string {
-  let label = "starting browser";
-  for (const [p, l] of MILESTONES) if (progress >= p) label = l;
+/** Analysis milestones (apps/scanner/src/analysis/stages.ts); progress restarts at 0 in this phase. */
+const ANALYSIS_MILESTONES = [
+  [20, "stack detected"],
+  [40, "evidence compressed"],
+  [50, "model reading evidence"],
+  [85, "findings validated"],
+  [95, "report stored"],
+] as const;
+function milestone(progress: number, status: ScanStatus = "collecting"): string {
+  const list = status === "analyzing" ? ANALYSIS_MILESTONES : MILESTONES;
+  let label = status === "analyzing" ? "fingerprinting" : "starting browser";
+  for (const [p, l] of list) if (progress >= p) label = l;
   return label;
 }
 
@@ -59,7 +68,7 @@ function milestone(progress: number): string {
  */
 function activeStep(s: Pick<ScanViewData, "status" | "progress">): number {
   if (s.status === "collecting") return 0;
-  if (s.status === "analyzing") return 3;
+  if (s.status === "analyzing") return s.progress < 20 ? 1 : s.progress < 40 ? 2 : 3;
   return -1;
 }
 type StepState = "done" | "active" | "pending" | "failed" | "not-built";
@@ -221,9 +230,7 @@ export function ScanView({
               </p>
               <p className="text-step-n2 text-chrome-500 font-mono">
                 {st === "active"
-                  ? i === 0
-                    ? milestone(scan.progress)
-                    : "running"
+                  ? milestone(scan.progress, scan.status)
                   : st === "done"
                     ? "done"
                     : st === "failed"
@@ -267,7 +274,7 @@ export function ScanView({
           {running && (
             <div className="flex flex-col gap-4">
               <h2 className="text-step-2 text-chrome-100">
-                {statusLabel(s.status)}: {milestone(s.progress)}
+                {statusLabel(s.status)}: {milestone(s.progress, s.status)}
               </h2>
               <div
                 role="progressbar"
@@ -275,7 +282,7 @@ export function ScanView({
                 aria-valuemin={0}
                 aria-valuemax={100}
                 aria-valuenow={s.progress}
-                aria-valuetext={`${s.progress}%, ${milestone(s.progress)}`}
+                aria-valuetext={`${s.progress}%, ${milestone(s.progress, s.status)}`}
                 className="bg-ink-950 border-line relative h-2 overflow-hidden rounded-sm border"
               >
                 <span
@@ -283,8 +290,8 @@ export function ScanView({
                   style={{ width: `${s.progress}%` }}
                 />
               </div>
-              <ol className="text-step-n1 grid grid-cols-3 gap-x-4 gap-y-1 font-mono sm:grid-cols-6" aria-label="Milestones">
-                {MILESTONES.map(([p, l]) => (
+              <ol className={cn("text-step-n1 grid grid-cols-3 gap-x-4 gap-y-1 font-mono", s.status === "analyzing" ? "sm:grid-cols-5" : "sm:grid-cols-6")} aria-label="Milestones">
+                {(s.status === "analyzing" ? ANALYSIS_MILESTONES : MILESTONES).map(([p, l]) => (
                   <li key={p} className={s.progress >= p ? "text-chrome-100" : "text-chrome-500"}>
                     {p}% {l}
                   </li>

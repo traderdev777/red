@@ -238,6 +238,8 @@ export const PassSchema = z.object({
   runtime: RuntimeSchema,
   console: ConsoleSchema,
   vitals: VitalsSchema,
+  /** Probes that timed out because the page kept its main thread busy; their sections are empty, not "nothing found". */
+  incomplete: z.array(z.string().max(32)).max(20).default([]),
 });
 export type Pass = z.infer<typeof PassSchema>;
 

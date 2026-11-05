@@ -109,6 +109,20 @@ describe.skipIf(!hasDb)("scanner queue: claim, progress, complete, fail, reap", 
     expect((await w.query("select public.update_scan_progress($1, 'intruder', 60) as ok", [id])).rows[0].ok).toBe(false);
   });
 
+  it("entering analyzing restarts the phase bar; it never goes back to collecting", async () => {
+    const w = await service();
+    const id = await enqueue(350, { charged: false });
+    await admin.query("update public.scans set status = 'done' where status = 'queued' and id <> $1", [id]);
+    await w.query("select public.claim_next_scan('phase')");
+    await w.query("select public.update_scan_progress($1, 'phase', 95)", [id]);
+    await w.query("select public.update_scan_progress($1, 'phase', 0, 'analyzing')", [id]);
+    expect([(await row(id)).status, (await row(id)).progress]).toEqual(["analyzing", 0]);
+    await w.query("select public.update_scan_progress($1, 'phase', 40)", [id]);
+    expect((await row(id)).progress).toBe(40);
+    expect((await w.query("select public.update_scan_progress($1, 'phase', 50, 'collecting') as ok", [id])).rows[0].ok).toBe(false);
+    expect((await row(id)).status).toBe("analyzing");
+  });
+
   it("complete_scan sets done, 100, result; a stale worker cannot overwrite it", async () => {
     const w = await service();
     const id = await enqueue(400, { charged: false });

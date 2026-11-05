@@ -15,7 +15,7 @@ export class ScanFailure extends Error {
 export const MESSAGES = {
   ssrf: "Blocked: the page sent the scanner to a private or reserved address. RED only fetches public sites.",
   botWall: "Blocked by bot protection. RED does not bypass protections.",
-  timeout: "Scan exceeded the 60 second limit.",
+  timeout: "Scan exceeded its time limit.",
   internal: "The scanner hit an internal error. No quota was used.",
 } as const;
 

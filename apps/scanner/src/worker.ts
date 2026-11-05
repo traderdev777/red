@@ -69,7 +69,7 @@ export class Worker {
   }
 
   /** Stop claiming, let in-flight scans finish (each is capped at SCAN_TIMEOUT_MS). */
-  async stop(graceMs = this.cfg.SCAN_TIMEOUT_MS + 5_000) {
+  async stop(graceMs = this.cfg.SCAN_TIMEOUT_MS + this.cfg.ANALYSIS_TIMEOUT_MS + 5_000) {
     this.state.draining = true;
     if (this.timer) clearInterval(this.timer);
     if (this.reaper) clearInterval(this.reaper);
@@ -128,6 +128,9 @@ export class Worker {
       db: this.db,
       log: slog,
       onAbort: (fn) => abortFns.push(fn),
+      phaseChanged: () => {
+        entry.progress = 0;
+      },
       progress: async (p) => {
         if (p <= entry.progress) return;
         entry.progress = p;
@@ -151,7 +154,7 @@ export class Worker {
           timer = setTimeout(() => {
             abort();
             rej(new ScanFailure("timeout", MESSAGES.timeout));
-          }, this.cfg.SCAN_TIMEOUT_MS);
+          }, this.cfg.SCAN_TIMEOUT_MS + this.cfg.ANALYSIS_TIMEOUT_MS);
         }),
       ]);
       const ok = await this.db.complete(scan.id, result);
@@ -166,7 +169,14 @@ export class Worker {
         return;
       }
       const crashed = /Target (page, context or browser )?(has been )?closed|Browser has been closed|browser has disconnected/i.test(String((e as Error)?.message));
-      const message = f ? f.message : crashed ? "The scanner's browser stopped unexpectedly. No quota was used." : MESSAGES.internal;
+      const analyzing = (await this.db.client.from("scans").select("status").eq("id", scan.id).maybeSingle()).data?.status === "analyzing";
+      const message = f
+        ? f.message
+        : crashed
+          ? "The scanner's browser stopped unexpectedly. No quota was used."
+          : analyzing
+            ? "The scanner hit an internal error during analysis."
+            : MESSAGES.internal;
       this.state.failed++;
       slog[f ? "warn" : "error"]({ kind: f?.kind ?? "internal", err: (e as Error).message, detail: f?.detail }, "scan failed");
       try {

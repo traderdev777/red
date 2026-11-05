@@ -72,6 +72,7 @@ export function buildPass(raw: RawPass, siteHost: string, keepHtml: boolean): Pa
     runtime: buildRuntime(raw.runtime),
     console: buildConsole(raw.console),
     vitals: buildVitals(raw.vitals),
+    incomplete: raw.incomplete ?? [],
   };
 }
 
@@ -300,6 +301,7 @@ export async function collect(ctx: StageContext, deps: CollectDeps = {}): Promis
     if (desktop.network.truncated) truncation.push("passes.desktop.network");
     if (mobile?.network.truncated) truncation.push("passes.mobile.network");
     if (fetched.some((f) => f.truncated)) truncation.push("sourceMaps.sources");
+    for (const name of desktop.incomplete) truncation.push(`passes.desktop.${name} (page did not answer in time)`);
 
     const draft: EvidenceDoc = {
       version: EVIDENCE_VERSION,

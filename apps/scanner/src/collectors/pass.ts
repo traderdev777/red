@@ -58,6 +58,8 @@ export interface RawPass {
   security: RawSecurityDetails | null;
   screenshot: Buffer | null;
   inspected: InspectedAsset[];
+  /** Probes that did not answer in time (the page's main thread was busy). */
+  incomplete: string[];
 }
 
 const PERF_PROBE = `(() => { const n = performance.getEntriesByType("navigation")[0]; return n ? { responseStart: n.responseStart, domContentLoadedEventEnd: n.domContentLoadedEventEnd, loadEventEnd: n.loadEventEnd } : null; })()`;
@@ -68,6 +70,26 @@ export const VIEWPORTS = {
 } as const;
 
 const remaining = (deadline: number) => Math.max(0, deadline - Date.now());
+
+/** Resolves to `fallback` if `p` hasn't settled within `ms`: a busy page must not stall the scan. */
+function within<T>(p: Promise<T>, ms: number, fallback: T, onTimeout?: () => void): Promise<T> {
+  return new Promise((resolve) => {
+    const t = setTimeout(() => {
+      onTimeout?.();
+      resolve(fallback);
+    }, Math.max(0, ms));
+    p.then(
+      (v) => {
+        clearTimeout(t);
+        resolve(v);
+      },
+      () => {
+        clearTimeout(t);
+        resolve(fallback);
+      },
+    );
+  });
+}
 
 async function contextFor(o: PassOptions): Promise<BrowserContext> {
   const mobile = o.kind === "mobile";
@@ -275,13 +297,14 @@ async function runInContext(o: PassOptions, context: BrowserContext): Promise<Ra
   const lh = lowerHeaders(Object.fromEntries(headersArray.map((h) => [h.name, h.value])));
   let html: string | null = null;
   try {
-    const body = await response.body();
+    const body = await within(response.body(), 8_000, null as Buffer | null);
+    if (!body) throw new Error("body timeout");
     html = body.subarray(0, EVIDENCE_LIMITS.htmlBytes + 4).toString("utf8");
     if (body.length > EVIDENCE_LIMITS.htmlBytes) html = body.toString("utf8"); // truncation recorded by buildHtml
   } catch {
     html = null;
   }
-  const title = await page.title().catch(() => null);
+  const title = await within(page.title(), 3_000, null);
 
   const wall = detectBotWall({ status: response.status(), headers: lh, title, htmlHead: (html ?? "").slice(0, 65_536) });
   if (wall) throw new ScanFailure("bot_wall", MESSAGES.botWall, { vendor: wall.vendor, signal: wall.signal, status: response.status() });
@@ -293,16 +316,32 @@ async function runInContext(o: PassOptions, context: BrowserContext): Promise<Ra
   if (navBlocked) throw failSsrf(navBlocked);
   await o.onMilestone?.("settled");
 
-  const [head, assets, runtime, vitals, perf, cookies] = await Promise.all([
-    page.evaluate(HEAD_PROBE).catch(() => ({ title, lang: null, meta: [], links: [], jsonLd: [] })) as Promise<RawHead>,
-    page.evaluate(ASSETS_PROBE).catch(() => ({ scripts: [], styles: [] })) as Promise<RawAssets>,
-    page.evaluate(RUNTIME_PROBE).catch(() => ({})) as Promise<Record<string, unknown>>,
-    page.evaluate(VITALS_READ).catch(() => null) as Promise<RawVitals | null>,
-    page
-      .evaluate(PERF_PROBE)
-      .catch(() => null) as Promise<RawPass["perf"]>,
-    context.cookies(),
-  ]);
+  const incomplete: string[] = [];
+  const probeMs = Math.min(6_000, Math.max(1_000, remaining(o.deadline) - 12_000));
+  const probe = () =>
+    Promise.all([
+      within(page.evaluate(HEAD_PROBE) as Promise<RawHead | null>, probeMs, null),
+      within(page.evaluate(ASSETS_PROBE) as Promise<RawAssets | null>, probeMs, null),
+      within(page.evaluate(RUNTIME_PROBE) as Promise<Record<string, unknown> | null>, probeMs, null),
+      within(page.evaluate(VITALS_READ) as Promise<RawVitals | null | undefined>, probeMs, undefined),
+      within(page.evaluate(PERF_PROBE) as Promise<RawPass["perf"] | undefined>, probeMs, undefined),
+      within(context.cookies() as Promise<RawCookie[] | null>, probeMs, null),
+    ] as const);
+  const missing = (x: unknown, i: number) => (i === 3 || i === 4 ? x === undefined : x === null);
+  let r = await probe();
+  // A page busy with startup work can miss the first window; ask once more if time allows.
+  if (r.some(missing) && remaining(o.deadline) > 20_000) {
+    const again = await probe();
+    r = r.map((x, i) => (missing(x, i) ? again[i] : x)) as unknown as typeof r;
+  }
+  const names = ["head", "assets", "runtime", "vitals", "timing", "cookies"];
+  r.forEach((x, i) => missing(x, i) && incomplete.push(names[i]!));
+  const head: RawHead = r[0] ?? { title, lang: null, meta: [], links: [], jsonLd: [] };
+  const assets: RawAssets = r[1] ?? { scripts: [], styles: [] };
+  const runtime = r[2] ?? {};
+  const vitals = r[3] ?? null;
+  const perf = r[4] ?? null;
+  const cookies = r[5] ?? [];
   await o.onMilestone?.("probed");
 
   const screenshot = await page
@@ -321,7 +360,8 @@ async function runInContext(o: PassOptions, context: BrowserContext): Promise<Ra
       let tail: string | null = null;
       if (!headers["sourcemap"] && !headers["x-sourcemap"]) {
         try {
-          const b = (await cdp.send("Network.getResponseBody", { requestId: r.requestId })) as { body: string; base64Encoded: boolean };
+          const b = (await within(cdp.send("Network.getResponseBody", { requestId: r.requestId }), 2_000, null)) as { body: string; base64Encoded: boolean } | null;
+          if (!b) throw new Error("body timeout");
           const text = b.base64Encoded ? Buffer.from(b.body, "base64").toString("utf8") : b.body;
           tail = text.length > EVIDENCE_LIMITS.resourceInspectBytes ? text.slice(-EVIDENCE_LIMITS.resourceInspectBytes) : text;
         } catch {
@@ -333,9 +373,9 @@ async function runInContext(o: PassOptions, context: BrowserContext): Promise<Ra
   }
 
   const hops = redirectHops(response);
-  await fillHopStatuses(hops, response);
+  await within(fillHopStatuses(hops, response), 3_000, undefined);
 
-  const security = await response.securityDetails().catch(() => null);
+  const security = await within(response.securityDetails(), 3_000, null);
 
   return {
     viewport: VIEWPORTS[o.kind],
@@ -356,6 +396,7 @@ async function runInContext(o: PassOptions, context: BrowserContext): Promise<Ra
     security: security ? { ...security } : null,
     screenshot,
     inspected,
+    incomplete,
   };
 }
 

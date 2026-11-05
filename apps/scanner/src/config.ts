@@ -17,6 +17,11 @@ const Env = z.object({
   /** Dev sandboxes only. See net/guardProxy.ts. */
   SCANNER_UPSTREAM_PROXY: z.string().url().optional(),
   CHROMIUM_EXECUTABLE: z.string().optional(),
+  /** Analysis model. Without a key, analysis runs the deterministic rules only and says so. */
+  GEMINI_API_KEY: z.string().min(10).optional(),
+  GEMINI_MODEL: z.string().default("gemini-3.8-flash"),
+  GEMINI_TIMEOUT_MS: z.coerce.number().int().min(5_000).max(120_000).default(35_000),
+  ANALYSIS_TIMEOUT_MS: z.coerce.number().int().min(10_000).max(180_000).default(45_000),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace"]).default("info"),
 });
 

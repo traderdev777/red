@@ -3,7 +3,8 @@ import { z } from "zod";
 import { currentUser } from "@/lib/supabase/server";
 import { ScanView, type ScanViewData } from "@/components/app/ScanView";
 import { EvidencePanel } from "@/components/app/evidence/EvidencePanel";
-import { loadEvidence } from "@/lib/server/evidence";
+import { ReportPanel } from "@/components/app/report/ReportPanel";
+import { loadAnalysis, loadEvidence } from "@/lib/server/evidence";
 import { scannerHealth } from "@/lib/server/scanner";
 
 export const metadata = { title: "Scan" };
@@ -26,8 +27,10 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
   const { result, ...scan } = data;
 
   // Evidence only for a finished scan, and only after the RLS read above succeeded.
-  const [evidence, health] = await Promise.all([
-    scan.status === "done" ? loadEvidence({ id: scan.id, cached_from: scan.cached_from, result }) : null,
+  const ref = { id: scan.id, cached_from: scan.cached_from, result };
+  const [evidence, analysis, health] = await Promise.all([
+    scan.status === "done" ? loadEvidence(ref) : null,
+    scan.status === "done" ? loadAnalysis(ref) : null,
     scan.status === "queued" ? scannerHealth() : null,
   ]);
 
@@ -36,7 +39,22 @@ export default async function ScanPage({ params }: { params: Promise<{ id: strin
       <ScanView
         initial={scan}
         scanner={health}
-        evidence={evidence ? <EvidencePanel load={evidence} collectedAt={scan.finished_at} /> : null}
+        evidence={
+          evidence ? (
+            <div className="flex flex-col gap-12">
+              {analysis ? (
+                <ReportPanel analysis={analysis} scanId={scan.id} />
+              ) : (
+                <p className="text-step-n1 text-chrome-500 font-mono">
+                  No analysis on this scan: it finished before the analysis stage existed. Scan again for findings.
+                </p>
+              )}
+              <div className="border-line border-t pt-10">
+                <EvidencePanel load={evidence} collectedAt={scan.finished_at} />
+              </div>
+            </div>
+          ) : null
+        }
       />
     </div>
   );

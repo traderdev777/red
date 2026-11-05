@@ -1,5 +1,5 @@
 import "server-only";
-import { EvidenceDocSchema, ScanResultSchema, type EvidenceDoc } from "@red/shared";
+import { AnalysisSchema, EvidenceDocSchema, ScanResultSchema, type Analysis, type EvidenceDoc } from "@red/shared";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 
 /** Screenshots are private; links expire after this many seconds. */
@@ -41,4 +41,21 @@ export async function loadEvidence(scan: { id: string; cached_from: string | nul
   };
   const [desktop, mobile] = await Promise.all([sign(doc.screenshots.desktop), sign(doc.screenshots.mobile)]);
   return { status: "ok", doc, screenshots: { desktop, mobile } };
+}
+
+/** Full analysis from Storage (scans.result only carries its summary). Same ownership rule as evidence. */
+export async function loadAnalysis(scan: { id: string; cached_from: string | null; result: unknown }): Promise<Analysis | null> {
+  const parsed = ScanResultSchema.safeParse(scan.result);
+  const path = parsed.success ? parsed.data.analysis?.analysisPath : undefined;
+  if (!path) return null;
+  const allowed = [scan.id, scan.cached_from].filter(Boolean).map((id) => `${id}/`);
+  if (!allowed.some((p) => path.startsWith(p)) || path.includes("..")) return null;
+  const { data, error } = await supabaseAdmin().storage.from("evidence").download(path);
+  if (error || !data) return null;
+  try {
+    const v = AnalysisSchema.safeParse(JSON.parse(await data.text()));
+    return v.success ? v.data : null;
+  } catch {
+    return null;
+  }
 }
