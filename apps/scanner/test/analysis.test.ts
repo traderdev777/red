@@ -103,10 +103,11 @@ describe("analysis stages without a model key", () => {
   it("produce a valid Analysis with rule findings and an honest model status", async () => {
     const progress: number[] = [];
     const uploads: string[] = [];
+    const indexed: number[] = [];
     const ctx = {
       scan: { id: doc.scanId },
       cfg: { GEMINI_MODEL: "gemini-3.8-flash", GEMINI_API_KEY: undefined },
-      db: { upload: async (path: string) => void uploads.push(path) },
+      db: { upload: async (path: string) => void uploads.push(path), indexFindings: async (_id: string, f: unknown[]) => void indexed.push(f.length) },
       log,
       evidence: doc,
       progress: async (p: number) => void progress.push(p),
@@ -121,6 +122,7 @@ describe("analysis stages without a model key", () => {
     expect(a.findings.every((f) => f.evidence.length > 0 && f.evidence.every((e) => cat.has(e.id)))).toBe(true);
     expect(progress).toEqual([20, 40, 95]);
     expect(uploads).toEqual([`${doc.scanId}/analysis.json`]);
+    expect(indexed).toEqual([a.findings.length]);
   });
 });
 

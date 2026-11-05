@@ -8,7 +8,7 @@ import type { StageContext } from "../src/pipeline/types";
 
 const doc = EvidenceDocSchema.parse(JSON.parse(readFileSync(process.argv[2]!, "utf8")));
 const cfg = loadConfig({ ...process.env, SUPABASE_URL: "http://127.0.0.1:1", SUPABASE_SERVICE_ROLE_KEY: "x".repeat(32) });
-const ctx = { scan: { id: doc.scanId }, cfg, log, evidence: doc, db: { upload: async () => {} }, progress: async (p: number) => console.error("progress", p), onAbort: () => {} } as unknown as StageContext;
+const ctx = { scan: { id: doc.scanId }, cfg, log, evidence: doc, db: { upload: async () => {}, indexFindings: async () => {} }, progress: async (p: number) => console.error("progress", p), onAbort: () => {} } as unknown as StageContext;
 await fingerprintStage(ctx);
 await compressStage(ctx);
 await analyzeStage(ctx);

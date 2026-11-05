@@ -3,6 +3,8 @@
  * "analyzing". The model is optional: without a key, or if it fails, the scan
  * still finishes with the rule findings and the reason is recorded.
  */
+import { createHash } from "node:crypto";
+import { open as openSecret } from "@red/shared/server";
 import { AnalysisSchema, storageKeyFor, type Analysis, type BuildAction, type Finding, type Technology } from "@red/shared";
 import { buildCatalog, type Catalog } from "./catalog";
 import { fingerprint } from "./fingerprint";
@@ -104,17 +106,30 @@ export async function analyzeStage(ctx: StageContext) {
   const scanId = ctx.scan.id;
   const ruleIds = new Set(s.rules.map((r) => r.ruleId));
   const ruleEvidence = new Map(s.rules.map((r) => [r.ruleId, new Set(r.evidenceIds)]));
-  let model: Analysis["model"] = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "not_configured", reason: "GEMINI_API_KEY is not set; rule findings only.", rejected: 0, ms: null };
+  let model: Analysis["model"] = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "not_configured", reason: "GEMINI_API_KEY is not set; rule findings only.", rejected: 0, ms: null, keySource: null };
   let modelFindings: ModelFinding[] = [];
   let overview: string | null = null;
   let priority: string[] = [];
   let ruleActions = new Map<string, ModelFinding["actions"]>();
 
-  if (ctx.cfg.GEMINI_API_KEY) {
+  // The scan owner's own key wins over the server key.
+  let apiKey = ctx.cfg.GEMINI_API_KEY ?? null;
+  let keySource: "user" | "server" | null = apiKey ? "server" : null;
+  const sealed = ctx.cfg.RED_SECRETS_KEY && ctx.db.userGeminiKey ? await ctx.db.userGeminiKey(ctx.scan.user_id).catch(() => null) : null;
+  if (sealed) {
+    try {
+      apiKey = openSecret(sealed, ctx.cfg.RED_SECRETS_KEY);
+      keySource = "user";
+    } catch {
+      ctx.log.warn("user Gemini key could not be decrypted; falling back to the server key");
+    }
+  }
+
+  if (apiKey) {
     await ctx.progress(ANALYSIS_MILESTONES.model);
     try {
       const { reply, ms } = await callGemini(
-        { apiKey: ctx.cfg.GEMINI_API_KEY, model: ctx.cfg.GEMINI_MODEL, timeoutMs: ctx.cfg.GEMINI_TIMEOUT_MS, proxy: ctx.cfg.SCANNER_UPSTREAM_PROXY ?? null },
+        { apiKey, model: ctx.cfg.GEMINI_MODEL, timeoutMs: ctx.cfg.GEMINI_TIMEOUT_MS, proxy: ctx.cfg.SCANNER_UPSTREAM_PROXY ?? null },
         s.prompt!,
       );
       const v = validateReply(reply, s.catalog, ruleIds, ruleEvidence);
@@ -122,10 +137,10 @@ export async function analyzeStage(ctx: StageContext) {
       overview = v.overview;
       priority = v.priority;
       ruleActions = v.ruleActions;
-      model = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "ok", reason: null, rejected: v.rejected, ms };
+      model = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "ok", reason: null, rejected: v.rejected, ms, keySource };
       ctx.log.info({ ms, kept: modelFindings.length, rejected: v.rejected }, "model done");
     } catch (e) {
-      model = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "failed", reason: (e as Error).message.slice(0, 500), rejected: 0, ms: null };
+      model = { provider: "gemini", model: ctx.cfg.GEMINI_MODEL, status: "failed", reason: (e as Error).message.slice(0, 500), rejected: 0, ms: null, keySource };
       ctx.log.warn({ err: (e as Error).message }, "model failed; keeping rule findings");
     }
     await ctx.progress(ANALYSIS_MILESTONES.modelDone);
@@ -133,7 +148,8 @@ export async function analyzeStage(ctx: StageContext) {
 
   const findings: Finding[] = [
     ...s.rules.map((r) => toFinding(scanId, r.ruleId, { ...r, actions: [...r.actions, ...(ruleActions.get(r.ruleId) ?? [])] }, s.catalog)),
-    ...modelFindings.map((f, i) => toFinding(scanId, `model.${i + 1}`, f, s.catalog)),
+    // Content-addressed ids so a user's done/dismissed status survives a re-scan.
+    ...modelFindings.map((f) => toFinding(scanId, `model.${createHash("sha1").update(`${f.category}|${f.title}`).digest("hex").slice(0, 12)}`, f, s.catalog)),
   ].filter((f) => f.evidence.length > 0);
 
   // Order: model priority when it named real ids/titles, then severity.
@@ -157,5 +173,6 @@ export async function analyzeStage(ctx: StageContext) {
   ctx.analysis = analysis;
   ctx.analysisPath = storageKeyFor(scanId, "analysis.json");
   await ctx.db.upload(ctx.analysisPath, JSON.stringify(analysis), "application/json");
+  await ctx.db.indexFindings(scanId, analysis.findings);
   await ctx.progress(ANALYSIS_MILESTONES.stored);
 }

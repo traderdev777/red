@@ -16,8 +16,7 @@ export const NAV: NavItem[] = [
     href: "/app/library",
     label: "Library",
     icon: Library,
-    match: () => false,
-    disabled: "Coming in a later build",
+    match: (p) => p.startsWith("/app/library"),
   },
   {
     href: "/app/settings",

@@ -87,6 +87,20 @@ export class Db {
     if (error) throw new Error(`scan_audit: ${error.message}`);
   }
 
+  /** The scan owner's own Gemini key, still sealed. null when they have none. */
+  async userGeminiKey(userId: string): Promise<string | null> {
+    const { data, error } = await this.client.from("user_gemini_keys").select("ciphertext").eq("user_id", userId).maybeSingle();
+    if (error) return null;
+    return (data?.ciphertext as string | undefined) ?? null;
+  }
+
+  /** Library index: one row per finding (ids, severity, title; no evidence). */
+  async indexFindings(scanId: string, findings: { id: string; category: string; severity: string; confidence: { kind: string; score: number }; title: string; actions: unknown[] }[]) {
+    const rows = findings.map((f) => ({ id: f.id, category: f.category, severity: f.severity, kind: f.confidence.kind, score: f.confidence.score, title: f.title, actions: f.actions.length }));
+    const { error } = await this.client.rpc("index_scan_findings", { p_scan_id: scanId, p_findings: rows });
+    if (error) throw new Error(`index_scan_findings: ${error.message}`);
+  }
+
   async upload(path: string, body: Buffer | string, contentType: string): Promise<void> {
     const { error } = await this.client.storage
       .from("evidence")

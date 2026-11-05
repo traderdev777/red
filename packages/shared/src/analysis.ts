@@ -47,6 +47,8 @@ export const ModelRunSchema = z.object({
   /** Findings the model proposed that were dropped by validation (uncited, unknown ids, unverifiable numbers). */
   rejected: z.number().int().nonnegative(),
   ms: z.number().int().nonnegative().nullable(),
+  /** Whose key paid for the call. */
+  keySource: z.enum(["user", "server"]).nullable().default(null),
 });
 export type ModelRun = z.infer<typeof ModelRunSchema>;
 

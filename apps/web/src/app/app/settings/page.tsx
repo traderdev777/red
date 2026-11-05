@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
-import { KeyRound } from "lucide-react";
 import { currentUser } from "@/lib/supabase/server";
 import { readQuota } from "@/lib/quota";
 import { DeleteAccount } from "@/components/app/DeleteAccount";
 import { Button } from "@/components/ui/Button";
-import { Icon } from "@/components/ui/Icon";
+import { GeminiKeyForm } from "@/components/app/GeminiKeyForm";
+import { supabaseAdmin } from "@/lib/supabase/admin";
 
 export const metadata = { title: "Settings" };
 
@@ -13,6 +13,13 @@ export default async function SettingsPage() {
   if (!user) redirect("/login?next=/app/settings");
   const quota = await readQuota(supabase, user);
   const provider = (user.app_metadata?.provider as string | undefined) ?? "email";
+  // Service role read of the caller's own row (the table has no user grants); only last4 leaves the server.
+  const { data: keyRow } = await supabaseAdmin()
+    .from("user_gemini_keys")
+    .select("last4, verified_at")
+    .eq("user_id", user.id)
+    .maybeSingle();
+  const saved = keyRow ? { last4: keyRow.last4 as string, verifiedAt: (keyRow.verified_at as string | null) ?? null } : null;
 
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-12 px-4 py-12 md:px-8">
@@ -64,22 +71,13 @@ export default async function SettingsPage() {
           <h2 id="byok" className="text-step-n2 tracking-label text-chrome-500 font-mono uppercase">
             Bring your own Gemini key
           </h2>
-          <span className="text-step-n2 text-chrome-500 font-mono">Coming in a later build</span>
         </div>
         <div className="col-span-12 flex flex-col gap-3 md:col-span-8">
-          <p className="text-step-n1 text-chrome-300">
-            Run analysis on your own Gemini quota. Not available yet; nothing here is stored.
+          <p className="text-step-n1 text-chrome-300 max-w-[60ch]">
+            Analysis runs on your own Gemini quota instead of RED&rsquo;s. The scanner reads the key only while analyzing
+            your scans.
           </p>
-          <div
-            aria-hidden
-            className="border-line flex h-12 items-center gap-3 rounded-md border border-dashed px-4"
-          >
-            <Icon as={KeyRound} className="text-chrome-500" />
-            <span className="text-step-n1 text-chrome-500 font-mono">Gemini API key</span>
-          </div>
-          <Button variant="ghost" disabled className="self-start">
-            Save key
-          </Button>
+          <GeminiKeyForm saved={saved} />
         </div>
       </section>
     </div>

@@ -10,7 +10,7 @@ export function modelLine(a: Analysis): string {
   const m = a.model;
   const fromModel = a.findings.filter((f) => f.id.startsWith("model.")).length;
   if (m.status === "ok") {
-    return `Rules plus ${m.model}: ${fromModel} model finding${fromModel === 1 ? "" : "s"} kept${m.rejected ? `, ${m.rejected} rejected for missing or unverifiable evidence` : ""}.`;
+    return `Rules plus ${m.model}${m.keySource === "user" ? " on your own key" : ""}: ${fromModel} model finding${fromModel === 1 ? "" : "s"} kept${m.rejected ? `, ${m.rejected} rejected for missing or unverifiable evidence` : ""}.`;
   }
   if (m.status === "not_configured") return "Rule findings only. The model is not configured for this scanner.";
   if (m.status === "failed") return `Rule findings only. The model call failed: ${m.reason ?? "unknown error"}.`;

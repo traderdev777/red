@@ -111,6 +111,8 @@ export async function startScanCore(opts: {
     .eq("url_hash", hash)
     .eq("status", "done")
     .gte("finished_at", since)
+    // Only results that went through analysis; older evidence-only scans are re-run.
+    .not("result->>analysis", "is", null)
     .order("finished_at", { ascending: false })
     .limit(1)
     .maybeSingle();
