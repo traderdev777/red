@@ -8,3 +8,4 @@ dist
 pages-out
 apps/.web-pages
 apps/scanner/.env
+.vercel
