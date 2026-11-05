@@ -7,6 +7,9 @@ import { EmailInput } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 
+/** Google sign-in shows only once the provider is configured in Supabase. */
+const GOOGLE_ENABLED = process.env.NEXT_PUBLIC_GOOGLE_AUTH === "1";
+
 function GoogleGlyph() {
   // Google's "G" in one color: brand guidelines allow monochrome on dark UI.
   return (
@@ -58,26 +61,30 @@ export function LoginForm({ next, notice }: { next: string; notice?: string }) {
           {notice}
         </p>
       )}
-      <form action={signInWithGoogle}>
-        <input type="hidden" name="next" value={next} />
-        <Button
-          type="submit"
-          variant="ghost"
-          size="lg"
-          className="w-full"
-          leading={<GoogleGlyph />}
-        >
-          Continue with Google
-        </Button>
-      </form>
+      {GOOGLE_ENABLED && (
+        <>
+          <form action={signInWithGoogle}>
+            <input type="hidden" name="next" value={next} />
+            <Button
+              type="submit"
+              variant="ghost"
+              size="lg"
+              className="w-full"
+              leading={<GoogleGlyph />}
+            >
+              Continue with Google
+            </Button>
+          </form>
 
-      <div className="flex items-center gap-4" aria-hidden>
-        <span className="bg-line h-px flex-1" />
-        <span className="text-step-n2 tracking-label text-chrome-500 font-mono uppercase">
-          or email
-        </span>
-        <span className="bg-line h-px flex-1" />
-      </div>
+          <div className="flex items-center gap-4" aria-hidden>
+            <span className="bg-line h-px flex-1" />
+            <span className="text-step-n2 tracking-label text-chrome-500 font-mono uppercase">
+              or email
+            </span>
+            <span className="bg-line h-px flex-1" />
+          </div>
+        </>
+      )}
 
       <form action={action} noValidate className="flex flex-col gap-3">
         <input type="hidden" name="next" value={next} />

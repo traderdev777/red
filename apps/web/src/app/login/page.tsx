@@ -50,7 +50,9 @@ export default async function LoginPage({
             </p>
           ) : (
             <p className="text-step-0 text-chrome-300">
-              No password. A Google account or an email link.
+              {process.env.NEXT_PUBLIC_GOOGLE_AUTH === "1"
+                ? "No password. A Google account or an email link."
+                : "No password. Just a link to your email."}
             </p>
           )}
         </div>

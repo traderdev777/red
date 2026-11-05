@@ -67,6 +67,7 @@ export async function sendMagicLink(_prev: LoginState, form: FormData): Promise<
 }
 
 export async function signInWithGoogle(form: FormData) {
+  if (process.env.NEXT_PUBLIC_GOOGLE_AUTH !== "1") redirect("/login?error=oauth");
   if (!supabaseConfigured()) redirect("/login?error=not-configured");
   const next = safeNext(String(form.get("next") ?? ""));
   const supabase = await supabaseServer();
