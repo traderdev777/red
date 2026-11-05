@@ -1,0 +1,32 @@
+name: Scanner image
+
+on:
+  push:
+    branches: [main]
+    paths: ["apps/scanner/**", "packages/shared/**", "docker-compose.yml", "pnpm-lock.yaml", ".github/workflows/scanner-image.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate compose file
+        run: |
+          printf 'SUPABASE_URL=https://example.supabase.co\nSUPABASE_SERVICE_ROLE_KEY=placeholder-not-a-key-000000000000\n' > apps/scanner/.env
+          docker compose config --quiet
+      - name: Build image
+        run: docker build -f apps/scanner/Dockerfile -t red-scanner:ci .
+      - name: Runs as non-root
+        run: test "$(docker run --rm red-scanner:ci id -un)" = "pwuser"
+      - name: Collector + SSRF tests inside the image (real Chromium)
+        run: docker run --rm --shm-size=1g -e NODE_ENV=test -e LOG_LEVEL=error red-scanner:ci pnpm exec vitest run
+      - name: Live collect of a public page inside the image (Chromium, egress guard, Lighthouse)
+        run: |
+          docker run --rm --shm-size=1g -e SCANNER_LIGHTHOUSE=on -e LOG_LEVEL=error red-scanner:ci \
+            node --import tsx scripts/collect-once.ts https://example.com | tee out.txt
+          grep -q '"status": 200' out.txt
+          grep -q '"status": "ok"' out.txt

@@ -8,7 +8,7 @@
     "start": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
-    "test": "vitest run --root ../.. apps/scanner"
+    "test": "vitest run"
   },
   "dependencies": {
     "@red/shared": "workspace:*",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/node": "^22.7.0",
     "tsx": "^4.23.15",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
   }
 }
