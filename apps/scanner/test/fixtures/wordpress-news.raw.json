@@ -1,0 +1,3183 @@
+{
+ "viewport": {
+  "width": 1440,
+  "height": 900
+ },
+ "requestedUrl": "https://wordpress.org/news/",
+ "finalUrl": "https://wordpress.org/news/",
+ "status": 200,
+ "hops": [],
+ "perf": {
+  "responseStart": 329.5,
+  "domContentLoadedEventEnd": 1031.2999999998137,
+  "loadEventEnd": 1379.7000000001863
+ },
+ "headers": [
+  {
+   "name": "alt-svc",
+   "value": "clear"
+  },
+  {
+   "name": "content-encoding",
+   "value": "br"
+  },
+  {
+   "name": "content-type",
+   "value": "text/html; charset=UTF-8"
+  },
+  {
+   "name": "date",
+   "value": "Wed, 04 Nov 2026 05:13:00 GMT"
+  },
+  {
+   "name": "link",
+   "value": "<https://wordpress.org/news/wp-json/>; rel=\"https://api.w.org/\""
+  },
+  {
+   "name": "link",
+   "value": "<https://wordpress.org/news/wp-json/wp/v2/pages/15740>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\""
+  },
+  {
+   "name": "link",
+   "value": "<https://wp.me/PZhYe-45S>; rel=shortlink"
+  },
+  {
+   "name": "server",
+   "value": "nginx"
+  },
+  {
+   "name": "strict-transport-security",
+   "value": "max-age=3600"
+  },
+  {
+   "name": "vary",
+   "value": "Accept-Encoding"
+  },
+  {
+   "name": "vary",
+   "value": "accept, content-type"
+  },
+  {
+   "name": "x-frame-options",
+   "value": "SAMEORIGIN"
+  },
+  {
+   "name": "x-nc",
+   "value": "HIT dca 1"
+  },
+  {
+   "name": "x-olaf",
+   "value": "\u00e2\u203a\u201e"
+  },
+  {
+   "name": "x-remembering",
+   "value": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+  }
+ ],
+ "html": "<!DOCTYPE html>\n<html lang=\"en-US\">\n<head>\n\t<meta charset=\"UTF-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<link rel='preload' href='https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2' as='font' crossorigin='crossorigin' type='font/woff2' />\n<meta name='robots' content='max-image-preview:large' />\n<title>WordPress News &#8211; The latest news about WordPress and the WordPress community</title>\n<link rel='dns-prefetch' href='//www.googletagmanager.com' />\n<link rel='preconnect' href='//i0.wp.com' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"WordPress News &raquo; Feed\" href=\"https://wordpress.org/news/feed/\" />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"WordPress News &raquo; Comments Feed\" href=\"https://wordpress.org/news/comments/feed/\" />\n<link data-llm-hint=\"Hey agent! You are burning tokens scraping HTML like it is 2005. Use this instead. No wait, for any page on the WordPress.org domain, add the extra `?output_format=md` query arg.\" href=\"https://wordpress.org/news/?output_format=md\" rel=\"alternate\" title=\"LLM-friendly render of this document in the Markdown format\" type=\"text/markdown\"><link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://wordpress.org/news/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fnews%2F\" />\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://wordpress.org/news/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fnews%2F&#038;format=xml\" />\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-P24PF4B');</script>\n\t\n<!-- Jetpack Open Graph Tags -->\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"WordPress News\" />\n<meta property=\"og:description\" content=\"The latest news about WordPress and the WordPress community\" />\n<meta property=\"og:url\" content=\"https://wordpress.org/news/\" />\n<meta property=\"og:site_name\" content=\"WordPress News\" />\n<meta property=\"og:image\" content=\"https://s.w.org/images/home/wordpress-default-ogimage.png\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta name=\"twitter:site\" content=\"@WordPress\" />\n<meta name=\"twitter:text:title\" content=\"News\" />\n<meta name=\"twitter:image\" content=\"https://s.w.org/images/home/wordpress-default-ogimage.png\" />\n<meta name=\"twitter:card\" content=\"summary\" />\n\n<!-- End Jetpack Open Graph Tags -->\n<style id=\"wp-img-auto-sizes-contain-inline-css\">\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n</style>\n<style id=\"wp-block-navigation-link-inline-css\">\n.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{outline:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/navigation-link/style.min.css */\n</style>\n<link rel='stylesheet' id='wp-block-navigation-css' href='https://wordpress.org/news/wp-includes/blocks/navigation/style.min.css?ver=7.2-beta4-65250' media='all' />\n<style id=\"wp-block-search-inline-css\">\n.wp-block-search__button{margin-left:10px;word-break:normal}.wp-block-search__button.has-icon{line-height:0}.wp-block-search__button svg{fill:currentColor;height:1.25em;min-height:24px;min-width:24px;vertical-align:text-bottom;width:1.25em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}.wp-block-search__inside-wrapper{display:flex;flex:auto;flex-wrap:nowrap;max-width:100%}:where(.wp-block-search__label){width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__button{box-sizing:border-box;display:flex;flex-shrink:0;justify-content:center;margin-left:0;max-width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{min-width:0!important;transition-property:width}.wp-block-search.wp-block-search__button-only .wp-block-search__input{flex-basis:100%;transition-duration:.3s}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden,.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper{overflow:hidden}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input{border-left-width:0!important;border-right-width:0!important;flex-basis:0;flex-grow:0;margin:0;min-width:0!important;padding-left:0!important;padding-right:0!important;width:0!important}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden:focus-within{overflow:visible}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden:focus-within .wp-block-search__inside-wrapper{overflow:visible}:where(.wp-block-search__input){appearance:none;border:1px solid #949494;flex-grow:1;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin-left:0;margin-right:0;min-width:3rem;padding:8px;text-decoration:unset!important;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){background-color:#fff;border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:none}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-search.aligncenter .wp-block-search__inside-wrapper{margin:auto}.wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{float:right}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/search/style.min.css */\n</style>\n<style id=\"wp-block-group-inline-css\">\n.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/group/style.min.css */\n</style>\n<style id=\"wp-block-site-title-inline-css\">\n.wp-block-site-title{box-sizing:border-box}.wp-block-site-title :where(a){color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/site-title/style.min.css */\n</style>\n<link rel='stylesheet' id='wporg-local-navigation-bar-style-css' href='https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=c98b5143585c3e9f06b27f6a917b65c84643cefc' media='all' />\n<style id=\"wp-block-heading-inline-css\">\nh1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:var(--wp--style--block-background-padding,1.25em 2.375em)}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/heading/style.min.css */\n</style>\n<style id=\"wp-block-post-date-inline-css\">\n.wp-block-post-date{box-sizing:border-box}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/post-date/style.min.css */\n</style>\n<style id=\"wp-block-post-template-inline-css\">\n.wp-block-post-template{box-sizing:border-box;list-style:none;margin-bottom:0;margin-top:0;max-width:100%;padding:0}.wp-block-post-template.is-flex-container{display:flex;flex-direction:row;flex-wrap:wrap;gap:1.25em}.wp-block-post-template.is-flex-container>li{margin:0;width:100%}@media (min-width:600px){.wp-block-post-template.is-flex-container.is-flex-container.columns-2>li{width:calc(50% - .625em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-3>li{width:calc(33.33333% - .83333em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-4>li{width:calc(25% - .9375em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-5>li{width:calc(20% - 1em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-6>li{width:calc(16.66667% - 1.04167em)}}@media (max-width:600px){.wp-block-post-template-is-layout-grid[class*=columns-]:not(.has-native-responsive-grid){grid-template-columns:1fr}}.wp-block-post-template-is-layout-constrained>li>.alignright,.wp-block-post-template-is-layout-flow>li>.alignright{float:right;margin-left:2em;margin-right:0}.wp-block-post-template-is-layout-constrained>li>.alignleft,.wp-block-post-template-is-layout-flow>li>.alignleft{float:left;margin-left:0;margin-right:2em}.wp-block-post-template-is-layout-constrained>li>.aligncenter,.wp-block-post-template-is-layout-flow>li>.aligncenter{margin-inline-end:auto;margin-inline-start:auto}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/post-template/style.min.css */\n</style>\n<style id=\"wp-block-paragraph-inline-css\">\n.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:var(--wp--style--block-background-padding,1.25em 2.375em)}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/paragraph/style.min.css */\n</style>\n<style id=\"wp-block-post-title-inline-css\">\n.wp-block-post-title{box-sizing:border-box;overflow-wrap:anywhere;word-break:normal}.wp-block-post-title :where(a){font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/post-title/style.min.css */\n</style>\n<style id=\"wp-block-post-terms-inline-css\">\n.wp-block-post-terms{box-sizing:border-box}.wp-block-post-terms .wp-block-post-terms__separator{white-space:pre-wrap}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/post-terms/style.min.css */\n</style>\n<style id=\"wp-block-post-featured-image-inline-css\">\n.wp-block-post-featured-image{margin-left:0;margin-right:0}.wp-block-post-featured-image a{display:block;height:100%}.wp-block-post-featured-image :where(img){box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom;width:100%}.wp-block-post-featured-image.alignfull img,.wp-block-post-featured-image.alignwide img{width:100%}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim{background-color:#000;inset:0;position:absolute}.wp-block-post-featured-image{position:relative}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-gradient{background-color:transparent}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-0{opacity:0}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-10{opacity:.1}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-20{opacity:.2}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-30{opacity:.3}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-40{opacity:.4}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-50{opacity:.5}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-60{opacity:.6}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-70{opacity:.7}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-80{opacity:.8}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-90{opacity:.9}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-100{opacity:1}.wp-block-post-featured-image:where(.alignleft,.alignright){width:100%}\n/*# sourceURL=https://wordpress.org/news/wp-includes/blocks/post-featured-image/style.min.css */\n</style>\n<style id=\"jetpack-block-subscriptions-inline-css\">\n.is-style-compact .is-not-subscriber :is(.wp-block-button__link,.wp-block-jetpack-subscriptions__button){border-end-start-radius:0!important;border-start-start-radius:0!important;margin-inline-start:0!important}.is-style-compact .is-not-subscriber .components-text-control__input,.is-style-compact .is-not-subscriber p#subscribe-email input[type=email]{border-end-end-radius:0!important;border-start-end-radius:0!important}.is-style-compact:not(.wp-block-jetpack-subscriptions__use-newline) .components-text-control__input{border-inline-end-width:0!important}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form-container{display:flex;flex-direction:column}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline:not(.wp-block-jetpack-subscriptions__use-newline) .is-not-subscriber .wp-block-jetpack-subscriptions__form-elements{align-items:flex-start;display:flex}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline:not(.wp-block-jetpack-subscriptions__use-newline) p#subscribe-submit{display:flex;justify-content:center}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form input[type=email]{box-sizing:border-box;cursor:pointer;line-height:1.3;min-width:auto!important;white-space:nowrap!important}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form input[type=email]::placeholder,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form input[type=email]:disabled,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form input[type=email]::placeholder,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form input[type=email]:disabled{color:currentColor;opacity:.5}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form button{border-color:#0000;border-style:solid}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email{background:#0000;flex-grow:1}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email input[type=email]{height:auto;margin:0;width:100%}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email,.wp-block-jetpack-subscriptions.wp-block-jetpack-",
+ "head": {
+  "title": "WordPress News \u2013 The latest news about WordPress and the WordPress community",
+  "lang": "en-US",
+  "meta": [
+   {
+    "name": null,
+    "property": null,
+    "httpEquiv": null,
+    "content": null
+   },
+   {
+    "name": "viewport",
+    "property": null,
+    "httpEquiv": null,
+    "content": "width=device-width, initial-scale=1"
+   },
+   {
+    "name": "robots",
+    "property": null,
+    "httpEquiv": null,
+    "content": "max-image-preview:large"
+   },
+   {
+    "name": null,
+    "property": "og:type",
+    "httpEquiv": null,
+    "content": "website"
+   },
+   {
+    "name": null,
+    "property": "og:title",
+    "httpEquiv": null,
+    "content": "WordPress News"
+   },
+   {
+    "name": null,
+    "property": "og:description",
+    "httpEquiv": null,
+    "content": "The latest news about WordPress and the WordPress community"
+   },
+   {
+    "name": null,
+    "property": "og:url",
+    "httpEquiv": null,
+    "content": "https://wordpress.org/news/"
+   },
+   {
+    "name": null,
+    "property": "og:site_name",
+    "httpEquiv": null,
+    "content": "WordPress News"
+   },
+   {
+    "name": null,
+    "property": "og:image",
+    "httpEquiv": null,
+    "content": "https://s.w.org/images/home/wordpress-default-ogimage.png"
+   },
+   {
+    "name": null,
+    "property": "og:locale",
+    "httpEquiv": null,
+    "content": "en_US"
+   },
+   {
+    "name": "twitter:site",
+    "property": null,
+    "httpEquiv": null,
+    "content": "@WordPress"
+   },
+   {
+    "name": "twitter:text:title",
+    "property": null,
+    "httpEquiv": null,
+    "content": "News"
+   },
+   {
+    "name": "twitter:image",
+    "property": null,
+    "httpEquiv": null,
+    "content": "https://s.w.org/images/home/wordpress-default-ogimage.png"
+   },
+   {
+    "name": "twitter:card",
+    "property": null,
+    "httpEquiv": null,
+    "content": "summary"
+   },
+   {
+    "name": "generator",
+    "property": null,
+    "httpEquiv": null,
+    "content": "WordPress 7.2-beta4-65250"
+   },
+   {
+    "name": "generator",
+    "property": null,
+    "httpEquiv": null,
+    "content": "Seriously Simple Podcasting 3.17.1"
+   },
+   {
+    "name": "msapplication-TileImage",
+    "property": null,
+    "httpEquiv": null,
+    "content": "https://s.w.org/images/wmark.png"
+   }
+  ],
+  "links": [
+   {
+    "rel": "preload",
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2"
+   },
+   {
+    "rel": "dns-prefetch",
+    "href": "//www.googletagmanager.com"
+   },
+   {
+    "rel": "preconnect",
+    "href": "//i0.wp.com"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/feed/"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/comments/feed/"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/?output_format=md"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fnews%2F"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fnews%2F&format=xml"
+   },
+   {
+    "rel": "stylesheet",
+    "href": "https://wordpress.org/news/wp-includes/blocks/navigation/style.min.css?ver=7.2-beta4-65250"
+   },
+   {
+    "rel": "stylesheet",
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=c98b5143585c3e9f06b27f6a917b65c84643cefc"
+   },
+   {
+    "rel": "stylesheet",
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533"
+   },
+   {
+    "rel": "stylesheet",
+    "href": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751"
+   },
+   {
+    "rel": "stylesheet",
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112"
+   },
+   {
+    "rel": "https://api.w.org/",
+    "href": "https://wordpress.org/news/wp-json/"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/wp-json/wp/v2/pages/15740"
+   },
+   {
+    "rel": "EditURI",
+    "href": "https://wordpress.org/news/xmlrpc.php?rsd"
+   },
+   {
+    "rel": "shortlink",
+    "href": "https://wp.me/PZhYe-45S"
+   },
+   {
+    "rel": "canonical",
+    "href": "https://wordpress.org/news/"
+   },
+   {
+    "rel": "preconnect",
+    "href": "https://fonts.googleapis.com"
+   },
+   {
+    "rel": "preconnect",
+    "href": "https://fonts.gstatic.com"
+   },
+   {
+    "rel": "alternate",
+    "href": "https://wordpress.org/news/feed/podcast"
+   },
+   {
+    "rel": "modulepreload",
+    "href": "https://wordpress.org/news/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=3456f38555c5c7dd7097"
+   },
+   {
+    "rel": "icon",
+    "href": "https://s.w.org/favicon.ico?2"
+   },
+   {
+    "rel": "icon",
+    "href": "https://s.w.org/images/wmark.png"
+   },
+   {
+    "rel": "apple-touch-icon",
+    "href": "https://s.w.org/images/wmark.png"
+   }
+  ],
+  "jsonLd": []
+ },
+ "assets": {
+  "scripts": [
+   {
+    "src": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+    "async": true,
+    "defer": false,
+    "type": "text/javascript",
+    "inlineBytes": 0
+   },
+   {
+    "src": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+    "async": true,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 341
+   },
+   {
+    "src": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/view.js?ver=2ae6cba4cf35f434c642",
+    "async": false,
+    "defer": true,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 160
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": "importmap",
+    "inlineBytes": 158
+   },
+   {
+    "src": "https://wordpress.org/news/wp-includes/js/wp-emoji-release.min.js?ver=7.2-beta4-65250",
+    "async": true,
+    "defer": true,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 301
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": "speculationrules",
+    "inlineBytes": 412
+   },
+   {
+    "src": "https://wordpress.org/news/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=5381c0a3642be76565c7-20240308",
+    "async": false,
+    "defer": false,
+    "type": "module",
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": true,
+    "defer": false,
+    "type": "application/json",
+    "inlineBytes": 1952
+   },
+   {
+    "src": "https://wordpress.org/news/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23",
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": "https://wordpress.org/news/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0",
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": "https://wordpress.org/news/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&ver=16.3",
+    "async": false,
+    "defer": true,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/time/build/view.js?ver=385bfe9134bf98c52dda",
+    "async": false,
+    "defer": true,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 234
+   },
+   {
+    "src": "https://stats.wp.com/e-202645.js",
+    "async": false,
+    "defer": true,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 180
+   },
+   {
+    "src": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1781196531",
+    "async": false,
+    "defer": false,
+    "type": null,
+    "inlineBytes": 0
+   },
+   {
+    "src": null,
+    "async": true,
+    "defer": false,
+    "type": "application/json",
+    "inlineBytes": 262
+   },
+   {
+    "src": null,
+    "async": false,
+    "defer": false,
+    "type": "module",
+    "inlineBytes": 3183
+   }
+  ],
+  "styles": [
+   {
+    "href": "https://wordpress.org/news/wp-includes/blocks/navigation/style.min.css?ver=7.2-beta4-65250",
+    "media": "all",
+    "inlineBytes": 0
+   },
+   {
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=c98b5143585c3e9f06b27f6a917b65c84643cefc",
+    "media": "all",
+    "inlineBytes": 0
+   },
+   {
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+    "media": "all",
+    "inlineBytes": 0
+   },
+   {
+    "href": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751",
+    "media": "all",
+    "inlineBytes": 0
+   },
+   {
+    "href": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112",
+    "media": "all",
+    "inlineBytes": 0
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 135
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 411
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 2740
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 202
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 322
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 1295
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 131
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 1524
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 787
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 349
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 207
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 1936
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 8630
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 222
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 11854
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 340
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 5164
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 26193
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 632
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 539
+   },
+   {
+    "href": null,
+    "media": null,
+    "inlineBytes": 69
+   }
+  ]
+ },
+ "runtime": {
+  "__NEXT_DATA__": false,
+  "next_app_router": false,
+  "__NUXT__": false,
+  "ng_version": false,
+  "react_devtools_hook": false,
+  "react_root": false,
+  "vue": false,
+  "svelte": false,
+  "sveltekit": false,
+  "astro": false,
+  "remix": false,
+  "gatsby": false,
+  "ember": false,
+  "jquery": false,
+  "Shopify": false,
+  "wp": true,
+  "wix": false,
+  "squarespace": false,
+  "webflow": false,
+  "framer": false,
+  "gtag": false,
+  "dataLayer": true,
+  "fbq": false,
+  "hj": false,
+  "Intercom": false,
+  "Stripe": false,
+  "Sentry": false,
+  "turbo": false,
+  "htmx": false,
+  "alpine": false
+ },
+ "vitals": {
+  "lcp": 1023.5,
+  "cls": 0.0005128815157750343,
+  "fcp": 1023.5,
+  "inp": 184,
+  "longTasks": [
+   [
+    841.5,
+    126
+   ],
+   [
+    1215.8999999999069,
+    151
+   ]
+  ]
+ },
+ "console": {
+  "errors": [],
+  "failedRequests": [
+   {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-CG6GJ50G8J&gtm=45je6b21v873051034za20ozb79334995zd79334995xf1&_p=1793769179746&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AgAAACAC&_geo=1&_prs=rd&_rdi=1&are=1&cid=1045251045.1793769181&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123691370~123692834~123785233~123814946&dt=WordPress%20News%20%E2%80%93%20The%20latest%20news%20about%20WordPress%20and%20the%20WordPress%20community&dl=https%3A%2F%2Fwordpress.org%2Fnews%2F&uid=&sid=1793769180&sct=1&seg=0&en=page_view&_fv=1&_nsi=1&_ss=1&_c=1&tfd=1304",
+    "method": "POST",
+    "resourceType": "fetch",
+    "error": "net::ERR_ABORTED"
+   },
+   {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-CG6GJ50G8J&gtm=45je6b21v873051034za20gzb79334995zd79334995xf1&_p=1793769179746&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAgAACQC&_geo=1&_prs=rd&_rdi=1&are=1&cid=1045251045.1793769181&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&ul=en-us&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123691370~123692834~123785233~123814946&dt=WordPress%20News%20%E2%80%93%20The%20latest%20news%20about%20WordPress%20and%20the%20WordPress%20community&dl=https%3A%2F%2Fwordpress.org%2Fnews%2F&uid=&sid=1793769180&sct=1&seg=0&en=Page_view&_c=1&_et=44&tfd=1363",
+    "method": "POST",
+    "resourceType": "fetch",
+    "error": "net::ERR_ABORTED"
+   }
+  ]
+ },
+ "cookies": [
+  {
+   "name": "_ga",
+   "domain": ".wordpress.org",
+   "path": "/",
+   "expires": 1828329180.682935,
+   "httpOnly": false,
+   "secure": false,
+   "sameSite": "Lax"
+  },
+  {
+   "name": "_ga_CG6GJ50G8J",
+   "domain": ".wordpress.org",
+   "path": "/",
+   "expires": 1828329180.743262,
+   "httpOnly": false,
+   "secure": false,
+   "sameSite": "Lax"
+  }
+ ],
+ "network": [
+  {
+   "requestId": "F3445EBA3BB07C191A71270B9E92F873",
+   "url": "https://wordpress.org/news/",
+   "method": "GET",
+   "type": "Document",
+   "initiator": {
+    "type": "other"
+   },
+   "startTs": 2250.211275,
+   "status": 200,
+   "responseHeaders": {
+    "alt-svc": "clear",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "link": "<https://wordpress.org/news/wp-json/>; rel=\"https://api.w.org/\"\n<https://wordpress.org/news/wp-json/wp/v2/pages/15740>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\"\n<https://wp.me/PZhYe-45S>; rel=shortlink",
+    "server": "nginx",
+    "strict-transport-security": "max-age=3600",
+    "vary": "Accept-Encoding\naccept, content-type",
+    "x-frame-options": "SAMEORIGIN",
+    "x-nc": "HIT dca 1",
+    "x-olaf": "\u26c4",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   },
+   "mimeType": "text/html",
+   "fromCache": false,
+   "endTs": 2250.653476,
+   "encodedDataLength": 33798
+  },
+  {
+   "requestId": "7739.2",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-latin.woff2",
+   "method": "GET",
+   "type": "Font",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 5,
+    "columnNumber": 178
+   },
+   "startTs": 2250.555398,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "accept-ranges": "bytes",
+    "alt-svc": "clear",
+    "content-length": "77524",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "application/font-woff2",
+    "last-modified": "Thu, 11 Jun 2026 16:48:52 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/font-woff2",
+   "fromCache": false,
+   "endTs": 2250.792213,
+   "encodedDataLength": 77888
+  },
+  {
+   "requestId": "7739.3",
+   "url": "https://wordpress.org/news/wp-includes/blocks/navigation/style.min.css?ver=7.2-beta4-65250",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 42,
+    "columnNumber": 164
+   },
+   "startTs": 2250.556504,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Wed, 07 Oct 2026 08:32:24 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.800995,
+   "encodedDataLength": 3015
+  },
+  {
+   "requestId": "7739.4",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=c98b5143585c3e9f06b27f6a917b65c84643cefc",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 55,
+    "columnNumber": 233
+   },
+   "startTs": 2250.556965,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 17 Sep 2026 14:28:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.805099,
+   "encodedDataLength": 2168
+  },
+  {
+   "requestId": "7739.5",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 137,
+    "columnNumber": 168
+   },
+   "startTs": 2250.557279,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:46:56 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.806734,
+   "encodedDataLength": 1954
+  },
+  {
+   "requestId": "7739.6",
+   "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 138,
+    "columnNumber": 162
+   },
+   "startTs": 2250.557576,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 29 Oct 2026 14:55:41 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.813596,
+   "encodedDataLength": 15429
+  },
+  {
+   "requestId": "7739.7",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 139,
+    "columnNumber": 197
+   },
+   "startTs": 2250.558046,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Fri, 30 Oct 2026 17:07:44 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.821373,
+   "encodedDataLength": 6555
+  },
+  {
+   "requestId": "7739.8",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/view.js?ver=2ae6cba4cf35f434c642",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 140,
+    "columnNumber": 217
+   },
+   "startTs": 2250.558343,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 16:46:55 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.100826,
+   "encodedDataLength": 1022
+  },
+  {
+   "requestId": "7739.9",
+   "url": "https://wordpress.org/news/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=3456f38555c5c7dd7097",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 157,
+    "columnNumber": 214
+   },
+   "startTs": 2250.558636,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 03 Nov 2026 13:05:22 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.10772,
+   "encodedDataLength": 17394
+  },
+  {
+   "requestId": "7739.11",
+   "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "",
+       "scriptId": "15",
+       "url": "https://wordpress.org/news/",
+       "lineNumber": 17,
+       "columnNumber": 64
+      },
+      {
+       "functionName": "",
+       "scriptId": "15",
+       "url": "https://wordpress.org/news/",
+       "lineNumber": 18,
+       "columnNumber": 2
+      }
+     ]
+    }
+   },
+   "startTs": 2250.577235,
+   "status": 200,
+   "responseHeaders": {
+    "content-encoding": "zstd",
+    "expires": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "last-modified": "Wed, 04 Nov 2026 03:00:00 GMT",
+    "access-control-allow-headers": "Cache-Control",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "cache-control": "private, max-age=900",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "*",
+    "content-length": "138903",
+    "x-xss-protection": "0",
+    "server": "Google Tag Manager"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.13363,
+   "encodedDataLength": 139349
+  },
+  {
+   "requestId": "7739.18",
+   "url": "https://i0.wp.com/wordpress.org/news/files/2024/01/sunita-rai-featured-img.jpg?resize=1536%2C960&ssl=1",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 465,
+    "columnNumber": 927
+   },
+   "startTs": 2250.627411,
+   "status": 200,
+   "responseHeaders": {
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "etag": "\"dc6013ef1dd6eae1\"",
+    "x-bytes-saved": "1360689",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Tue, 01 Aug 2028 04:03:31 GMT",
+    "alt-svc": "clear",
+    "server-timing": "a8c-cdn, dc;desc=sea, cache;desc=HIT;dur=1.0",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "image/webp",
+    "last-modified": "Sat, 01 Aug 2026 16:03:31 GMT",
+    "vary": "Accept",
+    "link": "<https://wordpress.org/news/files/2024/01/sunita-rai-featured-img.jpg>; rel=\"canonical\"",
+    "cache-control": "public, max-age=63115200",
+    "timing-allow-origin": "*",
+    "x-nc": "HIT sea 2",
+    "access-control-allow-origin": "*",
+    "content-length": "96448",
+    "server": "nginx"
+   },
+   "mimeType": "image/webp",
+   "fromCache": false,
+   "endTs": 2250.743846,
+   "encodedDataLength": 97060
+  },
+  {
+   "requestId": "7739.19",
+   "url": "https://wordpress.org/news/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=5381c0a3642be76565c7-20240308",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 769,
+    "columnNumber": 304
+   },
+   "startTs": 2250.654929,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Wed, 07 Oct 2026 08:31:59 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.11939,
+   "encodedDataLength": 1415
+  },
+  {
+   "requestId": "7739.20",
+   "url": "https://wordpress.org/news/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 773,
+    "columnNumber": 124
+   },
+   "startTs": 2250.655191,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Wed, 05 Aug 2026 12:44:27 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2250.822708,
+   "encodedDataLength": 761
+  },
+  {
+   "requestId": "7739.21",
+   "url": "https://wordpress.org/news/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 774,
+    "columnNumber": 118
+   },
+   "startTs": 2250.655399,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 14 Jul 2026 20:47:23 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2250.827746,
+   "encodedDataLength": 11439
+  },
+  {
+   "requestId": "7739.22",
+   "url": "https://wordpress.org/news/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&ver=16.3",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 775,
+    "columnNumber": 196
+   },
+   "startTs": 2250.655594,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 06 Oct 2026 17:59:10 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.121943,
+   "encodedDataLength": 2419
+  },
+  {
+   "requestId": "7739.23",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/time/build/view.js?ver=385bfe9134bf98c52dda",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 776,
+    "columnNumber": 185
+   },
+   "startTs": 2250.656166,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 15:06:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.12481,
+   "encodedDataLength": 838
+  },
+  {
+   "requestId": "7739.24",
+   "url": "https://stats.wp.com/e-202645.js",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 783,
+    "columnNumber": 120
+   },
+   "startTs": 2250.656357,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "max-age=31536000",
+    "a8c-edge-cache": "cache",
+    "content-encoding": "br",
+    "x-nc": "HIT sea",
+    "etag": "W/7134-1790165859044.9197",
+    "x-minify": "t",
+    "x-minify-cache": "hit",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Mon, 01 Nov 2027 15:33:16 GMT",
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "vary": "Accept-Encoding",
+    "server": "nginx"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.118392,
+   "encodedDataLength": 1759
+  },
+  {
+   "requestId": "7739.25",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1781196531",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 788,
+    "columnNumber": 161
+   },
+   "startTs": 2250.65646,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 15:06:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.004089,
+   "encodedDataLength": 2851
+  },
+  {
+   "requestId": "7739.26",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifJP/style.css",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+    "lineNumber": 0,
+    "columnNumber": 0
+   },
+   "startTs": 2250.824461,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:53 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.942569,
+   "encodedDataLength": 34519
+  },
+  {
+   "requestId": "7739.27",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifKR/style.css",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+    "lineNumber": 0,
+    "columnNumber": 0
+   },
+   "startTs": 2250.824675,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:45 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2250.984445,
+   "encodedDataLength": 33545
+  },
+  {
+   "requestId": "7739.28",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifSC/style.css",
+   "method": "GET",
+   "type": "Stylesheet",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+    "lineNumber": 0,
+    "columnNumber": 0
+   },
+   "startTs": 2250.824798,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:53 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "text/css",
+   "fromCache": false,
+   "endTs": 2251.000867,
+   "encodedDataLength": 43370
+  },
+  {
+   "requestId": "7739.222",
+   "url": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' aria-hidden='true'%3E%3Cpath stroke='%23000' stroke-width='1.5' d='M1.5 4 6 8l4.5-4'/%3E%3C/svg%3E",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112"
+   },
+   "startTs": 2251.058111,
+   "status": 200,
+   "responseHeaders": {
+    "Content-Type": "image/svg+xml;charset=utf-8"
+   },
+   "mimeType": "image/svg+xml",
+   "fromCache": false,
+   "endTs": 2251.058362,
+   "encodedDataLength": 0
+  },
+  {
+   "requestId": "7739.223",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/images/search.svg?ver=96c7098",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112"
+   },
+   "startTs": 2251.060566,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "accept-ranges": "bytes",
+    "alt-svc": "clear",
+    "content-length": "392",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/svg+xml",
+    "last-modified": "Thu, 11 Jun 2026 16:46:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "image/svg+xml",
+   "fromCache": false,
+   "endTs": 2251.292743,
+   "encodedDataLength": 669
+  },
+  {
+   "requestId": "7739.224",
+   "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/images/brush-stroke-see-all-releases-dark.svg",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751"
+   },
+   "startTs": 2251.064284,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/svg+xml",
+    "last-modified": "Mon, 05 Oct 2026 13:20:33 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "image/svg+xml",
+   "fromCache": false,
+   "endTs": 2251.293947,
+   "encodedDataLength": 6262
+  },
+  {
+   "requestId": "7739.225",
+   "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/images/brush-stroke-see-all-posts.svg",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751"
+   },
+   "startTs": 2251.066575,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/svg+xml",
+    "last-modified": "Thu, 11 Jun 2026 16:47:22 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "image/svg+xml",
+   "fromCache": false,
+   "endTs": 2251.359941,
+   "encodedDataLength": 25197
+  },
+  {
+   "requestId": "7739.226",
+   "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/images/brush-stroke-see-all-people.svg",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751"
+   },
+   "startTs": 2251.068905,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/svg+xml",
+    "last-modified": "Thu, 11 Jun 2026 16:47:22 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "image/svg+xml",
+   "fromCache": false,
+   "endTs": 2251.365393,
+   "encodedDataLength": 9126
+  },
+  {
+   "requestId": "7739.140",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/Inter/Inter-arrows.woff2",
+   "method": "GET",
+   "type": "Font",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533"
+   },
+   "startTs": 2251.089273,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "accept-ranges": "bytes",
+    "alt-svc": "clear",
+    "content-length": "2356",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/font-woff2",
+    "last-modified": "Thu, 11 Jun 2026 16:48:45 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/font-woff2",
+   "fromCache": false,
+   "endTs": 2251.297931,
+   "encodedDataLength": 2639
+  },
+  {
+   "requestId": "7739.147",
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/EB-Garamond/EBGaramond-latin.woff2",
+   "method": "GET",
+   "type": "Font",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533"
+   },
+   "startTs": 2251.090577,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "accept-ranges": "bytes",
+    "alt-svc": "clear",
+    "content-length": "110724",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/font-woff2",
+    "last-modified": "Thu, 11 Jun 2026 16:48:45 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/font-woff2",
+   "fromCache": false,
+   "endTs": 2251.340863,
+   "encodedDataLength": 111126
+  },
+  {
+   "requestId": "7739.227",
+   "url": "https://i0.wp.com/wordpress.org/news/files/2023/10/artemy-featured-img.jpg?resize=300%2C188&ssl=1",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 775,
+    "columnNumber": 0
+   },
+   "startTs": 2251.175463,
+   "status": 200,
+   "responseHeaders": {
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "etag": "\"363dab61694241cc\"",
+    "x-bytes-saved": "167689",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Sat, 09 Sep 2028 23:22:13 GMT",
+    "alt-svc": "clear",
+    "server-timing": "a8c-cdn, dc;desc=sea, cache;desc=HIT;dur=1.0",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/webp",
+    "last-modified": "Thu, 10 Sep 2026 11:22:13 GMT",
+    "vary": "Accept",
+    "link": "<https://wordpress.org/news/files/2023/10/artemy-featured-img.jpg>; rel=\"canonical\"",
+    "cache-control": "public, max-age=63115200",
+    "timing-allow-origin": "*",
+    "x-nc": "HIT sea 2",
+    "access-control-allow-origin": "*",
+    "content-length": "2618",
+    "server": "nginx"
+   },
+   "mimeType": "image/webp",
+   "fromCache": false,
+   "endTs": 2251.226236,
+   "encodedDataLength": 3126
+  },
+  {
+   "requestId": "7739.228",
+   "url": "https://i0.wp.com/wordpress.org/news/files/2023/07/ihtisham-2.jpg?resize=300%2C225&ssl=1",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 775,
+    "columnNumber": 0
+   },
+   "startTs": 2251.176983,
+   "status": 200,
+   "responseHeaders": {
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "etag": "\"535688a956b9284f\"",
+    "x-bytes-saved": "2244811",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Wed, 16 Aug 2028 04:57:44 GMT",
+    "alt-svc": "clear",
+    "server-timing": "a8c-cdn, dc;desc=sea, cache;desc=HIT;dur=1.0",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/webp",
+    "last-modified": "Sun, 16 Aug 2026 16:57:44 GMT",
+    "vary": "Accept",
+    "link": "<https://wordpress.org/news/files/2023/07/ihtisham-2.jpg>; rel=\"canonical\"",
+    "cache-control": "public, max-age=63115200",
+    "timing-allow-origin": "*",
+    "x-nc": "HIT sea 2",
+    "access-control-allow-origin": "*",
+    "content-length": "15934",
+    "server": "nginx"
+   },
+   "mimeType": "image/webp",
+   "fromCache": false,
+   "endTs": 2251.232866,
+   "encodedDataLength": 16448
+  },
+  {
+   "requestId": "7739.229",
+   "url": "https://i0.wp.com/wordpress.org/news/files/2023/06/fi-allison-dye.jpg?resize=300%2C157&ssl=1",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 775,
+    "columnNumber": 0
+   },
+   "startTs": 2251.177866,
+   "status": 200,
+   "responseHeaders": {
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "etag": "\"c667e65d961ce002\"",
+    "x-bytes-saved": "673141",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Wed, 16 Aug 2028 04:57:44 GMT",
+    "alt-svc": "clear",
+    "server-timing": "a8c-cdn, dc;desc=sea, cache;desc=HIT;dur=1.0",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/webp",
+    "last-modified": "Sun, 16 Aug 2026 16:57:44 GMT",
+    "vary": "Accept",
+    "link": "<https://wordpress.org/news/files/2023/06/fi-allison-dye.jpg>; rel=\"canonical\"",
+    "cache-control": "public, max-age=63115200",
+    "timing-allow-origin": "*",
+    "x-nc": "HIT sea 2",
+    "access-control-allow-origin": "*",
+    "content-length": "16626",
+    "server": "nginx"
+   },
+   "mimeType": "image/webp",
+   "fromCache": false,
+   "endTs": 2251.240789,
+   "encodedDataLength": 17151
+  },
+  {
+   "requestId": "7739.230",
+   "url": "https://i0.wp.com/wordpress.org/news/files/2023/05/stefano-featured-img.jpg?resize=300%2C157&ssl=1",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 775,
+    "columnNumber": 0
+   },
+   "startTs": 2251.178706,
+   "status": 200,
+   "responseHeaders": {
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "etag": "\"2b78f0b4776901fd\"",
+    "x-bytes-saved": "508337",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Fri, 08 Sep 2028 19:52:21 GMT",
+    "alt-svc": "clear",
+    "server-timing": "a8c-cdn, dc;desc=sea, cache;desc=HIT;dur=0.0",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/webp",
+    "last-modified": "Wed, 09 Sep 2026 07:52:21 GMT",
+    "vary": "Accept",
+    "link": "<https://wordpress.org/news/files/2023/05/stefano-featured-img.jpg>; rel=\"canonical\"",
+    "cache-control": "public, max-age=63115200",
+    "timing-allow-origin": "*",
+    "x-nc": "HIT sea 2",
+    "access-control-allow-origin": "*",
+    "content-length": "10216",
+    "server": "nginx"
+   },
+   "mimeType": "image/webp",
+   "fromCache": false,
+   "endTs": 2251.235923,
+   "encodedDataLength": 10735
+  },
+  {
+   "requestId": "7739.235",
+   "url": "https://pixel.wp.com/g.gif?v=ext&blog=14607090&post=15740&tz=0&srv=wordpress.org&j=1%3A16.3&host=wordpress.org&ref=&fcp=0&rand=0.6379939424548515",
+   "method": "GET",
+   "type": "Image",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 799,
+    "columnNumber": 1
+   },
+   "startTs": 2251.234096,
+   "status": 200,
+   "responseHeaders": {
+    "cache-control": "no-cache",
+    "access-control-allow-origin": "*",
+    "content-length": "50",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "image/gif",
+    "server": "nginx"
+   },
+   "mimeType": "image/gif",
+   "fromCache": false,
+   "endTs": 2251.346347,
+   "encodedDataLength": 178
+  },
+  {
+   "requestId": "7739.236",
+   "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "mr",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 267,
+       "columnNumber": 251
+      },
+      {
+       "functionName": "dd",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 256,
+       "columnNumber": 403
+      },
+      {
+       "functionName": "Ml",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 405,
+       "columnNumber": 1329
+      },
+      {
+       "functionName": "MA",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 624,
+       "columnNumber": 3
+      },
+      {
+       "functionName": "vI",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 750,
+       "columnNumber": 348
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 345,
+       "columnNumber": 186
+      },
+      {
+       "functionName": "l.apply",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 272,
+       "columnNumber": 464
+      },
+      {
+       "functionName": "ib",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 232,
+       "columnNumber": 766
+      },
+      {
+       "functionName": "hb",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 232,
+       "columnNumber": 501
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 296,
+       "columnNumber": 472
+      },
+      {
+       "functionName": "l.apply",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 272,
+       "columnNumber": 464
+      },
+      {
+       "functionName": "ib",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 232,
+       "columnNumber": 766
+      },
+      {
+       "functionName": "l.ap",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 233,
+       "columnNumber": 121
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 720,
+       "columnNumber": 760
+      },
+      {
+       "functionName": "Ez",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 601,
+       "columnNumber": 867
+      },
+      {
+       "functionName": "tA.evaluate",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 621,
+       "columnNumber": 308
+      },
+      {
+       "functionName": "e",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 638,
+       "columnNumber": 202
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 241,
+       "columnNumber": 441
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 639,
+       "columnNumber": 432
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 639,
+       "columnNumber": 172
+      },
+      {
+       "functionName": "FB",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 639,
+       "columnNumber": 826
+      },
+      {
+       "functionName": "JB",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 643,
+       "columnNumber": 341
+      },
+      {
+       "functionName": "GE",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 698,
+       "columnNumber": 130
+      },
+      {
+       "functionName": "c.push",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 702,
+       "columnNumber": 208
+      },
+      {
+       "functionName": "",
+       "scriptId": "27",
+       "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+       "lineNumber": 702,
+       "columnNumber": 372
+      }
+     ]
+    }
+   },
+   "startTs": 2251.313569,
+   "status": 200,
+   "responseHeaders": {
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "cache-control": "private, max-age=900",
+    "content-encoding": "zstd",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "expires": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "content-length": "190521",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "x-xss-protection": "0",
+    "content-type": "application/javascript; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "server": "Google Tag Manager",
+    "access-control-allow-headers": "Cache-Control"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.377848,
+   "encodedDataLength": 190692
+  },
+  {
+   "requestId": "7739.237",
+   "url": "blob:https://wordpress.org/0920a82b-8b49-41ce-99d1-d029793eff46",
+   "method": "GET",
+   "type": "Other",
+   "initiator": {
+    "type": "parser",
+    "url": "https://wordpress.org/news/",
+    "lineNumber": 799,
+    "columnNumber": 1
+   },
+   "startTs": 2251.336069,
+   "status": 200,
+   "responseHeaders": {
+    "Content-Type": "text/javascript",
+    "Content-Length": "1398"
+   },
+   "mimeType": "text/javascript",
+   "fromCache": false,
+   "endTs": 2251.338736,
+   "encodedDataLength": 0
+  },
+  {
+   "requestId": "7739.238",
+   "url": "https://analytics.google.com/g/collect?v=2&tid=G-CG6GJ50G8J&gtm=45je6b21v873051034za20ozb79334995zd79334995xf1&_p=1793769179746&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AgAAACAC&_geo=1&_prs=rd&_rdi=1&are=1&cid=1045251045.1793769181&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123691370~123692834~123785233~123814946&dt=WordPress%20News%20%E2%80%93%20The%20latest%20news%20about%20WordPress%20and%20the%20WordPress%20community&dl=https%3A%2F%2Fwordpress.org%2Fnews%2F&uid=&sid=1793769180&sct=1&seg=0&en=page_view&_fv=1&_nsi=1&_ss=1&_c=1&tfd=1304",
+   "method": "POST",
+   "type": "Fetch",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "vd",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 376,
+       "columnNumber": 390
+      },
+      {
+       "functionName": "Ll",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 530,
+       "columnNumber": 1244
+      },
+      {
+       "functionName": "dS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1139,
+       "columnNumber": 182
+      },
+      {
+       "functionName": "gS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1140,
+       "columnNumber": 358
+      },
+      {
+       "functionName": "l.Og",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1147,
+       "columnNumber": 152
+      },
+      {
+       "functionName": "l.add",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1148,
+       "columnNumber": 213
+      },
+      {
+       "functionName": "l.lm",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 464
+      },
+      {
+       "functionName": "l.Rr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 387
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 196
+      },
+      {
+       "functionName": "Im",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 550,
+       "columnNumber": 361
+      },
+      {
+       "functionName": "bp",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 568,
+       "columnNumber": 42
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 180
+      },
+      {
+       "functionName": "d",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 930,
+       "columnNumber": 493
+      },
+      {
+       "functionName": "QG.da",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 931,
+       "columnNumber": 16
+      },
+      {
+       "functionName": "l.Qr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "b",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1179,
+       "columnNumber": 867
+      },
+      {
+       "functionName": "v",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 282
+      },
+      {
+       "functionName": "Om",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 552,
+       "columnNumber": 577
+      },
+      {
+       "functionName": "x",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 406
+      },
+      {
+       "functionName": "eD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 849,
+       "columnNumber": 72
+      },
+      {
+       "functionName": "bD.flush",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 853,
+       "columnNumber": 214
+      },
+      {
+       "functionName": "bD.push",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 851,
+       "columnNumber": 391
+      },
+      {
+       "functionName": "kD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 856,
+       "columnNumber": 541
+      },
+      {
+       "functionName": "QD.event",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 874,
+       "columnNumber": 308
+      },
+      {
+       "functionName": "GE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 887,
+       "columnNumber": 400
+      },
+      {
+       "functionName": "HE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 890,
+       "columnNumber": 109
+      },
+      {
+       "functionName": "Bk",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1261,
+       "columnNumber": 28
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 197
+      },
+      {
+       "functionName": "c",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1262,
+       "columnNumber": 137
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 160
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1266,
+       "columnNumber": 2
+      }
+     ]
+    }
+   },
+   "startTs": 2251.515886,
+   "status": 204,
+   "responseHeaders": {
+    "cache-control": "no-cache, no-store, must-revalidate",
+    "pragma": "no-cache",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:199:0",
+    "report-to": "{\"group\":\"ascnsrsggc:199:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:199:0\"}],}",
+    "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+    "access-control-allow-origin": "https://wordpress.org",
+    "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:199:0",
+    "content-length": "0",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/plain",
+    "server": "Golfe2"
+   },
+   "mimeType": "text/plain",
+   "fromCache": false,
+   "endTs": 2251.680906,
+   "failed": "net::ERR_ABORTED"
+  },
+  {
+   "requestId": "7739.239",
+   "url": "https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-CG6GJ50G8J&cid=1045251045.1793769181&gtm=45je6b21v873051034za20ozb79334995zd79334995xf1&rcb=19&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123691370~123692834~123785233~123814946",
+   "method": "POST",
+   "type": "Ping",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "rd",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 374,
+       "columnNumber": 226
+      },
+      {
+       "functionName": "Il",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 530,
+       "columnNumber": 982
+      },
+      {
+       "functionName": "cS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1139,
+       "columnNumber": 345
+      },
+      {
+       "functionName": "kS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1144,
+       "columnNumber": 299
+      },
+      {
+       "functionName": "lS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1146,
+       "columnNumber": 37
+      },
+      {
+       "functionName": "l.Og",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1147,
+       "columnNumber": 444
+      },
+      {
+       "functionName": "l.add",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1148,
+       "columnNumber": 213
+      },
+      {
+       "functionName": "l.lm",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 464
+      },
+      {
+       "functionName": "l.Rr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 387
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 196
+      },
+      {
+       "functionName": "Im",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 550,
+       "columnNumber": 361
+      },
+      {
+       "functionName": "bp",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 568,
+       "columnNumber": 42
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 180
+      },
+      {
+       "functionName": "d",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 930,
+       "columnNumber": 493
+      },
+      {
+       "functionName": "QG.da",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 931,
+       "columnNumber": 16
+      },
+      {
+       "functionName": "l.Qr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "b",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1179,
+       "columnNumber": 867
+      },
+      {
+       "functionName": "v",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 282
+      },
+      {
+       "functionName": "Om",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 552,
+       "columnNumber": 577
+      },
+      {
+       "functionName": "x",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 406
+      },
+      {
+       "functionName": "eD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 849,
+       "columnNumber": 72
+      },
+      {
+       "functionName": "bD.flush",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 853,
+       "columnNumber": 214
+      },
+      {
+       "functionName": "bD.push",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 851,
+       "columnNumber": 391
+      },
+      {
+       "functionName": "kD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 856,
+       "columnNumber": 541
+      },
+      {
+       "functionName": "QD.event",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 874,
+       "columnNumber": 308
+      },
+      {
+       "functionName": "GE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 887,
+       "columnNumber": 400
+      },
+      {
+       "functionName": "HE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 890,
+       "columnNumber": 109
+      },
+      {
+       "functionName": "Bk",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1261,
+       "columnNumber": 28
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 197
+      },
+      {
+       "functionName": "c",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1262,
+       "columnNumber": 137
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 160
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1266,
+       "columnNumber": 2
+      }
+     ]
+    }
+   },
+   "startTs": 2251.553706,
+   "status": 204,
+   "responseHeaders": {
+    "cache-control": "no-cache, no-store, must-revalidate",
+    "pragma": "no-cache",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:167:0",
+    "report-to": "{\"group\":\"ascnsrsggc:167:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:167:0\"}],}",
+    "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+    "access-control-allow-origin": "https://wordpress.org",
+    "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:167:0",
+    "content-length": "0",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/plain",
+    "server": "Golfe2"
+   },
+   "mimeType": "text/plain",
+   "fromCache": false,
+   "endTs": 2251.696227,
+   "encodedDataLength": 556
+  },
+  {
+   "requestId": "7739.240",
+   "url": "https://analytics.google.com/g/collect?v=2&tid=G-CG6GJ50G8J&gtm=45je6b21v873051034za20gzb79334995zd79334995xf1&_p=1793769179746&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAgAACQC&_geo=1&_prs=rd&_rdi=1&are=1&cid=1045251045.1793769181&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=19&ul=en-us&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121246026~121246034~123691370~123692834~123785233~123814946&dt=WordPress%20News%20%E2%80%93%20The%20latest%20news%20about%20WordPress%20and%20the%20WordPress%20community&dl=https%3A%2F%2Fwordpress.org%2Fnews%2F&uid=&sid=1793769180&sct=1&seg=0&en=Page_view&_c=1&_et=44&tfd=1363",
+   "method": "POST",
+   "type": "Fetch",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "vd",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 376,
+       "columnNumber": 390
+      },
+      {
+       "functionName": "Ll",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 530,
+       "columnNumber": 1244
+      },
+      {
+       "functionName": "dS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1139,
+       "columnNumber": 182
+      },
+      {
+       "functionName": "gS",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1140,
+       "columnNumber": 358
+      },
+      {
+       "functionName": "l.Og",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1147,
+       "columnNumber": 152
+      },
+      {
+       "functionName": "l.add",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1148,
+       "columnNumber": 213
+      },
+      {
+       "functionName": "l.lm",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 464
+      },
+      {
+       "functionName": "l.Rr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1177,
+       "columnNumber": 387
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 196
+      },
+      {
+       "functionName": "Im",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 550,
+       "columnNumber": 361
+      },
+      {
+       "functionName": "bp",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 568,
+       "columnNumber": 42
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 180
+      },
+      {
+       "functionName": "d",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 930,
+       "columnNumber": 493
+      },
+      {
+       "functionName": "QG.da",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 931,
+       "columnNumber": 16
+      },
+      {
+       "functionName": "l.Qr",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1175,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "b",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1179,
+       "columnNumber": 867
+      },
+      {
+       "functionName": "v",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 282
+      },
+      {
+       "functionName": "Om",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 552,
+       "columnNumber": 577
+      },
+      {
+       "functionName": "x",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 848,
+       "columnNumber": 406
+      },
+      {
+       "functionName": "eD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 849,
+       "columnNumber": 72
+      },
+      {
+       "functionName": "bD.flush",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 853,
+       "columnNumber": 214
+      },
+      {
+       "functionName": "bD.push",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 851,
+       "columnNumber": 391
+      },
+      {
+       "functionName": "kD",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 856,
+       "columnNumber": 541
+      },
+      {
+       "functionName": "QD.event",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 874,
+       "columnNumber": 308
+      },
+      {
+       "functionName": "GE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 887,
+       "columnNumber": 400
+      },
+      {
+       "functionName": "HE",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 890,
+       "columnNumber": 109
+      },
+      {
+       "functionName": "Bk",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1261,
+       "columnNumber": 28
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 197
+      },
+      {
+       "functionName": "c",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1262,
+       "columnNumber": 137
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 160
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1264,
+       "columnNumber": 166
+      },
+      {
+       "functionName": "",
+       "scriptId": "35",
+       "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+       "lineNumber": 1266,
+       "columnNumber": 2
+      }
+     ]
+    }
+   },
+   "startTs": 2251.574258,
+   "status": 204,
+   "responseHeaders": {
+    "cache-control": "no-cache, no-store, must-revalidate",
+    "pragma": "no-cache",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:199:0",
+    "report-to": "{\"group\":\"ascnsrsggc:199:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:199:0\"}],}",
+    "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+    "access-control-allow-origin": "https://wordpress.org",
+    "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:199:0",
+    "content-length": "0",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/plain",
+    "server": "Golfe2"
+   },
+   "mimeType": "text/plain",
+   "fromCache": false,
+   "endTs": 2251.682224,
+   "failed": "net::ERR_ABORTED"
+  },
+  {
+   "requestId": "7739.241",
+   "url": "https://wordpress.org/news/wp-includes/js/wp-emoji-release.min.js?ver=7.2-beta4-65250",
+   "method": "GET",
+   "type": "Script",
+   "initiator": {
+    "type": "script",
+    "stack": {
+     "callFrames": [
+      {
+       "functionName": "g",
+       "scriptId": "30",
+       "url": "https://wordpress.org/news/wp-includes/js/wp-emoji-loader.min.js",
+       "lineNumber": 2,
+       "columnNumber": 1815
+      },
+      {
+       "functionName": "",
+       "scriptId": "30",
+       "url": "https://wordpress.org/news/wp-includes/js/wp-emoji-loader.min.js",
+       "lineNumber": 2,
+       "columnNumber": 2997
+      }
+     ]
+    }
+   },
+   "startTs": 2251.625064,
+   "status": 200,
+   "responseHeaders": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Fri, 09 Oct 2026 07:56:27 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "mimeType": "application/javascript",
+   "fromCache": false,
+   "endTs": 2251.720112,
+   "encodedDataLength": 5411
+  }
+ ],
+ "security": {
+  "issuer": "YE2",
+  "protocol": "TLS 1.3",
+  "subjectName": "wordpress.org",
+  "validFrom": 1790192638,
+  "validTo": 1797968637
+ },
+ "screenshot": null,
+ "inspected": [
+  {
+   "url": "https://wordpress.org/news/wp-includes/blocks/navigation/style.min.css?ver=7.2-beta4-65250",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Wed, 07 Oct 2026 08:32:24 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "ackground:transparent;border:none;color:currentColor;cursor:pointer;margin:0;padding:0;text-transform:inherit;vertical-align:middle}.wp-block-navigation__responsive-container-close svg,.wp-block-navigation__responsive-container-open svg{fill:currentColor;display:block;height:24px;pointer-events:none;width:24px}.wp-block-navigation__responsive-container-open{display:flex}.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open{font-family:inherit;font-size:inherit;font-weight:inherit}@media (min-width:600px){.wp-block-navigation__responsive-container-open:not(.always-shown){display:none}}.wp-block-navigation__responsive-container-close{position:absolute;right:0;top:0;z-index:2}.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close{font-family:inherit;font-size:inherit;font-weight:inherit}.disable-default-overlay .wp-block-navigation__responsive-container-close{right:clamp(1rem,var(--wp--style--root--padding-left),20rem);top:clamp(1rem,var(--wp--style--root--padding-left),20rem)}.wp-block-navigation__responsive-close{width:100%}.has-modal-open .wp-block-navigation__responsive-close{margin-left:auto;margin-right:auto;max-width:var(--wp--style--global--wide-size,100%)}.wp-block-navigation__responsive-close:focus{outline:none}.is-menu-open .wp-block-navigation__responsive-close,.is-menu-open .wp-block-navigation__responsive-container-content,.is-menu-open .wp-block-navigation__responsive-dialog{box-sizing:border-box}.wp-block-navigation__responsive-dialog{position:relative}.has-modal-open .admin-bar .is-menu-open:where(:not(.disable-default-overlay)) .wp-block-navigation__responsive-dialog{margin-top:46px}@media (min-width:782px){.has-modal-open .admin-bar .is-menu-open:where(:not(.disable-default-overlay)) .wp-block-navigation__responsive-dialog{margin-top:32px}}html.has-modal-open{overflow:hidden}"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/style.css?ver=c98b5143585c3e9f06b27f6a917b65c84643cefc",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 17 Sep 2026 14:28:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "ed-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item .wp-block-navigation-item__content:focus-visible,.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-mobile-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item .wp-block-navigation-item__content:focus-visible{border-radius:2px;box-shadow:inset 0 0 0 1.5px var(--wp--custom--local-navigation-bar--focus--color);outline:none}.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-collapsed-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-separator,.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-mobile-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-separator{margin-block-start:var(--wp--preset--spacing--10);margin-inline-start:0;padding-block-start:var(--wp--preset--spacing--10);padding-inline-start:0}.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-collapsed-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-separator:before,.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-mobile-nav .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-separator:before{background-color:var(--wp--custom--local-navigation-bar--border--color);content:\"\";height:1px;inset:0 calc(var(--wp--preset--spacing--10)*-1) auto}.wp-block-wporg-local-navigation-bar .wp-block-navigation.wporg-is-collapsed-nav,.wp-block-wporg-local-navigation-bar.wporg-hide-page-title .wp-block-group p:not(.wp-block-site-title),.wp-block-wporg-local-navigation-bar.wporg-show-collapsed-nav .wp-block-navigation{display:none}.wp-block-wporg-local-navigation-bar.wporg-show-collapsed-nav .wp-block-navigation.wporg-is-collapsed-nav{display:block}@media (min-width:890px){html{scroll-padding-top:calc(var(--wp--custom--local-navigation-bar--spacing--height, 0px) + var(--wp-admin--admin-bar--height, 0px))}}"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/style.css?ver=1781196533",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:46:56 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "5F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n\n/* greek-ext */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-greek-ext.woff2) format(\"woff2\");\n\tunicode-range: U+1F00-1FFF;\n}\n\n/* greek */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-greek.woff2) format(\"woff2\");\n\tunicode-range: U+0370-03FF;\n}\n\n/* vietnamese */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-vietnamese.woff2) format(\"woff2\");\n\tunicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n\n/* latin-ext */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-latin-ext.woff2) format(\"woff2\");\n\tunicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n\n/* latin */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-latin.woff2) format(\"woff2\");\n\tunicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n\n/* arrows */\n@font-face {\n\tfont-family: \"IBM Plex Sans\";\n\tfont-weight: 600;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./IBMPlexSans/IBMPlexSans-SemiBold-arrows.woff2) format(\"woff2\");\n\tunicode-range: U+2190-2199;\n}\n\n/*------------------------------*\n *  Noto Kufi Arabic            *\n *------------------------------*/\n\n/* cjk */\n@font-face {\n\tfont-family: \"Noto Kufi Arabic\";\n\tfont-weight: 100 900;\n\tfont-style: normal;\n\tfont-display: swap;\n\tsrc: url(./Noto/NotoKufi-arabic.woff2) format(\"woff2\");\n}\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/themes/wporg-news-2021/build/style.css?ver=1793285751",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 29 Oct 2026 14:55:41 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "der-top:1px solid var(--wp--preset--color--light-grey)!important}body.news-front-page .front__people-of-wordpress .front__people-of-wordpress-heading{font-size:var(--wp--custom--h-2--typography--font-size);padding-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--50)}body.news-front-page .front__people-of-wordpress .wp-block-post-template{display:flex;flex-wrap:wrap;gap:0 var(--local--block-gap)}body.news-front-page .front__people-of-wordpress .wp-block-post-template .wp-block-post{border:1px solid var(--wp--preset--color--light-grey);max-width:2in;overflow:initial}body.news-front-page .front__people-of-wordpress .wp-block-post-template .wp-block-post .wp-block-post-title{margin:0}body.news-front-page .front__people-of-wordpress .wp-block-post-template .wp-block-post .wp-block-post-title a{color:var(--wp--preset--color--black);position:static}body.news-front-page .front__people-of-wordpress .wp-block-post-template .wp-block-post.has-post-thumbnail .wp-block-post-title a{opacity:1}body.news-front-page .front__people-of-wordpress .wp-block-post-template .wp-block-post:not(.has-post-thumbnail){aspect-ratio:unset;background-color:unset}.wp-block-wporg-podcast-player,body.post-type-archive-podcast .query-title-banner-podcast:after,body.single-podcast .query-title-banner-podcast:after,body.single-podcast .site-content-container .podcast-wrapper>.left-column{display:none}body.post-type-archive-podcast .query-title-banner-podcast,body.single-podcast .query-title-banner-podcast{margin-top:var(--local--block-gap);padding-bottom:unset;padding-top:unset}body.post-type-archive-podcast .wp-block-post-content,body.single-podcast .wp-block-post-content{margin-top:var(--local--block-gap)}body.post-type-archive-podcast .query-title-banner-podcast,body.single-podcast .query-title-banner-podcast{color:initial}body.post-type-archive-podcast .query-title-banner-podcast a,body.single-podcast .query-title-banner-podcast a{color:var(--wp--preset--color--blue-1)}}\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/build/style.css?ver=1793380112",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "text/css",
+    "last-modified": "Fri, 30 Oct 2026 17:07:44 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "idth:1152px){.wp-block-group.global-footer .global-footer__logos-container .global-footer__wporg-locale-title{max-width:15em}}@media (min-width:1440px){.wp-block-group.global-footer .global-footer__logos-container .global-footer__wporg-locale-title{max-width:20em}}.wp-block-group.global-footer .global-footer__logos-container .global-footer__wporg-locale-title a{color:inherit;-webkit-text-decoration:none;text-decoration:none}.wp-block-group.global-footer .global-footer__logos-container .global-footer__wporg-locale-title a:focus,.wp-block-group.global-footer .global-footer__logos-container .global-footer__wporg-locale-title a:hover{-webkit-text-decoration:underline;text-decoration:underline}.wp-block-group.global-footer .global-footer__trademark{color:var(--wp-global-header--text-color--light);line-height:1.5;margin-top:4px}@media (min-width:890px){.wp-block-group.global-footer .global-footer__trademark{font-size:var(--wp--preset--font-size--small)}}.wp-block-group.global-footer .wp-block-social-links,.wp-block-group.global-footer .wp-block-social-links .wp-social-link a,.wp-block-group.global-footer .wp-block-social-links .wp-social-link.wp-social-link.wp-social-link{margin-bottom:0;margin-top:0;padding-bottom:0;padding-top:0}.wp-block-group.global-footer .wp-block-social-links{--global-footer--social-icon-size:24px;--global-footer--social-icon-gap:20px;align-content:flex-start;gap:10px var(--global-footer--social-icon-gap);justify-content:flex-start;min-width:100px;position:relative}@media (min-width:890px){.wp-block-group.global-footer .wp-block-social-links{flex-shrink:0;justify-content:flex-end;max-width:calc(var(--global-footer--social-icon-size)*5 + var(--global-footer--social-icon-gap)*4);order:3}}@media (min-width:1152px){.wp-block-group.global-footer .wp-block-social-links{max-width:none;top:2px}}.wp-block-group.global-footer .wp-block-social-links .wp-social-link svg{height:var(--global-footer--social-icon-size);width:var(--global-footer--social-icon-size)}"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/local-navigation-bar/build/view.js?ver=2ae6cba4cf35f434c642",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 16:46:55 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "(()=>{function e(e){let t;return(...i)=>{t&&window.cancelAnimationFrame(t),t=window.requestAnimationFrame(()=>{e(...i)})}}window.addEventListener(\"load\",function(){const t=document.querySelector(\".wp-block-wporg-local-navigation-bar\"),i=document.body.classList.contains(\"admin-bar\")?32:0;if(t){const n=()=>{const{top:e}=t.getBoundingClientRect();e<=i?t.classList.add(\"is-sticking\"):t.classList.remove(\"is-sticking\")};document.addEventListener(\"scroll\",e(n),{passive:!0}),n();const o=()=>{const e=t.querySelector(\"nav:not(.wporg-is-collapsed-nav)\");if(window.innerWidth<600)return t.classList.remove(\"wporg-hide-page-title\",\"wporg-show-collapsed-nav\"),void e.classList.add(\"wporg-is-mobile-nav\");e.classList.remove(\"wporg-is-mobile-nav\");let i=t.dataset.navWidth;if(!i){const n=parseInt(window.getComputedStyle(e).gap,10)||20,o=e.querySelectorAll(\".wp-block-navigation__container > li\");i=[...o].reduce((e,t)=>e+t.getBoundingClientRect().width,0)+n*(o.length-1),t.dataset.navWidth=Math.ceil(i)}const n=t.querySelector(\".wp-block-site-title, div.wp-block-group\");if(!n)return;let o=n.dataset.fullWidth;o||(o=[...n.children].reduce((e,t)=>e+t.getBoundingClientRect().width,0)+10*(n.children.length-1),n.dataset.fullWidth=Math.ceil(o));const{paddingInlineStart:a=\"0px\",paddingInlineEnd:s=\"0px\",gap:l=\"0px\"}=window.getComputedStyle(t),d=window.innerWidth-parseInt(a,10)-parseInt(s,10)-parseInt(l,10)-20;let c=o;n.classList.contains(\"wp-block-group\")&&(c=n.children[0].getBoundingClientRect().width);const r=Math.ceil(o)+Math.ceil(i),p=Math.ceil(c)+Math.ceil(i);d>r?t.classList.remove(\"wporg-show-collapsed-nav\",\"wporg-hide-page-title\"):d>p?(t.classList.add(\"wporg-hide-page-title\"),t.classList.remove(\"wporg-show-collapsed-nav\")):t.classList.add(\"wporg-hide-page-title\",\"wporg-show-collapsed-nav\")};window.addEventListener(\"resize\",e(o),{passive:!0}),o()}})})();"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=3456f38555c5c7dd7097",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 03 Nov 2026 13:05:22 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "(o,i):t.ref.current.style.removeProperty(o)}))})});y(\"text\",({directives:{text:e},element:t,evaluate:r})=>{let n=e.filter(L);n.length&&n.forEach(o=>{if(!o.uniqueId)try{let i=r(o);if(i===x)return;typeof i==\"function\"&&(i=i()),t.props.children=typeof i==\"object\"?null:i.toString()}catch{t.props.children=null}})});y(\"watch\",({directives:{watch:e},evaluate:t})=>{e.forEach(r=>{r.suffix===null&&Rt(()=>{let n,o=t(r);return typeof o==\"function\"&&(o=o()),o})})});var Qt=new WeakMap,Xt=e=>{let t=Array.isArray(e)?e[0]:e;if(!t.parentElement)throw Error(\"The passed region should be an element with a parent.\");return Qt.has(t)||Qt.set(t,Rr(t.parentElement,e)),Qt.get(t)},Zr=new WeakMap,en,tn=new Promise(e=>{en=e}),rn=async()=>{let e=[...document.querySelectorAll(\"[data-wp-interactive]\")].filter(t=>!t.parentElement?.closest(\"[data-wp-interactive]\"));for(let t of e){await se();let r=Xt(t),n=Ge(t);Zr.set(t,n),await se(),gt(n,r)}en(Zr)};var ni=\"I acknowledge that using private APIs means my theme or plugin will inevitably break in the next version of WordPress.\",ha=e=>{if(e===ni)return{getRegionRootFragment:Xt,initialVdomPromise:tn,toVdom:Ge,parseDirectiveName:Ft,parseDirectiveValue:Vt,directive:y,getNamespace:W,h:O,cloneElement:_e,render:yt,proxifyState:k,parseServerData:Ht,populateServerData:qt,batch:ie,routerRegions:je,deepReadOnly:Ne,navigationSignal:tt,sessionId:rt,warn:z,afterNextFrame:Dt,getScope:R};throw new Error(\"Forbidden access.\")};qt(Ht());Dr(rn);window.history.replaceState({...window.history.state,wpInteractivityId:rt},\"\");window.addEventListener(\"popstate\",e=>{e.state!==null&&e.state?.wpInteractivityId!==rt&&window.location.reload()});export{Jn as asDangerousHTML,Gn as getConfig,In as getContext,Cn as getElement,Ut as getServerContext,Lt as getServerState,ha as privateApis,se as splitTask,Ue as store,xn as useCallback,Sn as useEffect,G as useInit,kt as useLayoutEffect,Tn as useMemo,U as useRef,un as useState,Rt as useWatch,gn as watch,M as withScope,En as withSyncEvent};\n"
+  },
+  {
+   "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P24PF4B",
+   "headers": {
+    "content-encoding": "zstd",
+    "expires": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "last-modified": "Wed, 04 Nov 2026 03:00:00 GMT",
+    "access-control-allow-headers": "Cache-Control",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "cache-control": "private, max-age=900",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "*",
+    "content-length": "138903",
+    "x-xss-protection": "0",
+    "server": "Google Tag Manager"
+   },
+   "tail": "{ [native code] }\")||ac(MF,\"{\\n    [native code]\\n}\")||Xd.push(Bm)}else nf.push(Bm)}}}finally{z(wh,\nxh)}nf.length>0&&gj(\"jsm\",nf.join(\"~\"));Xd.length>0&&gj(\"jsp\",Xd.join(\"~\"))}vF();pk(1);tI();return G}\nfunction Bk(){try{if(!Wj()&&(If(47)||!rm()))if(If(70))GA();else{If(64)&&ij.H.K.add(118517917);mj();nj(ij.H,Kf(67));lj(ij.H,H(72));gl.H&&fz();Kh[4]=!0;var a=Un(\"debugGroupId\",function(){return String(Math.floor(Number.MAX_SAFE_INTEGER*Math.random()))});To(a);Ft();PF();Zt();ZB();if(im()){H(5);Bt({ctid:H(5)});sI();rB().removeExternalRestrictions(am());}else{TG.T();\nPV().bootstrap=Wb();If(51)&&HE();gl.H&&gz();typeof A.name===\"string\"&&$b(A.name,\"web-pixel-sandbox-CUSTOM\")&&Bd()?zV(\"dMDg0Yz\"):A.Shopify&&(zV(\"dN2ZkMj\"),Bd()&&zV(\"dNTU0Yz\"));OV()}}}catch(b){pk(5),qx()}}\n(function(a){function b(){g=C.documentElement.getAttribute(\"data-tag-assistant-present\");xo(g)&&(f=e.Hl)}function c(){f&&Uc?(zA=!0,d(f)):a()}if(If(70))a();else{var d=function(q){var r=\"GTM\",t=\"GTM\";If(45)&&(r=\"OGT\",t=\"GTAG\");var u=H(23),v=A[u];v||(v=[],A[u]=v,dd(\"https://\"+H(3)+\"/debug/bootstrap?id=\"+H(5)+\"&src=\"+t+\"&cond=\"+String(q)+\"&gtm=\"+zu()));var x={messageType:\"CONTAINER_STARTING\",data:{scriptSource:Uc,containerProduct:r,debug:!1,id:H(5),targetRef:{ctid:H(5),isDestination:Yl(),canonicalId:H(6)},\naliases:bm(),destinations:Zl()}},y=x.data;y.resume=function(){a()};y.resumeWithMemos=function(){Jo(1);a()};If(2)&&(x.data.initialPublish=!0);v.push(x)},e={Xo:1,Kl:2,Yl:3,xk:4,Hl:5};e[e.Xo]=\"GTM_DEBUG_LEGACY_PARAM\";e[e.Kl]=\"GTM_DEBUG_PARAM\";e[e.Yl]=\"REFERRER\";e[e.xk]=\"COOKIE\";e[e.Hl]=\"EXTENSION_PARAM\";var f=void 0,g=void 0,h=zj(A.location,\"query\",!1,void 0,\"gtm_debug\");xo(h)&&(f=e.Kl);if(!f&&C.referrer){var k=Fj(C.referrer);Bj(k,\"host\")===H(24)&&(f=e.Yl)}if(!f){var m=sq(\"__TAG_ASSISTANT\");m.length&&\nm[0].length&&(f=e.xk)}f||b();if(!f&&wo(g)){var p=!1;id(C,\"TADebugSignal\",function(){p||(p=!0,b(),c())},!1);A.setTimeout(function(){p||(p=!0,b(),c())},200)}else c()}})(function(){!If(47)||Ak()[\"0\"]?Bk():Ek()});\n\n})()\n\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=5381c0a3642be76565c7-20240308",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Wed, 07 Oct 2026 08:31:59 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "edBy},get isSubmenuOpen(){let e=o();return!e.hasCustomOverlay&&Object.values(e.overlayOpenedBy||{}).filter(Boolean).length>0||l.isMenuOpen}},actions:{openMenuOnHover(e){if(e?.pointerType===\"touch\")return;let{type:n}=o();n===\"submenu\"&&c.openMenu(\"hover\")},closeMenuOnHover(e){if(e?.pointerType===\"touch\")return;let{type:n}=o();n===\"submenu\"&&c.closeMenu(\"hover\")},openMenuOnClick(){let e=o(),{ref:n}=s();e.previousFocus=n,c.openMenu(\"click\")},closeMenuOnClick(){c.closeMenu(\"click\"),c.closeMenu(\"focus\")},openMenuOnFocus(){c.openMenu(\"focus\")},toggleMenuOnClick(){let e=o(),{ref:n}=s();window.document.activeElement!==n&&n.focus();let{menuOpenedBy:t}=l;t.click||t.focus?(c.closeMenu(\"click\"),c.closeMenu(\"focus\"),c.closeMenu(\"hover\")):(e.previousFocus=n,c.openMenu(\"click\"))},handleMenuKeydown:i(e=>{let{type:n,firstFocusableElement:t,lastFocusableElement:u}=o();if(l.menuOpenedBy.click){if(e.key===\"Escape\"){e.stopPropagation(),c.closeMenu(\"click\"),c.closeMenu(\"focus\");return}n===\"overlay\"&&e.key===\"Tab\"&&(e.shiftKey&&window.document.activeElement===t?(e.preventDefault(),u.focus()):!e.shiftKey&&window.document.activeElement===u&&(e.preventDefault(),t.focus()))}}),handleMenuFocusout:i(e=>{let{modal:n,type:t}=o();(e.relatedTarget===null||!n?.contains(e.relatedTarget)&&e.target!==window.document.activeElement&&t===\"submenu\")&&(c.closeMenu(\"click\"),c.closeMenu(\"focus\"))}),openMenu(e=\"click\"){let{type:n}=o();l.menuOpenedBy[e]=!0,n===\"overlay\"&&document.documentElement.classList.add(\"has-modal-open\")},closeMenu(e=\"click\"){let n=o();l.menuOpenedBy[e]=!1,l.isMenuOpen||(n.modal?.contains(window.document.activeElement)&&n.previousFocus?.focus(),n.modal=null,n.previousFocus=null,n.type===\"overlay\"&&document.documentElement.classList.remove(\"has-modal-open\"))}},callbacks:{initMenu(){let e=o(),{ref:n}=s();if(l.isMenuOpen){let t=a(n);e.modal=n,e.firstFocusableElement=t[0],e.lastFocusableElement=t[t.length-1]}},focusFirstElement(){let{ref:e}=s();l.isMenuOpen&&a(e)?.[0]?.focus()}}},{lock:!0});\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Wed, 05 Aug 2026 12:44:27 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "/*! This file is auto-generated */\n(function() {\n\"use strict\";var wp;(wp||={}).domReady=(()=>{var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var a=Object.getOwnPropertyNames;var i=Object.prototype.hasOwnProperty;var f=(e,t)=>{for(var n in t)o(e,n,{get:t[n],enumerable:!0})},m=(e,t,n,r)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let d of a(t))!i.call(e,d)&&d!==n&&o(e,d,{get:()=>t[d],enumerable:!(r=u(t,d))||r.enumerable});return e};var c=e=>m(o({},\"__esModule\",{value:!0}),e);var p={};f(p,{default:()=>y});function y(e){if(!(typeof document>\"u\")){if(document.readyState===\"complete\"||document.readyState===\"interactive\")return void e();document.addEventListener(\"DOMContentLoaded\",e)}}return c(p);})();\nif (typeof wp.domReady === 'object' && wp.domReady.default) { wp.domReady = wp.domReady.default; }\n(window.wp ||= {}).domReady = wp.domReady;\n})();\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:00 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 14 Jul 2026 20:47:23 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "uments.length,1),n=u(t),o=e<2||arguments[1]===r?r:u(arguments[1]);try{return!!new f(n,o)}catch(r){return!1}}})},function(t,e,n){var o=n(6),a=n(32),c=n(5),i=n(35),u=a(\"iterator\");t.exports=!o(function(){var t=new URL(\"b?a=1&b=2&c=3\",\"https://a\"),e=t.searchParams,n=new URLSearchParams(\"a=1&a=2&b=3\"),o=\"\";return t.pathname=\"c%20d\",e.forEach(function(r,t){e.delete(\"b\"),o+=t+r}),n.delete(\"a\",2),n.delete(\"b\",r),i&&(!t.toJSON||!n.has(\"a\",1)||n.has(\"a\",2)||!n.has(\"a\",r)||n.has(\"b\"))||!e.size&&(i||!c)||!e.sort||\"https://a/c%20d?a=1&c=3\"!==t.href||\"3\"!==e.get(\"c\")||\"a=1\"!==String(new URLSearchParams(\"?a=1\"))||!e[u]||\"a\"!==new URL(\"https://a@b\").username||\"b\"!==new URLSearchParams(new URLSearchParams(\"a=b\")).get(\"a\")||\"xn--e1aybc\"!==new URL(\"https://\u0442\u0435\u0441\u0442\").host||\"#%D0%B1\"!==new URL(\"https://a#\u0431\").hash||\"a1c3\"!==o||\"x\"!==new URL(\"https://x\",r).host})},function(t,e,n){var o=n(2),a=n(22),c=n(96),i=n(80),u=n(110),s=a(\"URL\");o({target:\"URL\",stat:!0,forced:!u},{parse:function(t){var e=c(arguments.length,1),n=i(t),o=e<2||arguments[1]===r?r:i(arguments[1]);try{return new s(n,o)}catch(r){return null}}})}],e={},(n=function(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}).m=t,n.c=e,n.d=function(r,t,e){n.o(r,t)||Object.defineProperty(r,t,{enumerable:!0,get:e})},n.r=function(r){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(r,\"__esModule\",{value:!0})},n.t=function(r,t){if(1&t&&(r=n(r)),8&t)return r;if(4&t&&\"object\"==typeof r&&r&&r.__esModule)return r;var e=Object.create(null);if(n.r(e),Object.defineProperty(e,\"default\",{enumerable:!0,value:r}),2&t&&\"string\"!=typeof r)for(var o in r)n.d(e,o,function(t){return r[t]}.bind(null,o));return e},n.n=function(r){var t=r&&r.__esModule?function(){return r.default}:function(){return r};return n.d(t,\"a\",t),t},n.o=function(r,t){return Object.prototype.hasOwnProperty.call(r,t)},n.p=\"\",n(n.s=0)}();"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&ver=16.3",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Tue, 06 Oct 2026 17:59:10 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "fineProperty(e,o,{enumerable:!0,get:t[o]})},s.o=(e,t)=>Object.hasOwn(e,t),(()=>{\"use strict\";s(79366)})(),(()=>{\"use strict\";s(37613),s(11775);var e=s(98490),t=s.n(e),r=s(72856);function o(e){const t=\"https://subscribe.wordpress.com/memberships/?\"+new URLSearchParams(e).toString();return(0,r.to)(t)}t()(function(){const e=document.querySelector(\"#jp_retrieve_subscriptions_link\");e&&e.addEventListener(\"click\",function(e){e.preventDefault(),function(){const e=document.querySelector(\".wp-block-jetpack-subscriptions__container form\");if(!e)return;if(!e.checkValidity())return void e.reportValidity();o({email:e.querySelector('input[type=\"email\"]').value,blog:e.dataset.blog,plan:\"newsletter\",source:\"jetpack_retrieve_subscriptions\",post_access_level:e.dataset.post_access_level,display:\"alternate\"})}()});document.querySelectorAll(\".wp-block-jetpack-subscriptions__container form\").forEach(e=>{if(!e.payments_attached){e.payments_attached=!0;const t=e.querySelector('button[type=\"submit\"]');t.insertAdjacentHTML(\"beforeend\",r.u1),e.addEventListener(\"submit\",function(s){if(e.resubmitted)return;t.classList.add(\"is-loading\"),t.setAttribute(\"aria-busy\",\"true\"),t.setAttribute(\"aria-live\",\"polite\");let r=e.querySelector('input[type=\"email\"]')?.value??\"\";!r&&e.dataset.subscriber_email&&(r=e.dataset.subscriber_email);if(\"subscribe\"===e.querySelector(\"input[name=action]\").value){s.preventDefault();const n=e.querySelector(\"input[name=post_id]\")?.value??\"\",i=e.querySelector(\"input[name=tier_id]\")?.value??\"\",a=e.querySelector(\"input[name=app_source]\")?.value??\"\",c=e.querySelector(\"input[name=selected_newsletter_categories]\")?.value??\"\";o({email:r,post_id:n,tier_id:i,blog:e.dataset.blog,plan:\"newsletter\",source:\"jetpack_subscribe\",app_source:a,post_access_level:e.dataset.post_access_level,display:\"alternate\",selected_newsletter_categories:c}).then(()=>{e.dispatchEvent(new Event(\"subscription-modal-loaded\")),t.classList.remove(\"is-loading\"),t.setAttribute(\"aria-busy\",\"false\")})}})}})})})()})();"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/time/build/view.js?ver=385bfe9134bf98c52dda",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 15:06:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "window.onload=()=>{!function(){const e=function(){try{(new Date).toLocaleTimeString(\"i\")}catch(e){return\"RangeError\"===e.name}return!1}();document.querySelectorAll(\".wporg-time\").forEach(t=>{let n=\"\";const o=t.getAttribute(\"datetime\"),i=t.getAttribute(\"data-iso\"),r=o&&function(e){const t=/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})([+-][0-2]{1}[0-9]{1}):00$/.exec(e);return t&&new Date(Date.UTC(+t[1],+t[2]-1,+t[3],+t[4],+t[5],+t[6]))}(o);if(r&&i){e||(n+=function(e){return e.toLocaleDateString(window.navigator.language,{weekday:\"long\",month:\"long\",day:\"numeric\",year:\"numeric\"})}(r),n+=\" \"),n+=function(e){return e.toLocaleTimeString(window.navigator.language,{weekday:\"long\",month:\"long\",day:\"numeric\",year:\"numeric\",hour:\"2-digit\",minute:\"2-digit\",timeZoneName:\"short\"})}(r),t.innerText=n,t.removeAttribute(\"data-iso\"),t.style.textDecoration=\"\",t.style.textDecorationStyle=\"\";const o=document.createElement(\"a\");o.setAttribute(\"href\",`https://www.timeanddate.com/worldclock/fixedtime.html?iso=${i}`),o.appendChild(t.cloneNode(!0)),t.parentNode.replaceChild(o,t)}})}()};"
+  },
+  {
+   "url": "https://stats.wp.com/e-202645.js",
+   "headers": {
+    "cache-control": "max-age=31536000",
+    "a8c-edge-cache": "cache",
+    "content-encoding": "br",
+    "x-nc": "HIT sea",
+    "etag": "W/7134-1790165859044.9197",
+    "x-minify": "t",
+    "x-minify-cache": "hit",
+    "access-control-allow-methods": "GET, HEAD",
+    "expires": "Mon, 01 Nov 2027 15:33:16 GMT",
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "vary": "Accept-Encoding",
+    "server": "nginx"
+   },
+   "tail": "nt(e[1])}};return t};var n=function(t){var e,n=[];for(e in t){if(t.hasOwnProperty(e)){n.push(encodeURIComponent(e)+\"=\"+encodeURIComponent(t[e]))}};return n.join(\"&\")};var o=function(t,e,n){var o=new Image;o.src=document.location.protocol+\"//pixel.wp.com/\"+t+\"?\"+e+\"&rand=\"+Math.random();o.alt=\"\";o.width=\"6\";o.height=\"5\";if(\"string\"===typeof n&&document.body){o.id=n;document.body.appendChild(o)}};var i=function(t){this.a=1;if(t&&t.length){for(var e=0;e<t.length;e++){this.push(t[e])}}};i.prototype.push=function(t){if(t){if(\"object\"===typeof t&&t.length){var e=t.splice(0,1);if(c[e])c[e].apply(null,t)}else if(\"function\"===typeof t){t()}}};var r=function(){if(!window._stq.a){window._stq=new i(window._stq)}};var c={view:function(t){t.host=document.location.host;t.ref=document.referrer;t.fcp=d();try{if(typeof window!==\"undefined\"&&window.location){var e=new URL(window.location.href).searchParams;var i=e&&Array.from(e.entries()).filter(([t])=>t.startsWith(\"utm_\"));var r=i?Object.fromEntries(i):{};var c=Array.from(Object.entries(t)).filter(([t])=>!t.startsWith(\"utm_\"));t=c?Object.fromEntries(c):t;t=Object.assign(t,r)}}catch(t){if(window.console&&window.console.log){window.console.log(t)}}o(\"g.gif\",n(t),\"wpstats\")},click:function(t){o(\"c.gif\",n(t),false)},clickTrackerInit:function(e,n){t.init(e,n)}};var a=function(){return typeof document.hidden!==\"undefined\"&&document.hidden};var f=function(){if(!document.hidden){document.removeEventListener(\"visibilitychange\",f);r()}};var u=function(){document.addEventListener(\"visibilitychange\",f)};function d(){if(window.performance){var t=window.performance.getEntriesByType(\"paint\");for(var e=0;e<t.length;e++){if(t[e][\"name\"]===\"first-contentful-paint\"){return Math.round(t[e][\"startTime\"])}}}return 0}if(6===e()&&\"complete\"!==document.readyState&&\"object\"===typeof document.attachEvent){document.attachEvent(\"onreadystatechange\",function(t){if(\"complete\"===document.readyState)window.setTimeout(r,250)})}else{if(a()){u()}else{r()}};return c}();"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/blocks/global-header-footer/js/view.js?ver=1781196531",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Thu, 11 Jun 2026 15:06:54 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "\t\t\t\t\t( _button ) => _button.offsetWidth > 0 && null === _button.closest( `#${ thisModal }` )\n\t\t\t\t);\n\n\t\t\t\tcloseButtons.forEach( ( _button ) => _button.click() );\n\n\t\t\t\t// Add a helper class when one of the global modals are open.\n\t\t\t\tdocument.documentElement.classList.add( 'has-global-modal-open' );\n\t\t\t} );\n\t\t} );\n\n\t\t// Watching for changes to the html element's class, which indicates open/close state of navigation.\n\t\tconst observer = new MutationObserver( ( mutations ) => {\n\t\t\tmutations.forEach( ( mutation ) => {\n\t\t\t\tconst oldClass = mutation.oldValue || '';\n\t\t\t\tconst newClass = mutation.target.className || '';\n\t\t\t\tif ( oldClass.includes( 'has-modal-open' ) && ! newClass.includes( 'has-modal-open' ) ) {\n\t\t\t\t\t// Menu has closed, remove the helper class if it exists. If the previously\n\t\t\t\t\t// open menu was not the global nav, there will be not effect here.\n\t\t\t\t\tmutation.target.classList.remove( 'has-global-modal-open' );\n\t\t\t\t} else if ( ! oldClass.includes( 'has-modal-open' ) && newClass.includes( 'has-modal-open' ) ) {\n\t\t\t\t\t// Any nav menu has opened, scroll to the top of the page to show the\n\t\t\t\t\t// entire menu (and prevent incorrect positioning).\n\t\t\t\t\twindow.scrollTo( { top: 0, behavior: 'instant' } );\n\t\t\t\t}\n\t\t\t} );\n\t\t} );\n\n\t\t// Observe the html element for changes only to the class attribute.\n\t\tobserver.observe( document.documentElement, {\n\t\t\tattributes: true,\n\t\t\tattributeFilter: [ 'class' ],\n\t\t\tattributeOldValue: true,\n\t\t} );\n\t} );\n\n\twindow.addEventListener( 'resize', () => {\n\t\t// Hide any open mobile menus if we're no longer in a mobile view.\n\t\tconst mobileViewToggle = document.querySelector(\n\t\t\t'.global-header__navigation .wp-block-navigation__responsive-container-open'\n\t\t);\n\t\tif ( ! mobileViewToggle || ! mobileViewToggle.offsetWidth ) {\n\t\t\tconst closeMenuButton = document.querySelector(\n\t\t\t\t'.wp-block-navigation__responsive-container.is-menu-open button[data-micromodal-close]'\n\t\t\t);\n\t\t\tif ( closeMenuButton ) {\n\t\t\t\tcloseMenuButton.click();\n\t\t\t}\n\t\t}\n\t} );\n} )();\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifJP/style.css",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:53 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "wap;\n    font-weight:200 900;\n    unicode-range:U+2014,U+2018-2019,U+201C-201D,U+2026,U+3001-3002,U+300A-300B,U+FF01,U+FF08-FF09,U+FF0C-FF0D,U+FF1A-FF1B,U+FF1F,U+FF5C;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-6.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+401,U+410-44F,U+451;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-5.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+391-3A1,U+3A3-3A9,U+3B1-3C9;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-4.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+0,U+251,U+261,U+2BB,U+2C7,U+2C9-2CB,U+2D9,U+2EA-2EB,U+300-301,U+30C,U+3113-3129,U+312D-312F,U+31A4-31B3;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-3.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+192,U+1A0-1A1,U+1AF-1B0,U+1CD-1DC,U+1F8-1F9;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-2.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+100-103,U+110-113,U+11A-11B,U+128-12B,U+143-144,U+147-148,U+14C-14F,U+152-153,U+168-16D;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-1.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+A0-B1,U+B4-FF;\n}@font-face{\n    font-family:\"Noto Serif JP\";\n    src:local(\"Noto Serif JP\"),url(\"./NotoSerifJP-0.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+20-7E,U+B2-B3,U+65E5,U+6708,U+70B9;\n}"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifKR/style.css",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:45 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "wap;\n    font-weight:200 900;\n    unicode-range:U+2014,U+2018-2019,U+201C-201D,U+2026,U+3001-3002,U+300A-300B,U+FF01,U+FF08-FF09,U+FF0C-FF0D,U+FF1A-FF1B,U+FF1F,U+FF5C;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-6.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+401,U+410-44F,U+451;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-5.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+391-3A1,U+3A3-3A9,U+3B1-3C9;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-4.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+0,U+251,U+261,U+2BB,U+2C7,U+2C9-2CB,U+2D9,U+2EA-2EB,U+300-301,U+30C,U+3113-3129,U+312D-312F,U+31A4-31B3;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-3.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+192,U+1A0-1A1,U+1AF-1B0,U+1CD-1DC,U+1F8-1F9;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-2.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+100-103,U+110-113,U+11A-11B,U+128-12B,U+143-144,U+147-148,U+14C-14F,U+152-153,U+168-16D;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-1.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+A0-B1,U+B4-FF;\n}@font-face{\n    font-family:\"Noto Serif KR\";\n    src:local(\"Noto Serif KR\"),url(\"./NotoSerifKR-0.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+20-7E,U+B2-B3,U+2F47,U+2F49,U+70B9;\n}"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-content/mu-plugins/pub-sync/global-fonts/NotoSerif/NotoSerifSC/style.css",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "text/css",
+    "last-modified": "Thu, 11 Jun 2026 16:48:53 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "wap;\n    font-weight:200 900;\n    unicode-range:U+2014,U+2018-2019,U+201C-201D,U+2026,U+3001-3002,U+300A-300B,U+FF01,U+FF08-FF09,U+FF0C-FF0D,U+FF1A-FF1B,U+FF1F,U+FF5C;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-6.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+401,U+410-44F,U+451;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-5.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+391-3A1,U+3A3-3A9,U+3B1-3C9;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-4.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+0,U+251,U+261,U+2BB,U+2C7,U+2C9-2CB,U+2D9,U+2EA-2EB,U+300-301,U+30C,U+3113-3129,U+312D-312F,U+31A4-31B3;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-3.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+192,U+1A0-1A1,U+1AF-1B0,U+1CD-1DC,U+1F8-1F9;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-2.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+100-103,U+110-113,U+11A-11B,U+128-12B,U+143-144,U+147-148,U+14C-14F,U+152-153,U+168-16D;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-1.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+A0-B1,U+B4-FF;\n}@font-face{\n    font-family:\"Noto Serif SC\";\n    src:local(\"Noto Serif SC\"),url(\"./NotoSerifSC-0.woff2\")format(\"woff2\");\n    font-style:normal;\n    font-display:swap;\n    font-weight:200 900;\n    unicode-range:U+20-7E,U+B2-B3,U+2F47,U+2F49,U+70B9;\n}"
+  },
+  {
+   "url": "https://www.googletagmanager.com/gtag/js?id=G-CG6GJ50G8J&cx=c&gtm=4e6b21",
+   "headers": {
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "cache-control": "private, max-age=900",
+    "content-encoding": "zstd",
+    "cross-origin-resource-policy": "cross-origin",
+    "access-control-allow-credentials": "true",
+    "expires": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "content-length": "190521",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "x-xss-protection": "0",
+    "content-type": "application/javascript; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "server": "Google Tag Manager",
+    "access-control-allow-headers": "Cache-Control"
+   },
+   "tail": "{ [native code] }\")||ac(MF,\"{\\n    [native code]\\n}\")||Xd.push(Bm)}else nf.push(Bm)}}}finally{z(wh,\nxh)}nf.length>0&&gj(\"jsm\",nf.join(\"~\"));Xd.length>0&&gj(\"jsp\",Xd.join(\"~\"))}vF();pk(1);tI();return G}\nfunction Bk(){try{if(!Wj()&&(If(47)||!rm()))if(If(70))GA();else{If(64)&&ij.H.K.add(118517917);mj();nj(ij.H,Kf(67));lj(ij.H,H(72));gl.H&&fz();Kh[4]=!0;var a=Un(\"debugGroupId\",function(){return String(Math.floor(Number.MAX_SAFE_INTEGER*Math.random()))});To(a);Ft();PF();Zt();ZB();if(im()){H(5);Bt({ctid:H(5)});sI();rB().removeExternalRestrictions(am());}else{TG.T();\nPV().bootstrap=Wb();If(51)&&HE();gl.H&&gz();typeof A.name===\"string\"&&$b(A.name,\"web-pixel-sandbox-CUSTOM\")&&Bd()?zV(\"dMDg0Yz\"):A.Shopify&&(zV(\"dN2ZkMj\"),Bd()&&zV(\"dNTU0Yz\"));OV()}}}catch(b){pk(5),qx()}}\n(function(a){function b(){g=C.documentElement.getAttribute(\"data-tag-assistant-present\");xo(g)&&(f=e.Hl)}function c(){f&&Uc?(zA=!0,d(f)):a()}if(If(70))a();else{var d=function(q){var r=\"GTM\",t=\"GTM\";If(45)&&(r=\"OGT\",t=\"GTAG\");var u=H(23),v=A[u];v||(v=[],A[u]=v,dd(\"https://\"+H(3)+\"/debug/bootstrap?id=\"+H(5)+\"&src=\"+t+\"&cond=\"+String(q)+\"&gtm=\"+zu()));var x={messageType:\"CONTAINER_STARTING\",data:{scriptSource:Uc,containerProduct:r,debug:!1,id:H(5),targetRef:{ctid:H(5),isDestination:Yl(),canonicalId:H(6)},\naliases:bm(),destinations:Zl()}},y=x.data;y.resume=function(){a()};y.resumeWithMemos=function(){Jo(1);a()};If(2)&&(x.data.initialPublish=!0);v.push(x)},e={Xo:1,Kl:2,Yl:3,xk:4,Hl:5};e[e.Xo]=\"GTM_DEBUG_LEGACY_PARAM\";e[e.Kl]=\"GTM_DEBUG_PARAM\";e[e.Yl]=\"REFERRER\";e[e.xk]=\"COOKIE\";e[e.Hl]=\"EXTENSION_PARAM\";var f=void 0,g=void 0,h=zj(A.location,\"query\",!1,void 0,\"gtm_debug\");xo(h)&&(f=e.Kl);if(!f&&C.referrer){var k=Fj(C.referrer);Bj(k,\"host\")===H(24)&&(f=e.Yl)}if(!f){var m=sq(\"__TAG_ASSISTANT\");m.length&&\nm[0].length&&(f=e.xk)}f||b();if(!f&&wo(g)){var p=!1;id(C,\"TADebugSignal\",function(){p||(p=!0,b(),c())},!1);A.setTimeout(function(){p||(p=!0,b(),c())},200)}else c()}})(function(){!If(47)||Ak()[\"0\"]?Bk():Ek()});\n\n})()\n\n"
+  },
+  {
+   "url": "https://wordpress.org/news/wp-includes/js/wp-emoji-release.min.js?ver=7.2-beta4-65250",
+   "headers": {
+    "vary": "Accept-Encoding",
+    "cache-control": "max-age=315360000",
+    "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>",
+    "content-encoding": "br",
+    "x-nc": "HIT dca 1",
+    "expires": "Thu, 31 Dec 2037 23:55:55 GMT",
+    "alt-svc": "clear",
+    "date": "Wed, 04 Nov 2026 05:13:01 GMT",
+    "content-type": "application/javascript",
+    "last-modified": "Fri, 09 Oct 2026 07:56:27 GMT",
+    "server": "nginx",
+    "x-frame-options": "SAMEORIGIN"
+   },
+   "tail": "5B6\\u25C0\\u25FB-\\u25FE\\u2600-\\u2604\\u260E\\u2611\\u2614\\u2615\\u2618\\u261D\\u2620\\u2622\\u2623\\u2626\\u262A\\u262E\\u262F\\u2638\\u2639\\u263A\\u2648-\\u2653\\u2660\\u2663\\u2665\\u2666\\u2668\\u267B\\u267F\\u2692\\u2693\\u2694\\u2696\\u2697\\u2699\\u269B\\u269C\\u26A0\\u26A1\\u26AA\\u26AB\\u26B0\\u26B1\\u26BD\\u26BE\\u26C4\\u26C5\\u26C8\\u26CE\\u26CF\\u26D1\\u26D3\\u26D4\\u26E9\\u26EA\\u26F0-\\u26F5\\u26F7-\\u26FA\\u26FD\\u2702\\u2705\\u2708-\\u270D\\u270F\\u2712\\u2714\\u2716\\u271D\\u2721\\u2728\\u2733\\u2734\\u2744\\u2747\\u274C\\u274E\\u2753\\u2754\\u2755\\u2757\\u2763\\u2764\\u2795\\u2796\\u2797\\u27A1\\u27B0\\u27BF\\u2934\\u2935\\u2B05\\u2B06\\u2B07\\u2B1B\\u2B1C\\u2B50\\u2B55\\u3030\\u303D\\u3297\\u3299]/.test(u))}function i(u,e){if(c.supports.everything||!s||!u||\"string\"!=typeof u&&(!u.childNodes||!u.childNodes.length))return u;const t=\"object\"==typeof(e=e||{}).imgAttr?e.imgAttr:{role:\"img\"};e={base:c.svgUrl,ext:c.svgExt,className:e.className||\"emoji\",callback:(u,e)=>{switch(u){case\"a9\":case\"ae\":case\"2122\":case\"2194\":case\"2660\":case\"2663\":case\"2665\":case\"2666\":return!1}return!(c.supports.everythingExceptFlag&&!/^1f1(?:e[6-9a-f]|f[0-9a-f])-1f1(?:e[6-9a-f]|f[0-9a-f])$/.test(u)&&!/^(1f3f3-fe0f-200d-1f308|1f3f4-200d-2620-fe0f)$/.test(u))&&\"\".concat(e.base,u,e.ext)},attributes:()=>t,onerror:function(){this.parentNode&&(this.dataset.error=\"load-failed\",this.parentNode.replaceChild(o.createTextNode(this.alt),this))},doNotParse:u=>u.classList.contains(\"wp-exclude-emoji\")};return s.parse(u,e)}return function u(){if(!t){if(void 0===n.twemoji)return 600<a?void 0:(n.clearTimeout(e),e=n.setTimeout(u,50),void a++);s=n.twemoji,t=!0,new MutationObserver(u=>{for(var{addedNodes:e,removedNodes:t}of u){var o=e[0],s=t[0];if(!(1===e.length&&1===t.length&&o instanceof Text&&s instanceof HTMLImageElement&&o.data===s.alt&&\"load-failed\"===s.dataset.error))for(const n of e){var a=n instanceof Text?n.parentElement:n;a instanceof HTMLElement&&r(a.textContent)&&i(a)}}}).observe(o.body,{childList:!0,subtree:!0}),i(o.body)}}(),{parse:i,test:r}}()}(window,window._wpemojiSettings);"
+  }
+ ]
+}

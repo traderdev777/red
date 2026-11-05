@@ -7,3 +7,4 @@ dist
 .DS_Store
 pages-out
 apps/.web-pages
+apps/scanner/.env

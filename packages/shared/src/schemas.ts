@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { EvidenceSummarySchema } from "./evidence";
 import type { Scan } from "./index";
 
 /** Runtime schemas mirroring the types in index.ts. Used at every trust boundary. */
@@ -66,10 +67,20 @@ export const FindingSchema = z.object({
 
 export const ScanStatusSchema = z.enum(["queued", "collecting", "analyzing", "done", "failed"]);
 
+/**
+ * public.scans.result. Collection fills `summary`; `analysis` stays null until
+ * the fingerprint + model stages land, and will then carry the findings.
+ */
 export const ScanResultSchema = z.object({
-  findings: z.array(FindingSchema),
   scannerVersion: z.string().min(1),
+  collectedAt: z.string(),
+  /** Key inside the private `evidence` bucket, e.g. "<scan_id>/evidence.json". */
+  evidencePath: z.string().min(1),
+  summary: EvidenceSummarySchema,
+  analysis: z.object({ findings: z.array(FindingSchema) }).nullable(),
 });
+
+export type ScanResultParsed = z.infer<typeof ScanResultSchema>;
 
 /** A row of public.scans as PostgREST returns it (snake_case). */
 export const ScanRowSchema = z.object({
@@ -86,6 +97,7 @@ export const ScanRowSchema = z.object({
   retry_of: z.string().uuid().nullable().optional().default(null),
   attempt: z.number().int().optional().default(1),
   created_at: z.string(),
+  started_at: z.string().nullable().optional().default(null),
   finished_at: z.string().nullable(),
 });
 export type ScanRow = z.infer<typeof ScanRowSchema>;

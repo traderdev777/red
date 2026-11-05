@@ -81,12 +81,8 @@ export interface Finding {
 /** Lifecycle, exactly as stored in public.scans.status. */
 export type ScanStatus = "queued" | "collecting" | "analyzing" | "done" | "failed";
 
-/** What a finished scan stores in public.scans.result. */
-export interface ScanResult {
-  findings: Finding[];
-  /** Scanner version that produced the result, for cache invalidation. */
-  scannerVersion: string;
-}
+/** What a finished scan stores in public.scans.result (see ScanResultSchema). */
+export type ScanResult = import("./schemas").ScanResultParsed;
 
 export interface Scan {
   id: string;
@@ -116,3 +112,5 @@ export function clampScore(score: number): number {
 export * from "./url";
 export * from "./normalize";
 export * from "./schemas";
+export * from "./evidence";
+

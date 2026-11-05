@@ -1,28 +1,28 @@
-import { createServer } from "node:http";
+import { loadConfig } from "./config";
+import { Db } from "./db";
+import { log } from "./log";
+import { Worker } from "./worker";
+import { startHealth } from "./health";
 
-const PORT = Number(process.env.PORT ?? 4000);
-const startedAt = Date.now();
+const cfg = loadConfig();
+if (cfg.SCANNER_UPSTREAM_PROXY) {
+  log.warn("SCANNER_UPSTREAM_PROXY is set: egress is chained through another proxy, so DNS pinning is weaker. Development only.");
+}
+const db = new Db(cfg);
+const worker = new Worker(cfg, db);
+const health = startHealth(cfg.PORT, db, worker);
+worker.start();
+log.info({ port: cfg.PORT, user_agent: cfg.userAgent }, "red-scanner up");
 
-/**
- * Scanner service. Scaffold only: a single health route until the
- * fetch/analyze pipeline lands. Types for Scan payloads live in @red/shared.
- */
-const server = createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/health") {
-    res.writeHead(200, { "content-type": "application/json" });
-    res.end(
-      JSON.stringify({
-        status: "ok",
-        service: "red-scanner",
-        uptimeMs: Date.now() - startedAt,
-      }),
-    );
-    return;
-  }
-  res.writeHead(404, { "content-type": "application/json" });
-  res.end(JSON.stringify({ error: "not_found", path: req.url }));
-});
-
-server.listen(PORT, () => {
-  console.log(`red-scanner listening on :${PORT}`);
-});
+let stopping = false;
+async function shutdown(signal: string) {
+  if (stopping) return;
+  stopping = true;
+  log.info({ signal }, "shutting down: no new claims, finishing in-flight scans");
+  await worker.stop();
+  health.close();
+  process.exit(0);
+}
+process.on("SIGTERM", () => void shutdown("SIGTERM"));
+process.on("SIGINT", () => void shutdown("SIGINT"));
+process.on("unhandledRejection", (e) => log.error({ err: String(e) }, "unhandled rejection"));

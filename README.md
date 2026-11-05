@@ -6,7 +6,7 @@ Point RED at a URL. It reads the site, cites its evidence, and hands you build a
 
 ```
 apps/web         Next.js 15 (App Router), Tailwind, Framer Motion, GSAP
-apps/scanner     Node + TypeScript service (GET /health)
+apps/scanner     Playwright evidence collector: claims queued scans, GET /health (docs/SCANNER.md)
 packages/shared  Domain types: Scan, Finding, Evidence, Confidence, BuildAction
 docs/DESIGN.md   The design system contract
 supabase/        SQL migrations (waitlist)
@@ -63,7 +63,14 @@ npx lighthouse http://localhost:3000/ --form-factor=mobile --view
 `scripts/try-role-escalation.sh` runs the direct-API attempts (self-promote, raise limit, write
 status, spend another user's quota) against your project; each must return 403.
 
-Scanner contract (next build step): write `status`, `progress` (0–100), `error`, `result`,
-`finished_at` with the service role. On failure set `failed_stage` to the status it was in
-(`queued`, `collecting`, `analyzing`); retries of failures before `analyzing` are free. Connect only
-to the addresses `assertPublicUrl()` returned (DNS pinning).
+## Scanner
+
+Full design, ethics rule and safety model: `docs/SCANNER.md`.
+
+1. Run `supabase/migrations/20261105000000_scanner.sql` (queue functions + private `evidence` bucket).
+2. `cp apps/scanner/.env.example apps/scanner/.env` and fill `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SCANNER_BOT_URL`.
+3. `docker compose up --build` (scanner on :4000). Set `SCANNER_URL=http://localhost:4000` in `apps/web/.env.local`.
+4. Without Docker: `pnpm --filter @red/scanner exec playwright install chromium`, then `pnpm --filter @red/scanner start`.
+
+Tests: `pnpm test` (collectors on recorded fixtures, SSRF integration with a real Chrome),
+`pnpm test:db` (queue: no double claims, refunds, reaper).

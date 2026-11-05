@@ -1,0 +1,28 @@
+# Local run of the scanner against your Supabase project:
+#   cp apps/scanner/.env.example apps/scanner/.env   # fill in the values
+#   docker compose up --build
+# The web app runs separately (pnpm dev); set SCANNER_URL=http://localhost:4000.
+services:
+  scanner:
+    build:
+      context: .
+      dockerfile: apps/scanner/Dockerfile
+    env_file: apps/scanner/.env
+    ports:
+      - "4000:4000"
+    init: true
+    # Chrome needs more than Docker's default 64 MB /dev/shm.
+    shm_size: "1gb"
+    cpus: "2.0"
+    mem_limit: 2g
+    pids_limit: 512
+    read_only: true
+    tmpfs:
+      - /tmp:size=512m
+      - /home/pwuser:size=256m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    stop_grace_period: 75s
+    restart: unless-stopped

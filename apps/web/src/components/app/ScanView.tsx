@@ -28,23 +28,43 @@ export interface ScanViewData {
   failed_stage: string | null;
   attempt: number;
   created_at: string;
+  started_at?: string | null;
   finished_at: string | null;
 }
 
 const STEPS = ["Collect", "Fingerprint", "Compress", "Analyze"] as const;
+/** Stages the scanner actually runs today. The rest plug in with the analysis build. */
+const BUILT = 1;
+
+/** The scanner's real milestones (apps/scanner/src/pipeline/collect.ts). */
+const MILESTONES = [
+  [10, "page loaded"],
+  [30, "network settled"],
+  [45, "runtime probed"],
+  [60, "mobile pass"],
+  [80, "Lighthouse"],
+  [95, "evidence uploaded"],
+] as const;
+function milestone(progress: number): string {
+  let label = "starting browser";
+  for (const [p, l] of MILESTONES) if (progress >= p) label = l;
+  return label;
+}
 
 /**
  * Which step is active, from what the scanner reports, never invented:
- *   collecting → Collect, Fingerprint, Compress (split by the scanner's own progress)
+ *   collecting → Collect
  *   analyzing  → Analyze
  * queued and done have no active step.
  */
 function activeStep(s: Pick<ScanViewData, "status" | "progress">): number {
-  if (s.status === "collecting") return s.progress < 34 ? 0 : s.progress < 67 ? 1 : 2;
+  if (s.status === "collecting") return 0;
   if (s.status === "analyzing") return 3;
   return -1;
 }
-function stepState(i: number, s: ScanViewData): "done" | "active" | "pending" | "failed" {
+type StepState = "done" | "active" | "pending" | "failed" | "not-built";
+function stepState(i: number, s: ScanViewData): StepState {
+  if (i >= BUILT && s.status !== "analyzing") return "not-built";
   if (s.status === "done") return "done";
   if (s.status === "failed") {
     const at = s.failed_stage === "analyzing" ? 3 : s.failed_stage === "collecting" ? 0 : -1;
@@ -57,7 +77,17 @@ function stepState(i: number, s: ScanViewData): "done" | "active" | "pending" | 
 /** The four coarse phases a dissolve may run between. Progress ticks inside a phase never trigger it. */
 const phase = (s: ScanStatus) => (s === "collecting" || s === "analyzing" ? "running" : s);
 
-export function ScanView({ initial }: { initial: ScanViewData }) {
+export function ScanView({
+  initial,
+  scanner,
+  evidence,
+}: {
+  initial: ScanViewData;
+  /** Scanner /health at render time, for queued scans. */
+  scanner: { online: boolean; queued: number | null } | null;
+  /** Server-rendered Evidence panel, present once the scan is done. */
+  evidence: React.ReactNode;
+}) {
   const router = useRouter();
   const [scan, setScan] = useState(initial);
   const [resolved, setResolved] = useState(true);
@@ -104,6 +134,15 @@ export function ScanView({ initial }: { initial: ScanViewData }) {
     }, 450);
     return () => clearTimeout(t);
   }, [scan, shown.status]);
+
+  // The Evidence panel is rendered on the server: fetch it once the scan finishes.
+  const refreshed = useRef(false);
+  useEffect(() => {
+    if (scan.status === "done" && !evidence && !refreshed.current) {
+      refreshed.current = true;
+      router.refresh();
+    }
+  }, [scan.status, evidence, router]);
 
   useEffect(() => {
     if (!("at" in retry) || retry.at === handled.current) return;
@@ -175,19 +214,23 @@ export function ScanView({ initial }: { initial: ScanViewData }) {
               <p
                 className={cn(
                   "text-step-0 mt-1",
-                  st === "pending" ? "text-chrome-500" : "text-chrome-100",
+                  st === "pending" || st === "not-built" ? "text-chrome-500" : "text-chrome-100",
                 )}
               >
                 {name}
               </p>
               <p className="text-step-n2 text-chrome-500 font-mono">
                 {st === "active"
-                  ? "running"
+                  ? i === 0
+                    ? milestone(scan.progress)
+                    : "running"
                   : st === "done"
                     ? "done"
                     : st === "failed"
                       ? "failed here"
-                      : "waiting"}
+                      : st === "not-built"
+                        ? "not built yet"
+                        : "waiting"}
               </p>
             </li>
           );
@@ -201,20 +244,54 @@ export function ScanView({ initial }: { initial: ScanViewData }) {
         >
           {s.status === "queued" && (
             <div className="flex flex-col gap-3">
-              <h2 className="text-step-2 text-chrome-100">
-                Queued. The scanner connects in the next build step.
-              </h2>
-              <p className="text-step-0 text-chrome-300 max-w-[60ch]">
-                This scan is saved and waiting. Nothing has been fetched yet, and no progress is
-                shown until the scanner reports it.
-              </p>
+              {scanner?.online ? (
+                <>
+                  <h2 className="text-step-2 text-chrome-100">Queued. A scanner picks this up next.</h2>
+                  <p className="text-step-0 text-chrome-300 max-w-[60ch]">
+                    The scanner is online
+                    {scanner.queued != null ? ` with ${scanner.queued} scan${scanner.queued === 1 ? "" : "s"} waiting` : ""}.
+                    Progress appears here as soon as it claims this one.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-step-2 text-chrome-100">Queued. The scanner is offline right now.</h2>
+                  <p className="text-step-0 text-chrome-300 max-w-[60ch]">
+                    This scan is saved and waiting. Nothing has been fetched yet; it starts when the scanner
+                    reconnects, and no progress is shown until the scanner reports it.
+                  </p>
+                </>
+              )}
             </div>
           )}
           {running && (
-            <div className="flex flex-col gap-3">
-              <h2 className="text-step-2 text-chrome-100">{statusLabel(s.status)}</h2>
-              <p className="text-step-n1 text-chrome-300 font-mono">
-                progress {s.progress}% (reported by the scanner)
+            <div className="flex flex-col gap-4">
+              <h2 className="text-step-2 text-chrome-100">
+                {statusLabel(s.status)}: {milestone(s.progress)}
+              </h2>
+              <div
+                role="progressbar"
+                aria-label="Scan progress"
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={s.progress}
+                aria-valuetext={`${s.progress}%, ${milestone(s.progress)}`}
+                className="bg-ink-950 border-line relative h-2 overflow-hidden rounded-sm border"
+              >
+                <span
+                  className="duration-240 ease-out-expo absolute inset-y-0 left-0 bg-red-500 transition-[width]"
+                  style={{ width: `${s.progress}%` }}
+                />
+              </div>
+              <ol className="text-step-n1 grid grid-cols-3 gap-x-4 gap-y-1 font-mono sm:grid-cols-6" aria-label="Milestones">
+                {MILESTONES.map(([p, l]) => (
+                  <li key={p} className={s.progress >= p ? "text-chrome-100" : "text-chrome-500"}>
+                    {p}% {l}
+                  </li>
+                ))}
+              </ol>
+              <p className="text-step-n1 text-chrome-500 font-mono">
+                The bar only moves when the scanner reports a milestone.
               </p>
             </div>
           )}
@@ -247,20 +324,13 @@ export function ScanView({ initial }: { initial: ScanViewData }) {
               )}
             </div>
           )}
-          {s.status === "done" && (
-            <div className="flex flex-col gap-3">
-              <span className="text-step-n2 tracking-label text-chrome-500 font-mono uppercase">
-                Placeholder
-              </span>
-              <h2 className="text-step-2 text-chrome-100">
-                Results render here in the next build step.
-              </h2>
-              <p className="text-step-0 text-chrome-300 max-w-[60ch]">
-                The scan is marked done. Findings, evidence, and actions aren&rsquo;t rendered yet,
-                and none are shown here until they come from the scanner.
-              </p>
-            </div>
-          )}
+          {s.status === "done" &&
+            (evidence ?? (
+              <div className="flex flex-col gap-3" aria-busy="true">
+                <h2 className="text-step-2 text-chrome-100">Evidence collected. Loading it…</h2>
+                <div className="bg-ink-950 h-40 animate-pulse rounded-md motion-reduce:animate-none" />
+              </div>
+            ))}
         </section>
       </PixelDissolve>
     </div>

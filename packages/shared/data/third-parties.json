@@ -1,0 +1,1466 @@
+{
+ "$comment": "Deterministic third-party domain list. Matching is by exact host or dot-suffix; the longest matching entry wins. Add entries here, never in code.",
+ "version": 1,
+ "entries": [
+  {
+   "domain": "abtasty.com",
+   "vendor": "AB Tasty",
+   "category": "experimentation"
+  },
+  {
+   "domain": "accounts.google.com",
+   "vendor": "Google Sign-In",
+   "category": "auth"
+  },
+  {
+   "domain": "addthis.com",
+   "vendor": "AddThis",
+   "category": "social"
+  },
+  {
+   "domain": "adnxs.com",
+   "vendor": "Xandr",
+   "category": "ads"
+  },
+  {
+   "domain": "adobedtm.com",
+   "vendor": "Adobe Launch",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "adroll.com",
+   "vendor": "AdRoll",
+   "category": "ads"
+  },
+  {
+   "domain": "ads-twitter.com",
+   "vendor": "X Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "ads.linkedin.com",
+   "vendor": "LinkedIn Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "adservice.google.com",
+   "vendor": "Google Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "adyen.com",
+   "vendor": "Adyen",
+   "category": "payments"
+  },
+  {
+   "domain": "afterpay.com",
+   "vendor": "Afterpay",
+   "category": "payments"
+  },
+  {
+   "domain": "ajax.googleapis.com",
+   "vendor": "Google Hosted Libraries",
+   "category": "cdn"
+  },
+  {
+   "domain": "akamaihd.net",
+   "vendor": "Akamai",
+   "category": "cdn"
+  },
+  {
+   "domain": "akamaized.net",
+   "vendor": "Akamai",
+   "category": "cdn"
+  },
+  {
+   "domain": "algolia.net",
+   "vendor": "Algolia",
+   "category": "commerce"
+  },
+  {
+   "domain": "algolianet.com",
+   "vendor": "Algolia",
+   "category": "commerce"
+  },
+  {
+   "domain": "amazon-adsystem.com",
+   "vendor": "Amazon Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "amplifyapp.com",
+   "vendor": "AWS Amplify",
+   "category": "hosting"
+  },
+  {
+   "domain": "amplitude.com",
+   "vendor": "Amplitude",
+   "category": "analytics"
+  },
+  {
+   "domain": "analytics.google.com",
+   "vendor": "Google Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "analytics.tiktok.com",
+   "vendor": "TikTok Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "api.mapbox.com",
+   "vendor": "Mapbox",
+   "category": "maps"
+  },
+  {
+   "domain": "apis.google.com",
+   "vendor": "Google APIs",
+   "category": "auth"
+  },
+  {
+   "domain": "apple-pay-gateway.apple.com",
+   "vendor": "Apple Pay",
+   "category": "payments"
+  },
+  {
+   "domain": "appleid.cdn-apple.com",
+   "vendor": "Sign in with Apple",
+   "category": "auth"
+  },
+  {
+   "domain": "arkoselabs.com",
+   "vendor": "Arkose Labs",
+   "category": "captcha"
+  },
+  {
+   "domain": "assets.adobedtm.com",
+   "vendor": "Adobe Launch",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "auth0.com",
+   "vendor": "Auth0",
+   "category": "auth"
+  },
+  {
+   "domain": "azurewebsites.net",
+   "vendor": "Azure App Service",
+   "category": "hosting"
+  },
+  {
+   "domain": "b-cdn.net",
+   "vendor": "Bunny CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "bat.bing.com",
+   "vendor": "Microsoft Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "bazaarvoice.com",
+   "vendor": "Bazaarvoice",
+   "category": "commerce"
+  },
+  {
+   "domain": "bigcommerce.com",
+   "vendor": "BigCommerce",
+   "category": "commerce"
+  },
+  {
+   "domain": "braintreegateway.com",
+   "vendor": "Braintree",
+   "category": "payments"
+  },
+  {
+   "domain": "brightcove.net",
+   "vendor": "Brightcove",
+   "category": "video"
+  },
+  {
+   "domain": "browser-intake-datadoghq.com",
+   "vendor": "Datadog RUM",
+   "category": "monitoring"
+  },
+  {
+   "domain": "browser.sentry-cdn.com",
+   "vendor": "Sentry",
+   "category": "monitoring"
+  },
+  {
+   "domain": "bugsnag.com",
+   "vendor": "Bugsnag",
+   "category": "monitoring"
+  },
+  {
+   "domain": "c0.wp.com",
+   "vendor": "Jetpack CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "captcha-delivery.com",
+   "vendor": "DataDome",
+   "category": "captcha"
+  },
+  {
+   "domain": "casalemedia.com",
+   "vendor": "Index Exchange",
+   "category": "ads"
+  },
+  {
+   "domain": "cdn.cookielaw.org",
+   "vendor": "OneTrust",
+   "category": "consent"
+  },
+  {
+   "domain": "cdn.jsdelivr.net",
+   "vendor": "jsDelivr",
+   "category": "cdn"
+  },
+  {
+   "domain": "cdn.optimizely.com",
+   "vendor": "Optimizely",
+   "category": "experimentation"
+  },
+  {
+   "domain": "cdn.prod.website-files.com",
+   "vendor": "Webflow",
+   "category": "cms"
+  },
+  {
+   "domain": "cdn.sanity.io",
+   "vendor": "Sanity",
+   "category": "cdn"
+  },
+  {
+   "domain": "cdn.segment.com",
+   "vendor": "Segment",
+   "category": "analytics"
+  },
+  {
+   "domain": "cdn.shopify.com",
+   "vendor": "Shopify",
+   "category": "commerce"
+  },
+  {
+   "domain": "cdninstagram.com",
+   "vendor": "Instagram",
+   "category": "social"
+  },
+  {
+   "domain": "cdnjs.cloudflare.com",
+   "vendor": "cdnjs",
+   "category": "cdn"
+  },
+  {
+   "domain": "challenges.cloudflare.com",
+   "vendor": "Cloudflare Turnstile",
+   "category": "captcha"
+  },
+  {
+   "domain": "chargebee.com",
+   "vendor": "Chargebee",
+   "category": "payments"
+  },
+  {
+   "domain": "chartbeat.com",
+   "vendor": "Chartbeat",
+   "category": "analytics"
+  },
+  {
+   "domain": "chartbeat.net",
+   "vendor": "Chartbeat",
+   "category": "analytics"
+  },
+  {
+   "domain": "checkout.razorpay.com",
+   "vendor": "Razorpay",
+   "category": "payments"
+  },
+  {
+   "domain": "clarity.ms",
+   "vendor": "Microsoft Clarity",
+   "category": "analytics"
+  },
+  {
+   "domain": "clerk.accounts.dev",
+   "vendor": "Clerk",
+   "category": "auth"
+  },
+  {
+   "domain": "clerk.com",
+   "vendor": "Clerk",
+   "category": "auth"
+  },
+  {
+   "domain": "cloud.typography.com",
+   "vendor": "Hoefler&Co Cloud.typography",
+   "category": "fonts"
+  },
+  {
+   "domain": "cloudflareinsights.com",
+   "vendor": "Cloudflare Web Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "cloudfront.net",
+   "vendor": "Amazon CloudFront",
+   "category": "cdn"
+  },
+  {
+   "domain": "cloudinary.com",
+   "vendor": "Cloudinary",
+   "category": "cdn"
+  },
+  {
+   "domain": "code.jquery.com",
+   "vendor": "jQuery CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "connect.facebook.net",
+   "vendor": "Meta Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "consensu.org",
+   "vendor": "IAB CMP",
+   "category": "consent"
+  },
+  {
+   "domain": "consent.cookiebot.com",
+   "vendor": "Cookiebot",
+   "category": "consent"
+  },
+  {
+   "domain": "contentful.com",
+   "vendor": "Contentful",
+   "category": "cms"
+  },
+  {
+   "domain": "convertexperiments.com",
+   "vendor": "Convert",
+   "category": "experimentation"
+  },
+  {
+   "domain": "cookiebot.com",
+   "vendor": "Cookiebot",
+   "category": "consent"
+  },
+  {
+   "domain": "cookielaw.org",
+   "vendor": "OneTrust",
+   "category": "consent"
+  },
+  {
+   "domain": "crazyegg.com",
+   "vendor": "Crazy Egg",
+   "category": "analytics"
+  },
+  {
+   "domain": "crisp.chat",
+   "vendor": "Crisp",
+   "category": "support"
+  },
+  {
+   "domain": "criteo.com",
+   "vendor": "Criteo",
+   "category": "ads"
+  },
+  {
+   "domain": "criteo.net",
+   "vendor": "Criteo",
+   "category": "ads"
+  },
+  {
+   "domain": "ct.pinterest.com",
+   "vendor": "Pinterest Tag",
+   "category": "ads"
+  },
+  {
+   "domain": "ctfassets.net",
+   "vendor": "Contentful Assets",
+   "category": "cdn"
+  },
+  {
+   "domain": "datadoghq-browser-agent.com",
+   "vendor": "Datadog RUM",
+   "category": "monitoring"
+  },
+  {
+   "domain": "datadoghq.com",
+   "vendor": "Datadog",
+   "category": "monitoring"
+  },
+  {
+   "domain": "datadome.co",
+   "vendor": "DataDome",
+   "category": "captcha"
+  },
+  {
+   "domain": "demdex.net",
+   "vendor": "Adobe Audience Manager",
+   "category": "ads"
+  },
+  {
+   "domain": "didomi.io",
+   "vendor": "Didomi",
+   "category": "consent"
+  },
+  {
+   "domain": "disqus.com",
+   "vendor": "Disqus",
+   "category": "social"
+  },
+  {
+   "domain": "disquscdn.com",
+   "vendor": "Disqus",
+   "category": "social"
+  },
+  {
+   "domain": "doubleclick.net",
+   "vendor": "Google Ads (DoubleClick)",
+   "category": "ads"
+  },
+  {
+   "domain": "drift.com",
+   "vendor": "Drift",
+   "category": "support"
+  },
+  {
+   "domain": "driftt.com",
+   "vendor": "Drift",
+   "category": "support"
+  },
+  {
+   "domain": "dynatrace.com",
+   "vendor": "Dynatrace",
+   "category": "monitoring"
+  },
+  {
+   "domain": "facebook.net",
+   "vendor": "Meta Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "fast.fonts.net",
+   "vendor": "Monotype Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "fast.wistia.com",
+   "vendor": "Wistia",
+   "category": "video"
+  },
+  {
+   "domain": "fastly.net",
+   "vendor": "Fastly",
+   "category": "cdn"
+  },
+  {
+   "domain": "fbcdn.net",
+   "vendor": "Meta CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "firebaseapp.com",
+   "vendor": "Firebase Hosting",
+   "category": "hosting"
+  },
+  {
+   "domain": "firebaseio.com",
+   "vendor": "Firebase",
+   "category": "auth"
+  },
+  {
+   "domain": "fly.dev",
+   "vendor": "Fly.io",
+   "category": "hosting"
+  },
+  {
+   "domain": "fonts.bunny.net",
+   "vendor": "Bunny Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "fonts.googleapis.com",
+   "vendor": "Google Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "fonts.gstatic.com",
+   "vendor": "Google Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "framer.com",
+   "vendor": "Framer",
+   "category": "cms"
+  },
+  {
+   "domain": "framer.website",
+   "vendor": "Framer",
+   "category": "cms"
+  },
+  {
+   "domain": "framerusercontent.com",
+   "vendor": "Framer",
+   "category": "cdn"
+  },
+  {
+   "domain": "freshchat.com",
+   "vendor": "Freshchat",
+   "category": "support"
+  },
+  {
+   "domain": "freshdesk.com",
+   "vendor": "Freshdesk",
+   "category": "support"
+  },
+  {
+   "domain": "fullstory.com",
+   "vendor": "FullStory",
+   "category": "analytics"
+  },
+  {
+   "domain": "ghost.io",
+   "vendor": "Ghost",
+   "category": "cms"
+  },
+  {
+   "domain": "github.io",
+   "vendor": "GitHub Pages",
+   "category": "hosting"
+  },
+  {
+   "domain": "githubusercontent.com",
+   "vendor": "GitHub Content",
+   "category": "cdn"
+  },
+  {
+   "domain": "go-mpulse.net",
+   "vendor": "Akamai mPulse",
+   "category": "monitoring"
+  },
+  {
+   "domain": "google-analytics.com",
+   "vendor": "Google Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "googleadservices.com",
+   "vendor": "Google Ads",
+   "category": "ads"
+  },
+  {
+   "domain": "googlesyndication.com",
+   "vendor": "Google AdSense",
+   "category": "ads"
+  },
+  {
+   "domain": "googletagmanager.com",
+   "vendor": "Google Tag Manager",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "googlevideo.com",
+   "vendor": "YouTube",
+   "category": "video"
+  },
+  {
+   "domain": "gorgias.chat",
+   "vendor": "Gorgias",
+   "category": "support"
+  },
+  {
+   "domain": "growthbook.io",
+   "vendor": "GrowthBook",
+   "category": "experimentation"
+  },
+  {
+   "domain": "gstatic.com",
+   "vendor": "Google Static",
+   "category": "cdn"
+  },
+  {
+   "domain": "hcaptcha.com",
+   "vendor": "hCaptcha",
+   "category": "captcha"
+  },
+  {
+   "domain": "heap.io",
+   "vendor": "Heap",
+   "category": "analytics"
+  },
+  {
+   "domain": "heapanalytics.com",
+   "vendor": "Heap",
+   "category": "analytics"
+  },
+  {
+   "domain": "helpscout.net",
+   "vendor": "Help Scout",
+   "category": "support"
+  },
+  {
+   "domain": "herokuapp.com",
+   "vendor": "Heroku",
+   "category": "hosting"
+  },
+  {
+   "domain": "highlight.io",
+   "vendor": "Highlight",
+   "category": "monitoring"
+  },
+  {
+   "domain": "hotjar.com",
+   "vendor": "Hotjar",
+   "category": "analytics"
+  },
+  {
+   "domain": "hotjar.io",
+   "vendor": "Hotjar",
+   "category": "analytics"
+  },
+  {
+   "domain": "hs-analytics.net",
+   "vendor": "HubSpot Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "hs-scripts.com",
+   "vendor": "HubSpot",
+   "category": "support"
+  },
+  {
+   "domain": "hscollectedforms.net",
+   "vendor": "HubSpot Forms",
+   "category": "support"
+  },
+  {
+   "domain": "hsforms.com",
+   "vendor": "HubSpot Forms",
+   "category": "support"
+  },
+  {
+   "domain": "hsforms.net",
+   "vendor": "HubSpot Forms",
+   "category": "support"
+  },
+  {
+   "domain": "hubspot.com",
+   "vendor": "HubSpot",
+   "category": "support"
+  },
+  {
+   "domain": "hubspotusercontent-na1.net",
+   "vendor": "HubSpot",
+   "category": "support"
+  },
+  {
+   "domain": "hubspotusercontent.com",
+   "vendor": "HubSpot CMS",
+   "category": "cms"
+  },
+  {
+   "domain": "i.posthog.com",
+   "vendor": "PostHog",
+   "category": "analytics"
+  },
+  {
+   "domain": "i0.wp.com",
+   "vendor": "Jetpack CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "i1.wp.com",
+   "vendor": "Jetpack CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "i2.wp.com",
+   "vendor": "Jetpack CDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "identitytoolkit.googleapis.com",
+   "vendor": "Firebase Auth",
+   "category": "auth"
+  },
+  {
+   "domain": "imgix.net",
+   "vendor": "imgix",
+   "category": "cdn"
+  },
+  {
+   "domain": "ingest.sentry.io",
+   "vendor": "Sentry",
+   "category": "monitoring"
+  },
+  {
+   "domain": "instagram.com",
+   "vendor": "Instagram",
+   "category": "social"
+  },
+  {
+   "domain": "intercom.io",
+   "vendor": "Intercom",
+   "category": "support"
+  },
+  {
+   "domain": "intercomcdn.com",
+   "vendor": "Intercom",
+   "category": "support"
+  },
+  {
+   "domain": "iubenda.com",
+   "vendor": "iubenda",
+   "category": "consent"
+  },
+  {
+   "domain": "js.stripe.com",
+   "vendor": "Stripe",
+   "category": "payments"
+  },
+  {
+   "domain": "jsdelivr.net",
+   "vendor": "jsDelivr",
+   "category": "cdn"
+  },
+  {
+   "domain": "judge.me",
+   "vendor": "Judge.me",
+   "category": "commerce"
+  },
+  {
+   "domain": "jwpcdn.com",
+   "vendor": "JW Player",
+   "category": "video"
+  },
+  {
+   "domain": "jwplayer.com",
+   "vendor": "JW Player",
+   "category": "video"
+  },
+  {
+   "domain": "ka-f.fontawesome.com",
+   "vendor": "Font Awesome",
+   "category": "fonts"
+  },
+  {
+   "domain": "kit.fontawesome.com",
+   "vendor": "Font Awesome",
+   "category": "fonts"
+  },
+  {
+   "domain": "klarna.com",
+   "vendor": "Klarna",
+   "category": "payments"
+  },
+  {
+   "domain": "klarnaservices.com",
+   "vendor": "Klarna",
+   "category": "payments"
+  },
+  {
+   "domain": "klaviyo.com",
+   "vendor": "Klaviyo",
+   "category": "commerce"
+  },
+  {
+   "domain": "launchdarkly.com",
+   "vendor": "LaunchDarkly",
+   "category": "experimentation"
+  },
+  {
+   "domain": "lemonsqueezy.com",
+   "vendor": "Lemon Squeezy",
+   "category": "payments"
+  },
+  {
+   "domain": "livechatinc.com",
+   "vendor": "LiveChat",
+   "category": "support"
+  },
+  {
+   "domain": "logrocket.com",
+   "vendor": "LogRocket",
+   "category": "analytics"
+  },
+  {
+   "domain": "loom.com",
+   "vendor": "Loom",
+   "category": "video"
+  },
+  {
+   "domain": "lr-in.com",
+   "vendor": "LogRocket",
+   "category": "monitoring"
+  },
+  {
+   "domain": "lr-ingest.io",
+   "vendor": "LogRocket",
+   "category": "analytics"
+  },
+  {
+   "domain": "m.stripe.network",
+   "vendor": "Stripe",
+   "category": "payments"
+  },
+  {
+   "domain": "mapbox.com",
+   "vendor": "Mapbox",
+   "category": "maps"
+  },
+  {
+   "domain": "maps.googleapis.com",
+   "vendor": "Google Maps",
+   "category": "maps"
+  },
+  {
+   "domain": "maps.gstatic.com",
+   "vendor": "Google Maps",
+   "category": "maps"
+  },
+  {
+   "domain": "matomo.cloud",
+   "vendor": "Matomo",
+   "category": "analytics"
+  },
+  {
+   "domain": "maxcdn.bootstrapcdn.com",
+   "vendor": "BootstrapCDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "mc.yandex.ru",
+   "vendor": "Yandex Metrica",
+   "category": "analytics"
+  },
+  {
+   "domain": "mixpanel.com",
+   "vendor": "Mixpanel",
+   "category": "analytics"
+  },
+  {
+   "domain": "moatads.com",
+   "vendor": "Moat",
+   "category": "ads"
+  },
+  {
+   "domain": "mouseflow.com",
+   "vendor": "Mouseflow",
+   "category": "analytics"
+  },
+  {
+   "domain": "mux.com",
+   "vendor": "Mux",
+   "category": "video"
+  },
+  {
+   "domain": "mxpnl.com",
+   "vendor": "Mixpanel",
+   "category": "analytics"
+  },
+  {
+   "domain": "myshopify.com",
+   "vendor": "Shopify",
+   "category": "commerce"
+  },
+  {
+   "domain": "netlify.app",
+   "vendor": "Netlify",
+   "category": "hosting"
+  },
+  {
+   "domain": "netlify.com",
+   "vendor": "Netlify",
+   "category": "hosting"
+  },
+  {
+   "domain": "newrelic.com",
+   "vendor": "New Relic",
+   "category": "analytics"
+  },
+  {
+   "domain": "nr-data.net",
+   "vendor": "New Relic",
+   "category": "analytics"
+  },
+  {
+   "domain": "okta.com",
+   "vendor": "Okta",
+   "category": "auth"
+  },
+  {
+   "domain": "olark.com",
+   "vendor": "Olark",
+   "category": "support"
+  },
+  {
+   "domain": "onetrust.com",
+   "vendor": "OneTrust",
+   "category": "consent"
+  },
+  {
+   "domain": "onrender.com",
+   "vendor": "Render",
+   "category": "hosting"
+  },
+  {
+   "domain": "openstreetmap.org",
+   "vendor": "OpenStreetMap",
+   "category": "maps"
+  },
+  {
+   "domain": "openx.net",
+   "vendor": "OpenX",
+   "category": "ads"
+  },
+  {
+   "domain": "optimizely.com",
+   "vendor": "Optimizely",
+   "category": "experimentation"
+  },
+  {
+   "domain": "osano.com",
+   "vendor": "Osano",
+   "category": "consent"
+  },
+  {
+   "domain": "outbrain.com",
+   "vendor": "Outbrain",
+   "category": "ads"
+  },
+  {
+   "domain": "p.typekit.net",
+   "vendor": "Adobe Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "paddle.com",
+   "vendor": "Paddle",
+   "category": "payments"
+  },
+  {
+   "domain": "pages.dev",
+   "vendor": "Cloudflare Pages",
+   "category": "hosting"
+  },
+  {
+   "domain": "parastorage.com",
+   "vendor": "Wix",
+   "category": "cdn"
+  },
+  {
+   "domain": "pay.google.com",
+   "vendor": "Google Pay",
+   "category": "payments"
+  },
+  {
+   "domain": "paypal.com",
+   "vendor": "PayPal",
+   "category": "payments"
+  },
+  {
+   "domain": "paypalobjects.com",
+   "vendor": "PayPal",
+   "category": "payments"
+  },
+  {
+   "domain": "pendo.io",
+   "vendor": "Pendo",
+   "category": "analytics"
+  },
+  {
+   "domain": "perimeterx.net",
+   "vendor": "HUMAN (PerimeterX)",
+   "category": "captcha"
+  },
+  {
+   "domain": "pinterest.com",
+   "vendor": "Pinterest Tag",
+   "category": "ads"
+  },
+  {
+   "domain": "pixel.wp.com",
+   "vendor": "Jetpack Stats",
+   "category": "analytics"
+  },
+  {
+   "domain": "platform.linkedin.com",
+   "vendor": "LinkedIn",
+   "category": "social"
+  },
+  {
+   "domain": "platform.twitter.com",
+   "vendor": "X Embeds",
+   "category": "social"
+  },
+  {
+   "domain": "plausible.io",
+   "vendor": "Plausible",
+   "category": "analytics"
+  },
+  {
+   "domain": "player.vimeo.com",
+   "vendor": "Vimeo",
+   "category": "video"
+  },
+  {
+   "domain": "posthog.com",
+   "vendor": "PostHog",
+   "category": "analytics"
+  },
+  {
+   "domain": "prismic.io",
+   "vendor": "Prismic",
+   "category": "cms"
+  },
+  {
+   "domain": "pubmatic.com",
+   "vendor": "PubMatic",
+   "category": "ads"
+  },
+  {
+   "domain": "px-cdn.net",
+   "vendor": "HUMAN (PerimeterX)",
+   "category": "captcha"
+  },
+  {
+   "domain": "px.ads.linkedin.com",
+   "vendor": "LinkedIn Insight",
+   "category": "ads"
+  },
+  {
+   "domain": "quantcast.mgr.consensu.org",
+   "vendor": "Quantcast Choice",
+   "category": "consent"
+  },
+  {
+   "domain": "quantserve.com",
+   "vendor": "Quantcast",
+   "category": "analytics"
+  },
+  {
+   "domain": "quora.com",
+   "vendor": "Quora Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "railway.app",
+   "vendor": "Railway",
+   "category": "hosting"
+  },
+  {
+   "domain": "raygun.io",
+   "vendor": "Raygun",
+   "category": "monitoring"
+  },
+  {
+   "domain": "razorpay.com",
+   "vendor": "Razorpay",
+   "category": "payments"
+  },
+  {
+   "domain": "recaptcha.net",
+   "vendor": "reCAPTCHA",
+   "category": "captcha"
+  },
+  {
+   "domain": "rechargeapps.com",
+   "vendor": "Recharge",
+   "category": "commerce"
+  },
+  {
+   "domain": "reddit.com",
+   "vendor": "Reddit",
+   "category": "ads"
+  },
+  {
+   "domain": "redditstatic.com",
+   "vendor": "Reddit Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "res.cloudinary.com",
+   "vendor": "Cloudinary",
+   "category": "cdn"
+  },
+  {
+   "domain": "rollbar.com",
+   "vendor": "Rollbar",
+   "category": "monitoring"
+  },
+  {
+   "domain": "rubiconproject.com",
+   "vendor": "Magnite",
+   "category": "ads"
+  },
+  {
+   "domain": "rudderstack.com",
+   "vendor": "RudderStack",
+   "category": "analytics"
+  },
+  {
+   "domain": "s0.wp.com",
+   "vendor": "WordPress.com",
+   "category": "cdn"
+  },
+  {
+   "domain": "sanity.io",
+   "vendor": "Sanity",
+   "category": "cdn"
+  },
+  {
+   "domain": "scorecardresearch.com",
+   "vendor": "Comscore",
+   "category": "analytics"
+  },
+  {
+   "domain": "searchspring.net",
+   "vendor": "Searchspring",
+   "category": "commerce"
+  },
+  {
+   "domain": "segment.com",
+   "vendor": "Segment",
+   "category": "analytics"
+  },
+  {
+   "domain": "segment.io",
+   "vendor": "Segment",
+   "category": "analytics"
+  },
+  {
+   "domain": "sentry-cdn.com",
+   "vendor": "Sentry",
+   "category": "monitoring"
+  },
+  {
+   "domain": "sentry.io",
+   "vendor": "Sentry",
+   "category": "monitoring"
+  },
+  {
+   "domain": "sharethis.com",
+   "vendor": "ShareThis",
+   "category": "social"
+  },
+  {
+   "domain": "shopify.com",
+   "vendor": "Shopify",
+   "category": "commerce"
+  },
+  {
+   "domain": "shopifycdn.com",
+   "vendor": "Shopify",
+   "category": "commerce"
+  },
+  {
+   "domain": "shopifysvc.com",
+   "vendor": "Shopify",
+   "category": "commerce"
+  },
+  {
+   "domain": "simpleanalyticscdn.com",
+   "vendor": "Simple Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "snap.licdn.com",
+   "vendor": "LinkedIn Insight",
+   "category": "ads"
+  },
+  {
+   "domain": "speedcurve.com",
+   "vendor": "SpeedCurve",
+   "category": "monitoring"
+  },
+  {
+   "domain": "split.io",
+   "vendor": "Split",
+   "category": "experimentation"
+  },
+  {
+   "domain": "squarespace-cdn.com",
+   "vendor": "Squarespace",
+   "category": "cdn"
+  },
+  {
+   "domain": "squareup.com",
+   "vendor": "Square",
+   "category": "payments"
+  },
+  {
+   "domain": "stackpath.bootstrapcdn.com",
+   "vendor": "BootstrapCDN",
+   "category": "cdn"
+  },
+  {
+   "domain": "static.cloudflareinsights.com",
+   "vendor": "Cloudflare Web Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "static.klaviyo.com",
+   "vendor": "Klaviyo",
+   "category": "commerce"
+  },
+  {
+   "domain": "stats.wp.com",
+   "vendor": "Jetpack Stats",
+   "category": "analytics"
+  },
+  {
+   "domain": "statsig.com",
+   "vendor": "Statsig",
+   "category": "experimentation"
+  },
+  {
+   "domain": "statsigapi.net",
+   "vendor": "Statsig",
+   "category": "experimentation"
+  },
+  {
+   "domain": "storyblok.com",
+   "vendor": "Storyblok",
+   "category": "cms"
+  },
+  {
+   "domain": "stripe.com",
+   "vendor": "Stripe",
+   "category": "payments"
+  },
+  {
+   "domain": "stripe.network",
+   "vendor": "Stripe",
+   "category": "payments"
+  },
+  {
+   "domain": "supabase.co",
+   "vendor": "Supabase",
+   "category": "auth"
+  },
+  {
+   "domain": "syndication.twitter.com",
+   "vendor": "X Embeds",
+   "category": "social"
+  },
+  {
+   "domain": "taboola.com",
+   "vendor": "Taboola",
+   "category": "ads"
+  },
+  {
+   "domain": "tagmanager.google.com",
+   "vendor": "Google Tag Manager",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "tawk.to",
+   "vendor": "tawk.to",
+   "category": "support"
+  },
+  {
+   "domain": "tealiumiq.com",
+   "vendor": "Tealium",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "termly.io",
+   "vendor": "Termly",
+   "category": "consent"
+  },
+  {
+   "domain": "tidio.co",
+   "vendor": "Tidio",
+   "category": "support"
+  },
+  {
+   "domain": "tiktok.com",
+   "vendor": "TikTok Pixel",
+   "category": "ads"
+  },
+  {
+   "domain": "tile.openstreetmap.org",
+   "vendor": "OpenStreetMap",
+   "category": "maps"
+  },
+  {
+   "domain": "tiqcdn.com",
+   "vendor": "Tealium",
+   "category": "tag-manager"
+  },
+  {
+   "domain": "trustarc.com",
+   "vendor": "TrustArc",
+   "category": "consent"
+  },
+  {
+   "domain": "trustpilot.com",
+   "vendor": "Trustpilot",
+   "category": "commerce"
+  },
+  {
+   "domain": "trustpilot.net",
+   "vendor": "Trustpilot",
+   "category": "commerce"
+  },
+  {
+   "domain": "twimg.com",
+   "vendor": "X Images",
+   "category": "cdn"
+  },
+  {
+   "domain": "unpkg.com",
+   "vendor": "unpkg",
+   "category": "cdn"
+  },
+  {
+   "domain": "use.fontawesome.com",
+   "vendor": "Font Awesome",
+   "category": "fonts"
+  },
+  {
+   "domain": "use.typekit.net",
+   "vendor": "Adobe Fonts",
+   "category": "fonts"
+  },
+  {
+   "domain": "usefathom.com",
+   "vendor": "Fathom",
+   "category": "analytics"
+  },
+  {
+   "domain": "usercentrics.eu",
+   "vendor": "Usercentrics",
+   "category": "consent"
+  },
+  {
+   "domain": "va.vercel-scripts.com",
+   "vendor": "Vercel Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "vercel-insights.com",
+   "vendor": "Vercel Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "vercel-scripts.com",
+   "vendor": "Vercel Analytics",
+   "category": "analytics"
+  },
+  {
+   "domain": "vercel.app",
+   "vendor": "Vercel",
+   "category": "hosting"
+  },
+  {
+   "domain": "vercel.com",
+   "vendor": "Vercel",
+   "category": "hosting"
+  },
+  {
+   "domain": "vimeo.com",
+   "vendor": "Vimeo",
+   "category": "video"
+  },
+  {
+   "domain": "vimeocdn.com",
+   "vendor": "Vimeo",
+   "category": "video"
+  },
+  {
+   "domain": "visualwebsiteoptimizer.com",
+   "vendor": "VWO",
+   "category": "experimentation"
+  },
+  {
+   "domain": "vwo.com",
+   "vendor": "VWO",
+   "category": "experimentation"
+  },
+  {
+   "domain": "web.app",
+   "vendor": "Firebase Hosting",
+   "category": "hosting"
+  },
+  {
+   "domain": "webflow.com",
+   "vendor": "Webflow",
+   "category": "cdn"
+  },
+  {
+   "domain": "website-files.com",
+   "vendor": "Webflow",
+   "category": "cdn"
+  },
+  {
+   "domain": "widget.intercom.io",
+   "vendor": "Intercom",
+   "category": "support"
+  },
+  {
+   "domain": "wistia.com",
+   "vendor": "Wistia",
+   "category": "video"
+  },
+  {
+   "domain": "wistia.net",
+   "vendor": "Wistia",
+   "category": "video"
+  },
+  {
+   "domain": "wixstatic.com",
+   "vendor": "Wix",
+   "category": "cdn"
+  },
+  {
+   "domain": "wordpress.com",
+   "vendor": "WordPress.com",
+   "category": "cms"
+  },
+  {
+   "domain": "wp.com",
+   "vendor": "WordPress.com",
+   "category": "cms"
+  },
+  {
+   "domain": "yandex.ru",
+   "vendor": "Yandex Metrica",
+   "category": "analytics"
+  },
+  {
+   "domain": "yotpo.com",
+   "vendor": "Yotpo",
+   "category": "commerce"
+  },
+  {
+   "domain": "youtube-nocookie.com",
+   "vendor": "YouTube",
+   "category": "video"
+  },
+  {
+   "domain": "youtube.com",
+   "vendor": "YouTube",
+   "category": "video"
+  },
+  {
+   "domain": "ytimg.com",
+   "vendor": "YouTube Images",
+   "category": "cdn"
+  },
+  {
+   "domain": "zdassets.com",
+   "vendor": "Zendesk",
+   "category": "support"
+  },
+  {
+   "domain": "zendesk.com",
+   "vendor": "Zendesk",
+   "category": "support"
+  }
+ ]
+}
