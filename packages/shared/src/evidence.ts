@@ -390,6 +390,14 @@ export const EvidenceDocSchema = z.object({
   lighthouse: LighthouseSchema,
   screenshots: z.object({ desktop: z.string().nullable(), mobile: z.string().nullable() }),
   blockedRequests: z.array(BlockedRequestSchema).max(200),
+  /**
+   * How the evidence was gathered. "browser": local Chrome passes + local
+   * Lighthouse. "lite": plain HTTP fetch of the document (no page scripts run)
+   * + Lighthouse by Google PageSpeed Insights. Absent on older documents = browser.
+   */
+  collection: z
+    .object({ mode: z.enum(["browser", "lite"]), notes: z.array(z.string().max(500)).max(20) })
+    .optional(),
 });
 export type EvidenceDoc = z.infer<typeof EvidenceDocSchema>;
 
@@ -417,6 +425,7 @@ export const EvidenceSummarySchema = z.object({
   consoleErrors: z.number().int(),
   screenshots: z.object({ desktop: z.string().nullable(), mobile: z.string().nullable() }),
   truncated: z.boolean(),
+  collectionMode: z.enum(["browser", "lite"]).optional(),
 });
 export type EvidenceSummary = z.infer<typeof EvidenceSummarySchema>;
 

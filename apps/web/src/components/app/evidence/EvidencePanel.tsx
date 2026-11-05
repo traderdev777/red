@@ -201,6 +201,13 @@ export function EvidencePanel({ load, collectedAt }: { load: EvidenceLoad; colle
           What a visitor&rsquo;s browser received from {short(p.navigation.finalUrl, 60)}. Analysis and findings are not run
           yet; nothing here is interpreted.
         </p>
+        {d.collection?.mode === "lite" && (
+          <ul className="text-step-n1 text-chrome-300 border-line flex max-w-[70ch] flex-col gap-1 border-l-2 pl-3 font-mono">
+            {d.collection.notes.map((n, i) => (
+              <li key={i}>{n}</li>
+            ))}
+          </ul>
+        )}
         {d.truncated && (
           <p className="text-step-n1 text-inferred font-mono">truncated: {d.truncation.join(", ")} exceeded the evidence caps</p>
         )}
@@ -260,7 +267,7 @@ export function EvidencePanel({ load, collectedAt }: { load: EvidenceLoad; colle
         {d.passes.mobile ? <VitalsGrid v={d.passes.mobile.vitals} label="mobile" /> : <p className="text-step-n1 text-chrome-500 font-mono">mobile pass: {d.mobileError ?? "not run"}</p>}
       </Section>
 
-      <Section title="Lighthouse" meta={lh.status === "ok" ? `v${lh.version} · mobile profile` : lh.status}>
+      <Section title="Lighthouse" meta={lh.status === "ok" ? `v${lh.version} · mobile profile${d.collection?.mode === "lite" ? " · via PageSpeed Insights" : ""}` : lh.status}>
         {lh.status === "ok" ? (
           <dl className="border-line bg-line grid grid-cols-2 gap-px overflow-hidden rounded-md border sm:grid-cols-4">
             {scores.map(([name, s]) => {

@@ -1,5 +1,6 @@
 import { ScanResultSchema, summarizeAnalysis } from "@red/shared";
 import { collect } from "./collect";
+import { collectLite } from "./collectLite";
 import type { Stage, StageContext } from "./types";
 import { ScanFailure } from "../errors";
 import { analyzeStage, compressStage, fingerprintStage } from "../analysis/stages";
@@ -10,7 +11,7 @@ import { analyzeStage, compressStage, fingerprintStage } from "../analysis/stage
  * A failure in an "analyzing" stage keeps the quota charge (see fail_scan).
  */
 export const STAGES: Stage[] = [
-  { name: "collect", status: "collecting", run: (ctx) => collect(ctx) },
+  { name: "collect", status: "collecting", run: (ctx) => (ctx.cfg.SCANNER_MODE === "lite" ? collectLite(ctx) : collect(ctx)) },
   { name: "fingerprint", status: "analyzing", run: fingerprintStage },
   { name: "compress", status: "analyzing", run: compressStage },
   { name: "analyze", status: "analyzing", run: analyzeStage },

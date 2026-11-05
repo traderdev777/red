@@ -93,7 +93,7 @@ export function ScanView({
 }: {
   initial: ScanViewData;
   /** Scanner /health at render time, for queued scans. */
-  scanner: { online: boolean; queued: number | null } | null;
+  scanner: { online: boolean; queued: number | null; wakes?: boolean } | null;
   /** Server-rendered Evidence panel, present once the scan is done. */
   evidence: React.ReactNode;
 }) {
@@ -258,6 +258,14 @@ export function ScanView({
                     The scanner is online
                     {scanner.queued != null ? ` with ${scanner.queued} scan${scanner.queued === 1 ? "" : "s"} waiting` : ""}.
                     Progress appears here as soon as it claims this one.
+                  </p>
+                </>
+              ) : scanner?.wakes ? (
+                <>
+                  <h2 className="text-step-2 text-chrome-100">Queued. Waking the scanner.</h2>
+                  <p className="text-step-0 text-chrome-300 max-w-[60ch]">
+                    The scanner sleeps after 15 quiet minutes and takes about a minute to start. Nothing has been
+                    fetched yet; progress appears here as soon as it claims this scan.
                   </p>
                 </>
               ) : (

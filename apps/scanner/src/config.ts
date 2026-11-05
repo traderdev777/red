@@ -14,6 +14,10 @@ const Env = z.object({
   REAPER_TIMEOUT_S: z.coerce.number().int().min(60).default(300),
   PORT: z.coerce.number().int().default(4000),
   SCANNER_LIGHTHOUSE: z.enum(["on", "off"]).default("on"),
+  /** "browser": local Chrome + Lighthouse. "lite": HTTP fetch + Google PageSpeed Insights (small hosts). */
+  SCANNER_MODE: z.enum(["browser", "lite"]).default("browser"),
+  /** PageSpeed Insights key (free, no billing). Without one, Google's anonymous quota is small. */
+  PSI_API_KEY: z.string().min(10).optional(),
   /** Dev sandboxes only. See net/guardProxy.ts. */
   SCANNER_UPSTREAM_PROXY: z.string().url().optional(),
   CHROMIUM_EXECUTABLE: z.string().optional(),

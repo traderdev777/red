@@ -1,4 +1,6 @@
 import "server-only";
+import { after } from "next/server";
+import { wakeScanner } from "./scanner";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { normalizeUrl, sha256Hex, StartScanInputSchema } from "@red/shared";
 import { assertPublicUrl, UnsafeUrlError } from "@red/shared/server";
@@ -172,6 +174,7 @@ export async function startScanCore(opts: {
     };
   }
   await audit("scan.created", user.id, hash, ip, row.id);
+  after(wakeScanner);
   return { ok: true, scanId: row.id, cached: false };
 }
 
@@ -253,5 +256,6 @@ export async function retryScanCore(opts: {
     };
   }
   await audit("scan.retried", user.id, prev.url_hash, ip, row.id);
+  after(wakeScanner);
   return { ok: true, scanId: row.id, cached: false };
 }

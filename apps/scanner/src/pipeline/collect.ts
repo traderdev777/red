@@ -99,6 +99,7 @@ export function summarize(doc: EvidenceDoc): EvidenceSummary {
     consoleErrors: d.console.errors.length,
     screenshots: doc.screenshots,
     truncated: doc.truncated,
+    collectionMode: doc.collection?.mode ?? "browser",
   });
 }
 
@@ -322,6 +323,7 @@ export async function collect(ctx: StageContext, deps: CollectDeps = {}): Promis
       lighthouse,
       screenshots: shots,
       blockedRequests: blocks.slice(0, 200).map((b) => ({ host: b.host.slice(0, 256), reason: b.reason.slice(0, 200), phase: b.phase })),
+      collection: { mode: "browser", notes: [] },
     };
     const { doc, json } = enforceSize(EvidenceDocSchema.parse(draft));
 

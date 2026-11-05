@@ -1,0 +1,32 @@
+# Render Blueprint: the RED scanner on Render's free plan (no card needed).
+# Free web services sleep after 15 idle minutes; the web app wakes this one
+# when a scan is queued (SCANNER_URL + SCANNER_SLEEPS=1 on Vercel).
+services:
+  - type: web
+    name: red-scanner
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./apps/scanner/Dockerfile.lite
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: SCANNER_MODE
+        value: lite
+      - key: SCAN_CONCURRENCY
+        value: "1"
+      - key: SCAN_TIMEOUT_MS
+        value: "90000"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SCANNER_BOT_URL
+        sync: false
+      - key: PSI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: RED_SECRETS_KEY
+        sync: false

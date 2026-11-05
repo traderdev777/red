@@ -1,0 +1,32 @@
+# RED scanner, lite mode: no local Chrome. For small hosts (Render free,
+# 0.1 CPU / 512 MB). Pages are fetched over HTTP; Lighthouse comes from
+# Google PageSpeed Insights. Build from the repo root:
+#   docker build -f apps/scanner/Dockerfile.lite -t red-scanner-lite .
+FROM node:22-slim
+
+ENV NODE_ENV=production \
+    SCANNER_MODE=lite \
+    SCAN_CONCURRENCY=1 \
+    SCAN_TIMEOUT_MS=90000 \
+    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 \
+    PNPM_HOME=/pnpm \
+    PATH=/pnpm:$PATH
+
+RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
+
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc tsconfig.base.json ./
+COPY packages/shared/package.json packages/shared/
+COPY apps/scanner/package.json apps/scanner/
+RUN pnpm install --frozen-lockfile --filter @red/scanner... --prod=false
+
+COPY packages/shared packages/shared
+COPY apps/scanner apps/scanner
+RUN chown -R node:node /app
+USER node
+
+WORKDIR /app/apps/scanner
+EXPOSE 4000
+STOPSIGNAL SIGTERM
+# Lean heap for 512 MB hosts.
+CMD ["node", "--max-old-space-size=320", "--import", "tsx", "src/index.ts"]
